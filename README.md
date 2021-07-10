@@ -1,6 +1,11 @@
 # LCOM Project
 
-LCOM Project for group T&lt;n&gt;G&lt;p&gt;&lt;q&gt;.
+LCOM Project where we should:
+
+- use an "hardware" interface of common peripherals. 
+- develop low-level and embedded software for the PC platform.
+- use the C programming language in a structured way.
+- use various software development tools.
 
 Group members:
 
