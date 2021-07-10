@@ -1,0 +1,323 @@
+\hypertarget{struct_game}{}\doxysection{Game Struct Reference}
+\label{struct_game}\index{Game@{Game}}
+
+
+{\ttfamily \#include $<$game.\+h$>$}
+
+
+
+Collaboration diagram for Game\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_game__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{struct_game_a6150e0515f7202e2fb518f7206ed97dc}{x}}
+\item 
+\mbox{\hyperlink{game_8h_a915b2902e05c4e29541a0e9973500da8}{state\+\_\+machine}} \mbox{\hyperlink{struct_game_a7da76793c8ed5bb368a32318d2c7e859}{state}}
+\item 
+\mbox{\hyperlink{game_8h_a29c96639a4cdcf5f641d8aba13c6115c}{level1\+\_\+state}} \mbox{\hyperlink{struct_game_a14437f95738b8a2498cf635986a8641c}{lvl1\+\_\+state}}
+\item 
+\mbox{\hyperlink{game_8h_a41c74c32574df1342f4e3ed166a73747}{level2\+\_\+state}} \mbox{\hyperlink{struct_game_a14afdcae40dc19751f1928fe3845067b}{lvl2\+\_\+state}}
+\item 
+\mbox{\hyperlink{game_8h_ab3b3d0a3e715fab667d3e5fd3ff5dfab}{level3\+\_\+state}} \mbox{\hyperlink{struct_game_a0a2ab42afb905490008b42e896e2ccfb}{lvl3\+\_\+state}}
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$ \mbox{\hyperlink{struct_game_a5ffa8e76673db59faed298010060ae3c}{main\+Screen}}
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$ \mbox{\hyperlink{struct_game_a3a7ea4305773abf5347bb261a8a5c16b}{cursor}}
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$ \mbox{\hyperlink{struct_game_a202c225f4df3ee17dc2ad000ad1d3e9e}{background1}}
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$ \mbox{\hyperlink{struct_game_a900ca9b8f856eb684820e0c5680c2d36}{background2}}
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$ \mbox{\hyperlink{struct_game_a84912bfbe970461af7ce0735a8cda814}{background3}}
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$ \mbox{\hyperlink{struct_game_a1495d21fc60f35b37a20ee32bee8f547}{boy\+\_\+idle1}}
+\item 
+\mbox{\hyperlink{struct_anim_sprite}{Anim\+Sprite}} $\ast$ \mbox{\hyperlink{struct_game_abd8ed42c81ccbbeab1b2a00cd75cc603}{boy}}
+\item 
+\mbox{\hyperlink{struct_anim_sprite}{Anim\+Sprite}} $\ast$ \mbox{\hyperlink{struct_game_a5d4d9e8dbacae10c4a85fbdfc3d83064}{boy\+Jumping}}
+\item 
+\mbox{\hyperlink{struct_anim_sprite}{Anim\+Sprite}} $\ast$ \mbox{\hyperlink{struct_game_ad2ecd7b2afc0568c74c643b1cba47d62}{boy\+Dying}}
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$ \mbox{\hyperlink{struct_game_a2632c2c86ad10fac56a7dac14bc2938c}{letterB}}
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$ \mbox{\hyperlink{struct_game_a2728709cea950eae6c09db27bdc4e124}{letterK}}
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$ \mbox{\hyperlink{struct_game_aa9f43728328ea27b60ec33f02242faa7}{letterS}}
+\item 
+\mbox{\hyperlink{struct_time_sprites}{Time\+Sprites}} \mbox{\hyperlink{struct_game_a3a3f04e7f40879b59e13fc9cf8a98059}{Rtc\+Time}}
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$ \mbox{\hyperlink{struct_game_ade84260dadfee276483c7c31f7ac3fa9}{digit}}
+\item 
+\mbox{\hyperlink{struct_anim_sprite}{Anim\+Sprite}} $\ast$ \mbox{\hyperlink{struct_game_aee7f962f58adc1ccbade1c7105c1587e}{mine}}
+\item 
+\mbox{\hyperlink{struct_mouse_movement}{Mouse\+Movement}} \mbox{\hyperlink{struct_game_ac854f9c39f7e95104551b7d5368e3ca8}{mouse\+Movement}}
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$ \mbox{\hyperlink{struct_game_a6f454acee92c2fa0d4e6413f2272ba79}{naruto\+Standing}}
+\item 
+\mbox{\hyperlink{struct_anim_sprite}{Anim\+Sprite}} $\ast$ \mbox{\hyperlink{struct_game_a6cd90a4fda8e4861c74dafa3610aab09}{naruto\+Walking}}
+\item 
+\mbox{\hyperlink{struct_anim_sprite}{Anim\+Sprite}} $\ast$ \mbox{\hyperlink{struct_game_ac2e0e4dc684c73a3fa4b24f06888e379}{shuriken}}
+\item 
+\mbox{\hyperlink{struct_anim_sprite}{Anim\+Sprite}} $\ast$ \mbox{\hyperlink{struct_game_a86b169bfe3603b2b68f5e1f0ebe3af5f}{original\+Bunshin}}
+\item 
+\mbox{\hyperlink{struct_anim_sprite}{Anim\+Sprite}} $\ast$ \mbox{\hyperlink{struct_game_ab3fe884896ae2fefbaa2a7ff9fd76131}{kage\+Bunshin1}}
+\item 
+\mbox{\hyperlink{struct_anim_sprite}{Anim\+Sprite}} $\ast$ \mbox{\hyperlink{struct_game_af2969728213f01231313975257747fe9}{kage\+Bunshin2}}
+\item 
+\mbox{\hyperlink{struct_anim_sprite}{Anim\+Sprite}} $\ast$ \mbox{\hyperlink{struct_game_a381dd4d6839689f322fe40dad8b19650}{kage\+Bunshin3}}
+\item 
+\mbox{\hyperlink{struct_anim_sprite}{Anim\+Sprite}} $\ast$ \mbox{\hyperlink{struct_game_aee142bc2c72339eeed98b8271690a385}{naruto\+Panorama}}
+\item 
+\mbox{\hyperlink{struct_anim_sprite}{Anim\+Sprite}} $\ast$ \mbox{\hyperlink{struct_game_ae1172baca4fd130660abfae4afeee890}{naruto\+Dead}}
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$ \mbox{\hyperlink{struct_game_afae8620d88297abf4d13f247d49fbcdc}{game\+Over\+Screen}}
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$ \mbox{\hyperlink{struct_game_a0feeed19bb3a099e427a773f29d1aa27}{victory\+Screen}}
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$ \mbox{\hyperlink{struct_game_a083c522354aa96195bf787de241b8951}{opponent\+Updates}} \mbox{[}6\mbox{]}
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$ \mbox{\hyperlink{struct_game_ab3bef5e7681df2548428e034797a348c}{game\+Mode}}
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$ \mbox{\hyperlink{struct_game_a58f5886bdedde02aef77455ee7e9d16c}{waiting\+Screen}}
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$ \mbox{\hyperlink{struct_game_ad7126885043e44e24e7cf8b4039b2ffb}{scoreboard}}
+\item 
+bool \mbox{\hyperlink{struct_game_a3f46611b50b0f6a1642c79bb01bbec16}{single\+Player}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{struct_game_a202c225f4df3ee17dc2ad000ad1d3e9e}\label{struct_game_a202c225f4df3ee17dc2ad000ad1d3e9e}} 
+\index{Game@{Game}!background1@{background1}}
+\index{background1@{background1}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{background1}{background1}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_sprite}{Sprite}}$\ast$ background1}
+
+\mbox{\Hypertarget{struct_game_a900ca9b8f856eb684820e0c5680c2d36}\label{struct_game_a900ca9b8f856eb684820e0c5680c2d36}} 
+\index{Game@{Game}!background2@{background2}}
+\index{background2@{background2}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{background2}{background2}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_sprite}{Sprite}}$\ast$ background2}
+
+\mbox{\Hypertarget{struct_game_a84912bfbe970461af7ce0735a8cda814}\label{struct_game_a84912bfbe970461af7ce0735a8cda814}} 
+\index{Game@{Game}!background3@{background3}}
+\index{background3@{background3}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{background3}{background3}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_sprite}{Sprite}}$\ast$ background3}
+
+\mbox{\Hypertarget{struct_game_abd8ed42c81ccbbeab1b2a00cd75cc603}\label{struct_game_abd8ed42c81ccbbeab1b2a00cd75cc603}} 
+\index{Game@{Game}!boy@{boy}}
+\index{boy@{boy}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{boy}{boy}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_anim_sprite}{Anim\+Sprite}}$\ast$ boy}
+
+\mbox{\Hypertarget{struct_game_a1495d21fc60f35b37a20ee32bee8f547}\label{struct_game_a1495d21fc60f35b37a20ee32bee8f547}} 
+\index{Game@{Game}!boy\_idle1@{boy\_idle1}}
+\index{boy\_idle1@{boy\_idle1}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{boy\_idle1}{boy\_idle1}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_sprite}{Sprite}}$\ast$ boy\+\_\+idle1}
+
+\mbox{\Hypertarget{struct_game_ad2ecd7b2afc0568c74c643b1cba47d62}\label{struct_game_ad2ecd7b2afc0568c74c643b1cba47d62}} 
+\index{Game@{Game}!boyDying@{boyDying}}
+\index{boyDying@{boyDying}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{boyDying}{boyDying}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_anim_sprite}{Anim\+Sprite}}$\ast$ boy\+Dying}
+
+\mbox{\Hypertarget{struct_game_a5d4d9e8dbacae10c4a85fbdfc3d83064}\label{struct_game_a5d4d9e8dbacae10c4a85fbdfc3d83064}} 
+\index{Game@{Game}!boyJumping@{boyJumping}}
+\index{boyJumping@{boyJumping}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{boyJumping}{boyJumping}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_anim_sprite}{Anim\+Sprite}}$\ast$ boy\+Jumping}
+
+\mbox{\Hypertarget{struct_game_a3a7ea4305773abf5347bb261a8a5c16b}\label{struct_game_a3a7ea4305773abf5347bb261a8a5c16b}} 
+\index{Game@{Game}!cursor@{cursor}}
+\index{cursor@{cursor}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{cursor}{cursor}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_sprite}{Sprite}}$\ast$ cursor}
+
+\mbox{\Hypertarget{struct_game_ade84260dadfee276483c7c31f7ac3fa9}\label{struct_game_ade84260dadfee276483c7c31f7ac3fa9}} 
+\index{Game@{Game}!digit@{digit}}
+\index{digit@{digit}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{digit}{digit}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_sprite}{Sprite}}$\ast$ digit}
+
+\mbox{\Hypertarget{struct_game_ab3bef5e7681df2548428e034797a348c}\label{struct_game_ab3bef5e7681df2548428e034797a348c}} 
+\index{Game@{Game}!gameMode@{gameMode}}
+\index{gameMode@{gameMode}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{gameMode}{gameMode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_sprite}{Sprite}}$\ast$ game\+Mode}
+
+\mbox{\Hypertarget{struct_game_afae8620d88297abf4d13f247d49fbcdc}\label{struct_game_afae8620d88297abf4d13f247d49fbcdc}} 
+\index{Game@{Game}!gameOverScreen@{gameOverScreen}}
+\index{gameOverScreen@{gameOverScreen}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{gameOverScreen}{gameOverScreen}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_sprite}{Sprite}}$\ast$ game\+Over\+Screen}
+
+\mbox{\Hypertarget{struct_game_ab3fe884896ae2fefbaa2a7ff9fd76131}\label{struct_game_ab3fe884896ae2fefbaa2a7ff9fd76131}} 
+\index{Game@{Game}!kageBunshin1@{kageBunshin1}}
+\index{kageBunshin1@{kageBunshin1}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{kageBunshin1}{kageBunshin1}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_anim_sprite}{Anim\+Sprite}}$\ast$ kage\+Bunshin1}
+
+\mbox{\Hypertarget{struct_game_af2969728213f01231313975257747fe9}\label{struct_game_af2969728213f01231313975257747fe9}} 
+\index{Game@{Game}!kageBunshin2@{kageBunshin2}}
+\index{kageBunshin2@{kageBunshin2}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{kageBunshin2}{kageBunshin2}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_anim_sprite}{Anim\+Sprite}}$\ast$ kage\+Bunshin2}
+
+\mbox{\Hypertarget{struct_game_a381dd4d6839689f322fe40dad8b19650}\label{struct_game_a381dd4d6839689f322fe40dad8b19650}} 
+\index{Game@{Game}!kageBunshin3@{kageBunshin3}}
+\index{kageBunshin3@{kageBunshin3}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{kageBunshin3}{kageBunshin3}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_anim_sprite}{Anim\+Sprite}}$\ast$ kage\+Bunshin3}
+
+\mbox{\Hypertarget{struct_game_a2632c2c86ad10fac56a7dac14bc2938c}\label{struct_game_a2632c2c86ad10fac56a7dac14bc2938c}} 
+\index{Game@{Game}!letterB@{letterB}}
+\index{letterB@{letterB}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{letterB}{letterB}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_sprite}{Sprite}}$\ast$ letterB}
+
+\mbox{\Hypertarget{struct_game_a2728709cea950eae6c09db27bdc4e124}\label{struct_game_a2728709cea950eae6c09db27bdc4e124}} 
+\index{Game@{Game}!letterK@{letterK}}
+\index{letterK@{letterK}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{letterK}{letterK}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_sprite}{Sprite}}$\ast$ letterK}
+
+\mbox{\Hypertarget{struct_game_aa9f43728328ea27b60ec33f02242faa7}\label{struct_game_aa9f43728328ea27b60ec33f02242faa7}} 
+\index{Game@{Game}!letterS@{letterS}}
+\index{letterS@{letterS}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{letterS}{letterS}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_sprite}{Sprite}}$\ast$ letterS}
+
+\mbox{\Hypertarget{struct_game_a14437f95738b8a2498cf635986a8641c}\label{struct_game_a14437f95738b8a2498cf635986a8641c}} 
+\index{Game@{Game}!lvl1\_state@{lvl1\_state}}
+\index{lvl1\_state@{lvl1\_state}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{lvl1\_state}{lvl1\_state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{game_8h_a29c96639a4cdcf5f641d8aba13c6115c}{level1\+\_\+state}} lvl1\+\_\+state}
+
+\mbox{\Hypertarget{struct_game_a14afdcae40dc19751f1928fe3845067b}\label{struct_game_a14afdcae40dc19751f1928fe3845067b}} 
+\index{Game@{Game}!lvl2\_state@{lvl2\_state}}
+\index{lvl2\_state@{lvl2\_state}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{lvl2\_state}{lvl2\_state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{game_8h_a41c74c32574df1342f4e3ed166a73747}{level2\+\_\+state}} lvl2\+\_\+state}
+
+\mbox{\Hypertarget{struct_game_a0a2ab42afb905490008b42e896e2ccfb}\label{struct_game_a0a2ab42afb905490008b42e896e2ccfb}} 
+\index{Game@{Game}!lvl3\_state@{lvl3\_state}}
+\index{lvl3\_state@{lvl3\_state}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{lvl3\_state}{lvl3\_state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{game_8h_ab3b3d0a3e715fab667d3e5fd3ff5dfab}{level3\+\_\+state}} lvl3\+\_\+state}
+
+\mbox{\Hypertarget{struct_game_a5ffa8e76673db59faed298010060ae3c}\label{struct_game_a5ffa8e76673db59faed298010060ae3c}} 
+\index{Game@{Game}!mainScreen@{mainScreen}}
+\index{mainScreen@{mainScreen}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{mainScreen}{mainScreen}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_sprite}{Sprite}}$\ast$ main\+Screen}
+
+\mbox{\Hypertarget{struct_game_aee7f962f58adc1ccbade1c7105c1587e}\label{struct_game_aee7f962f58adc1ccbade1c7105c1587e}} 
+\index{Game@{Game}!mine@{mine}}
+\index{mine@{mine}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{mine}{mine}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_anim_sprite}{Anim\+Sprite}}$\ast$ mine}
+
+\mbox{\Hypertarget{struct_game_ac854f9c39f7e95104551b7d5368e3ca8}\label{struct_game_ac854f9c39f7e95104551b7d5368e3ca8}} 
+\index{Game@{Game}!mouseMovement@{mouseMovement}}
+\index{mouseMovement@{mouseMovement}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{mouseMovement}{mouseMovement}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_mouse_movement}{Mouse\+Movement}} mouse\+Movement}
+
+\mbox{\Hypertarget{struct_game_ae1172baca4fd130660abfae4afeee890}\label{struct_game_ae1172baca4fd130660abfae4afeee890}} 
+\index{Game@{Game}!narutoDead@{narutoDead}}
+\index{narutoDead@{narutoDead}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{narutoDead}{narutoDead}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_anim_sprite}{Anim\+Sprite}}$\ast$ naruto\+Dead}
+
+\mbox{\Hypertarget{struct_game_aee142bc2c72339eeed98b8271690a385}\label{struct_game_aee142bc2c72339eeed98b8271690a385}} 
+\index{Game@{Game}!narutoPanorama@{narutoPanorama}}
+\index{narutoPanorama@{narutoPanorama}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{narutoPanorama}{narutoPanorama}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_anim_sprite}{Anim\+Sprite}}$\ast$ naruto\+Panorama}
+
+\mbox{\Hypertarget{struct_game_a6f454acee92c2fa0d4e6413f2272ba79}\label{struct_game_a6f454acee92c2fa0d4e6413f2272ba79}} 
+\index{Game@{Game}!narutoStanding@{narutoStanding}}
+\index{narutoStanding@{narutoStanding}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{narutoStanding}{narutoStanding}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_sprite}{Sprite}}$\ast$ naruto\+Standing}
+
+\mbox{\Hypertarget{struct_game_a6cd90a4fda8e4861c74dafa3610aab09}\label{struct_game_a6cd90a4fda8e4861c74dafa3610aab09}} 
+\index{Game@{Game}!narutoWalking@{narutoWalking}}
+\index{narutoWalking@{narutoWalking}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{narutoWalking}{narutoWalking}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_anim_sprite}{Anim\+Sprite}}$\ast$ naruto\+Walking}
+
+\mbox{\Hypertarget{struct_game_a083c522354aa96195bf787de241b8951}\label{struct_game_a083c522354aa96195bf787de241b8951}} 
+\index{Game@{Game}!opponentUpdates@{opponentUpdates}}
+\index{opponentUpdates@{opponentUpdates}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{opponentUpdates}{opponentUpdates}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_sprite}{Sprite}}$\ast$ opponent\+Updates\mbox{[}6\mbox{]}}
+
+\mbox{\Hypertarget{struct_game_a86b169bfe3603b2b68f5e1f0ebe3af5f}\label{struct_game_a86b169bfe3603b2b68f5e1f0ebe3af5f}} 
+\index{Game@{Game}!originalBunshin@{originalBunshin}}
+\index{originalBunshin@{originalBunshin}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{originalBunshin}{originalBunshin}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_anim_sprite}{Anim\+Sprite}}$\ast$ original\+Bunshin}
+
+\mbox{\Hypertarget{struct_game_a3a3f04e7f40879b59e13fc9cf8a98059}\label{struct_game_a3a3f04e7f40879b59e13fc9cf8a98059}} 
+\index{Game@{Game}!RtcTime@{RtcTime}}
+\index{RtcTime@{RtcTime}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{RtcTime}{RtcTime}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_time_sprites}{Time\+Sprites}} Rtc\+Time}
+
+\mbox{\Hypertarget{struct_game_ad7126885043e44e24e7cf8b4039b2ffb}\label{struct_game_ad7126885043e44e24e7cf8b4039b2ffb}} 
+\index{Game@{Game}!scoreboard@{scoreboard}}
+\index{scoreboard@{scoreboard}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{scoreboard}{scoreboard}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_sprite}{Sprite}}$\ast$ scoreboard}
+
+\mbox{\Hypertarget{struct_game_ac2e0e4dc684c73a3fa4b24f06888e379}\label{struct_game_ac2e0e4dc684c73a3fa4b24f06888e379}} 
+\index{Game@{Game}!shuriken@{shuriken}}
+\index{shuriken@{shuriken}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{shuriken}{shuriken}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_anim_sprite}{Anim\+Sprite}}$\ast$ shuriken}
+
+\mbox{\Hypertarget{struct_game_a3f46611b50b0f6a1642c79bb01bbec16}\label{struct_game_a3f46611b50b0f6a1642c79bb01bbec16}} 
+\index{Game@{Game}!singlePlayer@{singlePlayer}}
+\index{singlePlayer@{singlePlayer}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{singlePlayer}{singlePlayer}}
+{\footnotesize\ttfamily bool single\+Player}
+
+\mbox{\Hypertarget{struct_game_a7da76793c8ed5bb368a32318d2c7e859}\label{struct_game_a7da76793c8ed5bb368a32318d2c7e859}} 
+\index{Game@{Game}!state@{state}}
+\index{state@{state}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{game_8h_a915b2902e05c4e29541a0e9973500da8}{state\+\_\+machine}} state}
+
+\mbox{\Hypertarget{struct_game_a0feeed19bb3a099e427a773f29d1aa27}\label{struct_game_a0feeed19bb3a099e427a773f29d1aa27}} 
+\index{Game@{Game}!victoryScreen@{victoryScreen}}
+\index{victoryScreen@{victoryScreen}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{victoryScreen}{victoryScreen}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_sprite}{Sprite}}$\ast$ victory\+Screen}
+
+\mbox{\Hypertarget{struct_game_a58f5886bdedde02aef77455ee7e9d16c}\label{struct_game_a58f5886bdedde02aef77455ee7e9d16c}} 
+\index{Game@{Game}!waitingScreen@{waitingScreen}}
+\index{waitingScreen@{waitingScreen}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{waitingScreen}{waitingScreen}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_sprite}{Sprite}}$\ast$ waiting\+Screen}
+
+\mbox{\Hypertarget{struct_game_a6150e0515f7202e2fb518f7206ed97dc}\label{struct_game_a6150e0515f7202e2fb518f7206ed97dc}} 
+\index{Game@{Game}!x@{x}}
+\index{x@{x}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily int x}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{game_8h}{game.\+h}}\end{DoxyCompactItemize}

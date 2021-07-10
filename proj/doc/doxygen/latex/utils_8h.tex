@@ -1,0 +1,50 @@
+\hypertarget{utils_8h}{}\doxysection{utils.\+h File Reference}
+\label{utils_8h}\index{utils.h@{utils.h}}
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+Include dependency graph for utils.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=139pt]{utils_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=176pt]{utils_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int() \mbox{\hyperlink{utils_8h_a81621440b3d65680979425e39aa8c789}{util\+\_\+get\+\_\+\+L\+SB}} (uint16\+\_\+t val, uint8\+\_\+t $\ast$lsb)
+\item 
+int() \mbox{\hyperlink{utils_8h_a6a880076cd2ec468834438b6e0c58836}{util\+\_\+get\+\_\+\+M\+SB}} (uint16\+\_\+t val, uint8\+\_\+t $\ast$msb)
+\item 
+int() \mbox{\hyperlink{utils_8h_a79a031a8611f5b2d6afa4158e92b0fb4}{util\+\_\+sys\+\_\+inb}} (int port, uint8\+\_\+t $\ast$value)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{utils_8h_a81621440b3d65680979425e39aa8c789}\label{utils_8h_a81621440b3d65680979425e39aa8c789}} 
+\index{utils.h@{utils.h}!util\_get\_LSB@{util\_get\_LSB}}
+\index{util\_get\_LSB@{util\_get\_LSB}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{util\_get\_LSB()}{util\_get\_LSB()}}
+{\footnotesize\ttfamily int() util\+\_\+get\+\_\+\+L\+SB (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{val,  }\item[{uint8\+\_\+t $\ast$}]{lsb }\end{DoxyParamCaption})}
+
+get lsb byte of a 16bit value \mbox{\Hypertarget{utils_8h_a6a880076cd2ec468834438b6e0c58836}\label{utils_8h_a6a880076cd2ec468834438b6e0c58836}} 
+\index{utils.h@{utils.h}!util\_get\_MSB@{util\_get\_MSB}}
+\index{util\_get\_MSB@{util\_get\_MSB}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{util\_get\_MSB()}{util\_get\_MSB()}}
+{\footnotesize\ttfamily int() util\+\_\+get\+\_\+\+M\+SB (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{val,  }\item[{uint8\+\_\+t $\ast$}]{msb }\end{DoxyParamCaption})}
+
+get msb byte of a 16bit value \mbox{\Hypertarget{utils_8h_a79a031a8611f5b2d6afa4158e92b0fb4}\label{utils_8h_a79a031a8611f5b2d6afa4158e92b0fb4}} 
+\index{utils.h@{utils.h}!util\_sys\_inb@{util\_sys\_inb}}
+\index{util\_sys\_inb@{util\_sys\_inb}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{util\_sys\_inb()}{util\_sys\_inb()}}
+{\footnotesize\ttfamily int() util\+\_\+sys\+\_\+inb (\begin{DoxyParamCaption}\item[{int}]{port,  }\item[{uint8\+\_\+t $\ast$}]{value }\end{DoxyParamCaption})}
+
+Gets a value from a port to a variable 

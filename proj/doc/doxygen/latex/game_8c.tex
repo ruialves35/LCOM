@@ -1,0 +1,430 @@
+\hypertarget{game_8c}{}\doxysection{game.\+c File Reference}
+\label{game_8c}\index{game.c@{game.c}}
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include $<$machine/int86.\+h$>$}\newline
+{\ttfamily \#include $<$stdarg.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}anim\+Sprite.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}game.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}game\+Constants.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}i8042.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}i8254.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}kbc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mouse.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}queue.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rtc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sprite.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}uart.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}vbe.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}vbe\+\_\+utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}vc\+Macros.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/background1.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/background2.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/background3.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/main\+Screen.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/main\+Screen2.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/mouse2.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/boy/idle\+\_\+xpm/idle1.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/boy/idle\+\_\+xpm/idle2.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/boy/run\+\_\+xpm/run1.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/boy/run\+\_\+xpm/run11.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/boy/run\+\_\+xpm/run3.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/boy/run\+\_\+xpm/run8.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/boy/jump\+\_\+xpm/\+Jump10.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/boy/jump\+\_\+xpm/\+Jump14.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/boy/jump\+\_\+xpm/\+Jump2.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/boy/jump\+\_\+xpm/\+Jump5.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/boy/dead\+\_\+xpm/dead1.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/boy/dead\+\_\+xpm/dead11.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/boy/dead\+\_\+xpm/dead4.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/boy/dead\+\_\+xpm/dead7.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/letras/letra\+B.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/letras/letra\+K.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/letras/letra\+S.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/traps/mine\+Xpm/mine1.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/traps/mine\+Xpm/mine2.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/traps/mine\+Xpm/mine3.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/traps/mine\+Xpm/mine4.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/digits/collon.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/digits/eight.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/digits/five.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/digits/four.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/digits/nine.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/digits/one.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/digits/seven.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/digits/six.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/digits/three.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/digits/two.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/digits/zero.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/background\+Win.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/game\+Over.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/naruto/dead/naruto\+Dead1.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/naruto/dead/naruto\+Dead2.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/naruto/dead/naruto\+Dead3.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/naruto/kage\+Bunshin/kage\+Bunshin1.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/naruto/kage\+Bunshin/kage\+Bunshin2.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/naruto/kage\+Bunshin/kage\+Bunshin3.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/naruto/kage\+Bunshin/kage\+Bunshin4.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/naruto/kage\+Bunshin/original\+Bunshin1.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/naruto/kage\+Bunshin/original\+Bunshin2.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/naruto/kage\+Bunshin/original\+Bunshin3.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/naruto/naruto\+Standing.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/naruto/panorama/panorama1.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/naruto/panorama/panorama2.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/naruto/panorama/panorama3.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/naruto/panorama/panorama4.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/naruto/shuriken/shuriken1.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/naruto/shuriken/shuriken2.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/naruto/shuriken/shuriken3.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/naruto/shuriken/shuriken4.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/naruto/walking/naruto\+Walking1.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/naruto/walking/naruto\+Walking2.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/game\+Mode.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/opponent\+Updates/\+Opponent\+Cleared\+Lvl1.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/opponent\+Updates/\+Opponent\+Cleared\+Lvl2.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/opponent\+Updates/\+Opponent\+Cleared\+Lvl3.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/opponent\+Updates/\+Opponent\+Died\+Lvl1.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/opponent\+Updates/\+Opponent\+Died\+Lvl2.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/opponent\+Updates/\+Opponent\+Died\+Lvl3.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/scoreboard.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgs/waiting\+Screen.\+xpm\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{game_8c_aefcf067809e26c01e5413d61140295e9}{setup\+Sprites}} (\mbox{\hyperlink{struct_game}{Game}} $\ast$game)
+\begin{DoxyCompactList}\small\item\em Initialization functions that creates all the needed sprites and some variables. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{game_8c_a7cbc607dedd794f4e9b0160e3f2506c2}{choose\+\_\+your\+\_\+destiny}} (\mbox{\hyperlink{struct_game}{Game}} $\ast$game)
+\begin{DoxyCompactList}\small\item\em Main loop of the game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game_8c_adff2210798ae43e37c32d66d8b589c10}{update\+Mouse\+Sprite\+Position}} (\mbox{\hyperlink{struct_game}{Game}} $\ast$game, struct packet $\ast$packet)
+\begin{DoxyCompactList}\small\item\em Updates the cursor position based on the packets received from the mouse. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{game_8c_aca67dfe717203bac33a082e4f1b84348}{check\+Click}} (\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$sp, struct packet $\ast$packet, int x0, int x1, int y0, int y1)
+\item 
+int \mbox{\hyperlink{game_8c_ac83a816fc365d338a51abcbadc6bbacc}{paint\+Mouse\+Movement}} (\mbox{\hyperlink{struct_game}{Game}} $\ast$game, struct packet $\ast$packet)
+\begin{DoxyCompactList}\small\item\em Cheks if the mouse movement is valid and updates variables. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game_8c_a99a0e4f1133c87e87fd270a7ebe06b8d}{draw\+Cursor\+Positions}} (\mbox{\hyperlink{struct_game}{Game}} $\ast$game, uint32\+\_\+t color, uint8\+\_\+t $\ast$aux\+\_\+buffer)
+\begin{DoxyCompactList}\small\item\em Draws on the buffer the positions the cursor has travelled to. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{game_8c_ad5636bd381f117c6d575dc6b56167434}{check\+Valid\+Movement}} (\mbox{\hyperlink{struct_game}{Game}} $\ast$game)
+\begin{DoxyCompactList}\small\item\em Validates a movement, if it is following a vertical line upwards. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game_8c_a73c38b28f5840b95c9e1b5cd04060319}{reset\+Variables}} (\mbox{\hyperlink{struct_game}{Game}} $\ast$game, int $\ast$timer\+\_\+counter, int $\ast$seconds\+\_\+elapsed, int $\ast$key\+\_\+codes\+\_\+counter)
+\begin{DoxyCompactList}\small\item\em Resets the game variables to their start. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game_8c_a273ad821edce51b0a7229b86dc2aab5e}{draw\+Rtc\+Time}} (\mbox{\hyperlink{struct_game}{Game}} $\ast$game, uint8\+\_\+t $\ast$buffer)
+\item 
+void \mbox{\hyperlink{game_8c_a954762f0594d1047f59151c4832a6927}{update\+Time\+Sprites}} (\mbox{\hyperlink{struct_game}{Game}} $\ast$game, \mbox{\hyperlink{struct_date}{Date}} $\ast$date)
+\begin{DoxyCompactList}\small\item\em Updates the time\+Sprite with the date given as argument. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{game_8c_adcc4fc389d1d01a3ccb00aa3e3685483}{kb\+\_\+data}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{game_8c_aa609298e312c52ae74a53ac6c8274fd3}{mouse\+\_\+data}}
+\item 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{game_8c_a1e6304079d2ed39f1e942020ed2c2bb5}{mapped\+\_\+mem}}
+\item 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{game_8c_a1092abeeed1ddbd3a82b648585d6cd84}{mapped\+\_\+mem2}}
+\item 
+float \mbox{\hyperlink{game_8c_a5c01fe51341743fe512f69a4cc36b650}{prev\+MouseX}}
+\item 
+float \mbox{\hyperlink{game_8c_a9ecad1ae7f0e7e940a9e72424c1b895a}{prev\+MouseY}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{game_8c_abcfd925961ff79b871c3a3f9b449e9d9}{uart\+Send}} = 0
+\item 
+uint8\+\_\+t \mbox{\hyperlink{game_8c_afacfea9341fb57b51162708d3ebd244b}{uart\+Receive}} = 0
+\item 
+uint8\+\_\+t \mbox{\hyperlink{game_8c_af7c5cf386daf55d00108cdfbeb327644}{received\+Score}} = 0
+\item 
+uint8\+\_\+t \mbox{\hyperlink{game_8c_af1d1a47b4bb3f0983450a9f0569e0641}{curr\+Score}} = 0
+\item 
+int \mbox{\hyperlink{game_8c_a4159103e5c98de8b0b40bdaa0d35b22d}{uart\+Counter}} = \mbox{\hyperlink{uart_8h_a51c78220ce486ddf17965b25acbc4b4d}{U\+A\+R\+T\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+T\+I\+ME}}
+\item 
+\mbox{\hyperlink{struct_date}{Date}} \mbox{\hyperlink{game_8c_ab16240514dfa222811ef2fb14a72d4a8}{start\+Date}}
+\item 
+\mbox{\hyperlink{struct_date}{Date}} \mbox{\hyperlink{game_8c_ac342ae2125b437a76ece3ac962e0d9a3}{end\+Date}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{game_8c_aca67dfe717203bac33a082e4f1b84348}\label{game_8c_aca67dfe717203bac33a082e4f1b84348}} 
+\index{game.c@{game.c}!checkClick@{checkClick}}
+\index{checkClick@{checkClick}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{checkClick()}{checkClick()}}
+{\footnotesize\ttfamily bool check\+Click (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$}]{sp,  }\item[{struct packet $\ast$}]{packet,  }\item[{int}]{x0,  }\item[{int}]{x1,  }\item[{int}]{y0,  }\item[{int}]{y1 }\end{DoxyParamCaption})}
+
+Check if the user click on left mouse button and the cursor x is between x0,x1 and cursor y between y0,y1 \mbox{\Hypertarget{game_8c_ad5636bd381f117c6d575dc6b56167434}\label{game_8c_ad5636bd381f117c6d575dc6b56167434}} 
+\index{game.c@{game.c}!checkValidMovement@{checkValidMovement}}
+\index{checkValidMovement@{checkValidMovement}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{checkValidMovement()}{checkValidMovement()}}
+{\footnotesize\ttfamily bool check\+Valid\+Movement (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game}{Game}} $\ast$}]{game }\end{DoxyParamCaption})}
+
+
+
+Validates a movement, if it is following a vertical line upwards. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game_8c_a7cbc607dedd794f4e9b0160e3f2506c2}\label{game_8c_a7cbc607dedd794f4e9b0160e3f2506c2}} 
+\index{game.c@{game.c}!choose\_your\_destiny@{choose\_your\_destiny}}
+\index{choose\_your\_destiny@{choose\_your\_destiny}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{choose\_your\_destiny()}{choose\_your\_destiny()}}
+{\footnotesize\ttfamily int choose\+\_\+your\+\_\+destiny (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game}{Game}} $\ast$}]{game }\end{DoxyParamCaption})}
+
+
+
+Main loop of the game. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{game_8c_a7cbc607dedd794f4e9b0160e3f2506c2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8c_a99a0e4f1133c87e87fd270a7ebe06b8d}\label{game_8c_a99a0e4f1133c87e87fd270a7ebe06b8d}} 
+\index{game.c@{game.c}!drawCursorPositions@{drawCursorPositions}}
+\index{drawCursorPositions@{drawCursorPositions}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{drawCursorPositions()}{drawCursorPositions()}}
+{\footnotesize\ttfamily void draw\+Cursor\+Positions (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game}{Game}} $\ast$}]{game,  }\item[{uint32\+\_\+t}]{color,  }\item[{uint8\+\_\+t $\ast$}]{aux\+\_\+buffer }\end{DoxyParamCaption})}
+
+
+
+Draws on the buffer the positions the cursor has travelled to. 
+
+Only works with C\+O\+L\+OR M\+O\+D\+ES 8\+\_\+8\+\_\+8\+\_\+8
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & \\
+\hline
+{\em color} & \\
+\hline
+{\em aux\+\_\+buffer} & \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=343pt]{game_8c_a99a0e4f1133c87e87fd270a7ebe06b8d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8c_a273ad821edce51b0a7229b86dc2aab5e}\label{game_8c_a273ad821edce51b0a7229b86dc2aab5e}} 
+\index{game.c@{game.c}!drawRtcTime@{drawRtcTime}}
+\index{drawRtcTime@{drawRtcTime}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{drawRtcTime()}{drawRtcTime()}}
+{\footnotesize\ttfamily void draw\+Rtc\+Time (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game}{Game}} $\ast$}]{game,  }\item[{uint8\+\_\+t $\ast$}]{buffer }\end{DoxyParamCaption})}
+
+Displays the time on the screen (h/m/s format) Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8c_a273ad821edce51b0a7229b86dc2aab5e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8c_ac83a816fc365d338a51abcbadc6bbacc}\label{game_8c_ac83a816fc365d338a51abcbadc6bbacc}} 
+\index{game.c@{game.c}!paintMouseMovement@{paintMouseMovement}}
+\index{paintMouseMovement@{paintMouseMovement}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{paintMouseMovement()}{paintMouseMovement()}}
+{\footnotesize\ttfamily int paint\+Mouse\+Movement (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game}{Game}} $\ast$}]{game,  }\item[{struct packet $\ast$}]{packet }\end{DoxyParamCaption})}
+
+
+
+Cheks if the mouse movement is valid and updates variables. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & \\
+\hline
+{\em packet} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game_8c_a73c38b28f5840b95c9e1b5cd04060319}\label{game_8c_a73c38b28f5840b95c9e1b5cd04060319}} 
+\index{game.c@{game.c}!resetVariables@{resetVariables}}
+\index{resetVariables@{resetVariables}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{resetVariables()}{resetVariables()}}
+{\footnotesize\ttfamily void reset\+Variables (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game}{Game}} $\ast$}]{game,  }\item[{int $\ast$}]{timer\+\_\+counter,  }\item[{int $\ast$}]{seconds\+\_\+elapsed,  }\item[{int $\ast$}]{key\+\_\+codes\+\_\+counter }\end{DoxyParamCaption})}
+
+
+
+Resets the game variables to their start. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & \\
+\hline
+{\em timer\+\_\+counter} & \\
+\hline
+{\em seconds\+\_\+elapsed} & \\
+\hline
+{\em key\+\_\+codes\+\_\+counter} & \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{game_8c_a73c38b28f5840b95c9e1b5cd04060319_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8c_aefcf067809e26c01e5413d61140295e9}\label{game_8c_aefcf067809e26c01e5413d61140295e9}} 
+\index{game.c@{game.c}!setupSprites@{setupSprites}}
+\index{setupSprites@{setupSprites}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{setupSprites()}{setupSprites()}}
+{\footnotesize\ttfamily void setup\+Sprites (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game}{Game}} $\ast$}]{game }\end{DoxyParamCaption})}
+
+
+
+Initialization functions that creates all the needed sprites and some variables. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8c_aefcf067809e26c01e5413d61140295e9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8c_adff2210798ae43e37c32d66d8b589c10}\label{game_8c_adff2210798ae43e37c32d66d8b589c10}} 
+\index{game.c@{game.c}!updateMouseSpritePosition@{updateMouseSpritePosition}}
+\index{updateMouseSpritePosition@{updateMouseSpritePosition}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{updateMouseSpritePosition()}{updateMouseSpritePosition()}}
+{\footnotesize\ttfamily void update\+Mouse\+Sprite\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game}{Game}} $\ast$}]{game,  }\item[{struct packet $\ast$}]{packet }\end{DoxyParamCaption})}
+
+
+
+Updates the cursor position based on the packets received from the mouse. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & \\
+\hline
+{\em packet} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{game_8c_a954762f0594d1047f59151c4832a6927}\label{game_8c_a954762f0594d1047f59151c4832a6927}} 
+\index{game.c@{game.c}!updateTimeSprites@{updateTimeSprites}}
+\index{updateTimeSprites@{updateTimeSprites}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{updateTimeSprites()}{updateTimeSprites()}}
+{\footnotesize\ttfamily void update\+Time\+Sprites (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game}{Game}} $\ast$}]{game,  }\item[{\mbox{\hyperlink{struct_date}{Date}} $\ast$}]{date }\end{DoxyParamCaption})}
+
+
+
+Updates the time\+Sprite with the date given as argument. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & \\
+\hline
+{\em date} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{game_8c_af1d1a47b4bb3f0983450a9f0569e0641}\label{game_8c_af1d1a47b4bb3f0983450a9f0569e0641}} 
+\index{game.c@{game.c}!currScore@{currScore}}
+\index{currScore@{currScore}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{currScore}{currScore}}
+{\footnotesize\ttfamily uint8\+\_\+t curr\+Score = 0}
+
+\mbox{\Hypertarget{game_8c_ac342ae2125b437a76ece3ac962e0d9a3}\label{game_8c_ac342ae2125b437a76ece3ac962e0d9a3}} 
+\index{game.c@{game.c}!endDate@{endDate}}
+\index{endDate@{endDate}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{endDate}{endDate}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_date}{Date}} end\+Date}
+
+\mbox{\Hypertarget{game_8c_adcc4fc389d1d01a3ccb00aa3e3685483}\label{game_8c_adcc4fc389d1d01a3ccb00aa3e3685483}} 
+\index{game.c@{game.c}!kb\_data@{kb\_data}}
+\index{kb\_data@{kb\_data}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{kb\_data}{kb\_data}}
+{\footnotesize\ttfamily uint8\+\_\+t kb\+\_\+data\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{game_8c_a1e6304079d2ed39f1e942020ed2c2bb5}\label{game_8c_a1e6304079d2ed39f1e942020ed2c2bb5}} 
+\index{game.c@{game.c}!mapped\_mem@{mapped\_mem}}
+\index{mapped\_mem@{mapped\_mem}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{mapped\_mem}{mapped\_mem}}
+{\footnotesize\ttfamily uint8\+\_\+t$\ast$ mapped\+\_\+mem\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{game_8c_a1092abeeed1ddbd3a82b648585d6cd84}\label{game_8c_a1092abeeed1ddbd3a82b648585d6cd84}} 
+\index{game.c@{game.c}!mapped\_mem2@{mapped\_mem2}}
+\index{mapped\_mem2@{mapped\_mem2}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{mapped\_mem2}{mapped\_mem2}}
+{\footnotesize\ttfamily uint8\+\_\+t $\ast$ mapped\+\_\+mem2}
+
+\mbox{\Hypertarget{game_8c_aa609298e312c52ae74a53ac6c8274fd3}\label{game_8c_aa609298e312c52ae74a53ac6c8274fd3}} 
+\index{game.c@{game.c}!mouse\_data@{mouse\_data}}
+\index{mouse\_data@{mouse\_data}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{mouse\_data}{mouse\_data}}
+{\footnotesize\ttfamily uint8\+\_\+t mouse\+\_\+data}
+
+\mbox{\Hypertarget{game_8c_a5c01fe51341743fe512f69a4cc36b650}\label{game_8c_a5c01fe51341743fe512f69a4cc36b650}} 
+\index{game.c@{game.c}!prevMouseX@{prevMouseX}}
+\index{prevMouseX@{prevMouseX}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{prevMouseX}{prevMouseX}}
+{\footnotesize\ttfamily float prev\+MouseX}
+
+\mbox{\Hypertarget{game_8c_a9ecad1ae7f0e7e940a9e72424c1b895a}\label{game_8c_a9ecad1ae7f0e7e940a9e72424c1b895a}} 
+\index{game.c@{game.c}!prevMouseY@{prevMouseY}}
+\index{prevMouseY@{prevMouseY}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{prevMouseY}{prevMouseY}}
+{\footnotesize\ttfamily float prev\+MouseY}
+
+\mbox{\Hypertarget{game_8c_af7c5cf386daf55d00108cdfbeb327644}\label{game_8c_af7c5cf386daf55d00108cdfbeb327644}} 
+\index{game.c@{game.c}!receivedScore@{receivedScore}}
+\index{receivedScore@{receivedScore}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{receivedScore}{receivedScore}}
+{\footnotesize\ttfamily uint8\+\_\+t received\+Score = 0}
+
+\mbox{\Hypertarget{game_8c_ab16240514dfa222811ef2fb14a72d4a8}\label{game_8c_ab16240514dfa222811ef2fb14a72d4a8}} 
+\index{game.c@{game.c}!startDate@{startDate}}
+\index{startDate@{startDate}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{startDate}{startDate}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_date}{Date}} start\+Date}
+
+\mbox{\Hypertarget{game_8c_a4159103e5c98de8b0b40bdaa0d35b22d}\label{game_8c_a4159103e5c98de8b0b40bdaa0d35b22d}} 
+\index{game.c@{game.c}!uartCounter@{uartCounter}}
+\index{uartCounter@{uartCounter}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{uartCounter}{uartCounter}}
+{\footnotesize\ttfamily int uart\+Counter = \mbox{\hyperlink{uart_8h_a51c78220ce486ddf17965b25acbc4b4d}{U\+A\+R\+T\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+T\+I\+ME}}}
+
+\mbox{\Hypertarget{game_8c_afacfea9341fb57b51162708d3ebd244b}\label{game_8c_afacfea9341fb57b51162708d3ebd244b}} 
+\index{game.c@{game.c}!uartReceive@{uartReceive}}
+\index{uartReceive@{uartReceive}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{uartReceive}{uartReceive}}
+{\footnotesize\ttfamily uint8\+\_\+t uart\+Receive = 0}
+
+\mbox{\Hypertarget{game_8c_abcfd925961ff79b871c3a3f9b449e9d9}\label{game_8c_abcfd925961ff79b871c3a3f9b449e9d9}} 
+\index{game.c@{game.c}!uartSend@{uartSend}}
+\index{uartSend@{uartSend}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{uartSend}{uartSend}}
+{\footnotesize\ttfamily uint8\+\_\+t uart\+Send = 0}
+

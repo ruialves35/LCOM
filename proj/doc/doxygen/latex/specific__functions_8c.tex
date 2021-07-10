@@ -1,0 +1,108 @@
+\hypertarget{specific__functions_8c}{}\doxysection{specific\+\_\+functions.\+c File Reference}
+\label{specific__functions_8c}\index{specific\_functions.c@{specific\_functions.c}}
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}i8042.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}kbc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}specific\+\_\+functions.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+Include dependency graph for specific\+\_\+functions.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{specific__functions_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int() \mbox{\hyperlink{specific__functions_8c_ad95f860c76fffcc5c2c2695dd8d7468f}{kbc\+\_\+sys\+\_\+inb}} (int port, uint8\+\_\+t $\ast$value)
+\item 
+void() \mbox{\hyperlink{specific__functions_8c_aea970a154161a35f6894898a092ed70a}{kbc\+\_\+ih}} ()
+\item 
+void() \mbox{\hyperlink{specific__functions_8c_a61f4ae28611a30e88bbd47ab76b4d6b7}{kbc\+\_\+poll\+\_\+status}} ()
+\item 
+int() \mbox{\hyperlink{specific__functions_8c_a8b0872fcd66f2133f261e343b37a9b66}{mouse\+\_\+sys\+\_\+inb}} (int port, uint8\+\_\+t $\ast$value)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{specific__functions_8c_a5b226f0a4c52f50ed009bf827dd3c277}{kb\+\_\+counter}} = 0
+\item 
+uint8\+\_\+t \mbox{\hyperlink{specific__functions_8c_ae5dc6ffcd9b7605c7787791e40cc6bb0}{size}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{specific__functions_8c_adcc4fc389d1d01a3ccb00aa3e3685483}{kb\+\_\+data}}
+\item 
+bool \mbox{\hyperlink{specific__functions_8c_ad4fc2d544f41a6c2751efb12dd908213}{make}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{specific__functions_8c_aea970a154161a35f6894898a092ed70a}\label{specific__functions_8c_aea970a154161a35f6894898a092ed70a}} 
+\index{specific\_functions.c@{specific\_functions.c}!kbc\_ih@{kbc\_ih}}
+\index{kbc\_ih@{kbc\_ih}!specific\_functions.c@{specific\_functions.c}}
+\doxysubsubsection{\texorpdfstring{kbc\_ih()}{kbc\_ih()}}
+{\footnotesize\ttfamily void() kbc\+\_\+ih (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{specific__functions_8c_aea970a154161a35f6894898a092ed70a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{specific__functions_8c_a61f4ae28611a30e88bbd47ab76b4d6b7}\label{specific__functions_8c_a61f4ae28611a30e88bbd47ab76b4d6b7}} 
+\index{specific\_functions.c@{specific\_functions.c}!kbc\_poll\_status@{kbc\_poll\_status}}
+\index{kbc\_poll\_status@{kbc\_poll\_status}!specific\_functions.c@{specific\_functions.c}}
+\doxysubsubsection{\texorpdfstring{kbc\_poll\_status()}{kbc\_poll\_status()}}
+{\footnotesize\ttfamily void() kbc\+\_\+poll\+\_\+status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+while output buffer is empty, keep iterating until it has a value that will be stored in status Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{specific__functions_8c_a61f4ae28611a30e88bbd47ab76b4d6b7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{specific__functions_8c_ad95f860c76fffcc5c2c2695dd8d7468f}\label{specific__functions_8c_ad95f860c76fffcc5c2c2695dd8d7468f}} 
+\index{specific\_functions.c@{specific\_functions.c}!kbc\_sys\_inb@{kbc\_sys\_inb}}
+\index{kbc\_sys\_inb@{kbc\_sys\_inb}!specific\_functions.c@{specific\_functions.c}}
+\doxysubsubsection{\texorpdfstring{kbc\_sys\_inb()}{kbc\_sys\_inb()}}
+{\footnotesize\ttfamily int() kbc\+\_\+sys\+\_\+inb (\begin{DoxyParamCaption}\item[{int}]{port,  }\item[{uint8\+\_\+t $\ast$}]{value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{specific__functions_8c_a8b0872fcd66f2133f261e343b37a9b66}\label{specific__functions_8c_a8b0872fcd66f2133f261e343b37a9b66}} 
+\index{specific\_functions.c@{specific\_functions.c}!mouse\_sys\_inb@{mouse\_sys\_inb}}
+\index{mouse\_sys\_inb@{mouse\_sys\_inb}!specific\_functions.c@{specific\_functions.c}}
+\doxysubsubsection{\texorpdfstring{mouse\_sys\_inb()}{mouse\_sys\_inb()}}
+{\footnotesize\ttfamily int() mouse\+\_\+sys\+\_\+inb (\begin{DoxyParamCaption}\item[{int}]{port,  }\item[{uint8\+\_\+t $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{specific__functions_8c_a5b226f0a4c52f50ed009bf827dd3c277}\label{specific__functions_8c_a5b226f0a4c52f50ed009bf827dd3c277}} 
+\index{specific\_functions.c@{specific\_functions.c}!kb\_counter@{kb\_counter}}
+\index{kb\_counter@{kb\_counter}!specific\_functions.c@{specific\_functions.c}}
+\doxysubsubsection{\texorpdfstring{kb\_counter}{kb\_counter}}
+{\footnotesize\ttfamily uint32\+\_\+t kb\+\_\+counter = 0}
+
+\mbox{\Hypertarget{specific__functions_8c_adcc4fc389d1d01a3ccb00aa3e3685483}\label{specific__functions_8c_adcc4fc389d1d01a3ccb00aa3e3685483}} 
+\index{specific\_functions.c@{specific\_functions.c}!kb\_data@{kb\_data}}
+\index{kb\_data@{kb\_data}!specific\_functions.c@{specific\_functions.c}}
+\doxysubsubsection{\texorpdfstring{kb\_data}{kb\_data}}
+{\footnotesize\ttfamily uint8\+\_\+t kb\+\_\+data}
+
+\mbox{\Hypertarget{specific__functions_8c_ad4fc2d544f41a6c2751efb12dd908213}\label{specific__functions_8c_ad4fc2d544f41a6c2751efb12dd908213}} 
+\index{specific\_functions.c@{specific\_functions.c}!make@{make}}
+\index{make@{make}!specific\_functions.c@{specific\_functions.c}}
+\doxysubsubsection{\texorpdfstring{make}{make}}
+{\footnotesize\ttfamily bool make}
+
+\mbox{\Hypertarget{specific__functions_8c_ae5dc6ffcd9b7605c7787791e40cc6bb0}\label{specific__functions_8c_ae5dc6ffcd9b7605c7787791e40cc6bb0}} 
+\index{specific\_functions.c@{specific\_functions.c}!size@{size}}
+\index{size@{size}!specific\_functions.c@{specific\_functions.c}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily uint8\+\_\+t size}
+

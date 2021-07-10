@@ -1,0 +1,52 @@
+<map id="proj_main_loop" name="proj_main_loop">
+<area shape="rect" id="node1" title=" " alt="" coords="5,1703,115,1729"/>
+<area shape="rect" id="node2" href="$game_8c.html#a7cbc607dedd794f4e9b0160e3f2506c2" title="Main loop of the game." alt="" coords="163,1145,308,1172"/>
+<area shape="rect" id="node49" href="$vbe_8c.html#a6f3d80d4f03a6331647972f8db8ab6c9" title=" " alt="" coords="172,1728,299,1755"/>
+<area shape="rect" id="node3" href="$anim_sprite_8c.html#a481798d1000ae97ad80dcfcd17f3df76" title=" " alt="" coords="378,411,515,437"/>
+<area shape="rect" id="node5" href="$vbe_8c.html#a1cb8d2f949b208688572ecea7bdd80c1" title=" " alt="" coords="803,360,881,387"/>
+<area shape="rect" id="node6" href="$vbe_8c.html#a2151525935e20e57fc0087ad189d833d" title=" " alt="" coords="803,411,881,437"/>
+<area shape="rect" id="node7" href="$game_8c.html#aca67dfe717203bac33a082e4f1b84348" title=" " alt="" coords="403,715,490,741"/>
+<area shape="rect" id="node8" href="$game_8c.html#ad5636bd381f117c6d575dc6b56167434" title="Validates a movement, if it is following a vertical line upwards." alt="" coords="374,765,519,792"/>
+<area shape="rect" id="node9" href="$sprite_8c.html#a2ef176738adbb3526e7300ad10fdc6cc" title=" " alt="" coords="398,816,495,843"/>
+<area shape="rect" id="node10" href="$queue_8c.html#acc14ce4fa2e4e399059846467cdcebed" title="Aloca memória e cria a Queue." alt="" coords="399,867,495,893"/>
+<area shape="rect" id="node11" href="$anim_sprite_8c.html#a2ae9348124af6a57267c3be86afbf8c7" title=" " alt="" coords="585,461,755,488"/>
+<area shape="rect" id="node12" href="$sprite_8c.html#ad41459c7f6cebf69bf08d7f81b4a1d01" title=" " alt="" coords="609,512,731,539"/>
+<area shape="rect" id="node13" href="$sprite_8c.html#a92557072532e4f8c75e7b8d07670683d" title=" " alt="" coords="615,563,725,589"/>
+<area shape="rect" id="node14" href="$game_8c.html#a99a0e4f1133c87e87fd270a7ebe06b8d" title="Draws on the buffer the positions the cursor has travelled to." alt="" coords="599,208,741,235"/>
+<area shape="rect" id="node15" href="$game_8c.html#a273ad821edce51b0a7229b86dc2aab5e" title=" " alt="" coords="398,613,495,640"/>
+<area shape="rect" id="node16" href="$specific__functions_8c.html#aea970a154161a35f6894898a092ed70a" title=" " alt="" coords="417,917,477,944"/>
+<area shape="rect" id="node17" href="$kbc_8c.html#a178b1db0b319dccad2840cc3fd273132" title=" " alt="" coords="367,968,526,995"/>
+<area shape="rect" id="node18" href="$kbc_8c.html#a32cc4de66854f8a7bd909e7aa8b901ed" title=" " alt="" coords="360,1019,533,1045"/>
+<area shape="rect" id="node19" href="$mouse_8c.html#ac93462fdee1791bdddd06b5ca7e6d0d9" title=" " alt="" coords="383,1069,510,1096"/>
+<area shape="rect" id="node20" href="$mouse_8c.html#ae6e74d2b64d6df5f731ad0aadebc839a" title=" " alt="" coords="385,1120,509,1147"/>
+<area shape="rect" id="node21" href="$mouse_8c.html#a210374b50462acdedab00df64d5cea3c" title=" " alt="" coords="407,1171,486,1197"/>
+<area shape="rect" id="node22" href="$mouse_8c.html#a9073e268415ef6a7a2152f4527d051d4" title="Parses the packet received from the mouse." alt="" coords="365,1221,528,1248"/>
+<area shape="rect" id="node23" href="$mouse_8c.html#a20285aed4b3ef45812cd967532dd09db" title="Subscribes mouse interrupts." alt="" coords="374,1272,519,1299"/>
+<area shape="rect" id="node24" href="$mouse_8c.html#a3ecf823d80520009ae5e0d76ae40a3c3" title="Unsubscribes mouse interrupts." alt="" coords="367,1323,526,1349"/>
+<area shape="rect" id="node25" href="$game_8c.html#ac83a816fc365d338a51abcbadc6bbacc" title="Cheks if the mouse movement is valid and updates variables." alt="" coords="373,1373,521,1400"/>
+<area shape="rect" id="node26" href="$queue_8c.html#ab1f6625e397bfad97b22aa372f0b15e5" title="Verifica se a Queue está vazia." alt="" coords="617,1449,723,1476"/>
+<area shape="rect" id="node27" href="$rtc_8c.html#a93262ca901ff33bfdcf405d1a0212df3" title=" " alt="" coords="621,1551,719,1577"/>
+<area shape="rect" id="node28" href="$queue_8c.html#a71ee47d1b336dc49a3a7c883307ed130" title="Remove um Item da Queue." alt="" coords="381,1475,512,1501"/>
+<area shape="rect" id="node29" href="$game_8c.html#a73c38b28f5840b95c9e1b5cd04060319" title="Resets the game variables to their start." alt="" coords="617,259,723,285"/>
+<area shape="rect" id="node30" href="$rtc_8c.html#ab24206c20ad4073660373189feaad4ca" title="handles rtc interrupt" alt="" coords="419,1576,474,1603"/>
+<area shape="rect" id="node31" href="$rtc_8c.html#a6bbe679f115cec90d36d50eb2aac1b89" title="Subscribes to RTC interrupts." alt="" coords="386,1627,507,1653"/>
+<area shape="rect" id="node32" href="$rtc_8c.html#a9d4850bb2a488644672d43287f160622" title="Unsubscribes the rtc interruptions." alt="" coords="379,1677,514,1704"/>
+<area shape="rect" id="node33" href="$vbe_8c.html#ab0b1692a0719fcd23da377a4e1907638" title=" " alt="" coords="386,1728,507,1755"/>
+<area shape="rect" id="node34" href="$game_8c.html#aefcf067809e26c01e5413d61140295e9" title="Initialization functions that creates all the needed sprites and some variables." alt="" coords="623,309,717,336"/>
+<area shape="rect" id="node35" href="$rtc_8c.html#a889efd9f1f0e4ed85e630336c110b5e3" title="Updates Register B to enable interrupt given as argument." alt="" coords="372,1779,521,1805"/>
+<area shape="rect" id="node36" href="$rtc_8c.html#a1718ff7f55f03d03649bcb205014ebcc" title="Calculate time between 2 dates." alt="" coords="381,1829,512,1856"/>
+<area shape="rect" id="node37" href="$timer_8c.html#ac57a7e1140a7e00ad95ac5488d2a671b" title=" " alt="" coords="379,1880,514,1907"/>
+<area shape="rect" id="node38" href="$timer_8c.html#afabd21de449be154dd65d5fdb2d8045d" title=" " alt="" coords="372,1931,521,1957"/>
+<area shape="rect" id="node39" href="$uart_8c.html#aa4552416dcf7782e19c22002204f66a2" title="ENABLES FIFO, clears Transmitter and Receiver FIFO and sets trigger level." alt="" coords="403,1981,491,2008"/>
+<area shape="rect" id="node40" href="$uart_8c.html#ac359a74525a0c1d17ffd4b57a09b9c24" title=" " alt="" coords="416,2032,477,2059"/>
+<area shape="rect" id="node41" href="$uart_8c.html#a3c1b230231f6f74ab6ba6b396b9ce04e" title="Sends a message through the serial port." alt="" coords="377,2083,516,2109"/>
+<area shape="rect" id="node42" href="$uart_8c.html#a84d7057bb3d3e03a7783efad09c5a095" title="Set the bitrate to the one specified as the argument." alt="" coords="387,2133,506,2160"/>
+<area shape="rect" id="node43" href="$uart_8c.html#abc4203ec358dc25de70dd6dd341f701e" title="changes the line control register byte in accordance to the args (Except BIT 6 and 7)" alt="" coords="395,2184,499,2211"/>
+<area shape="rect" id="node44" href="$uart_8c.html#aa12b7563cba242a7eefc7f1c74cd7483" title="Subscribes interrupts from the serial port." alt="" coords="383,2235,511,2261"/>
+<area shape="rect" id="node45" href="$uart_8c.html#a89beffcfd47d3f718580e8c54d2d9380" title="Unsubscribes interrupts from the serial port." alt="" coords="375,5,518,32"/>
+<area shape="rect" id="node46" href="$game_8c.html#adff2210798ae43e37c32d66d8b589c10" title="Updates the cursor position based on the packets received from the mouse." alt="" coords="356,56,537,83"/>
+<area shape="rect" id="node47" href="$game_8c.html#a954762f0594d1047f59151c4832a6927" title="Updates the timeSprite with the date given as argument." alt="" coords="381,107,512,133"/>
+<area shape="rect" id="node48" href="$vbe_8c.html#ab99f2e54d7a5f33aa7a4ba05f32fa58c" title="Draws a rectangle in desired buffer." alt="" coords="595,360,745,387"/>
+<area shape="rect" id="node4" href="$sprite_8c.html#a89f1990315453247c90b2c0ea575ddc9" title=" " alt="" coords="617,411,723,437"/>
+<area shape="rect" id="node50" href="$vbe_8c.html#a0655e84fd5af3ef2f87a07b58d73b0be" title=" " alt="" coords="377,2285,516,2312"/>
+</map>

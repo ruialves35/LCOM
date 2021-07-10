@@ -1,0 +1,6 @@
+<map id="uart_fifo_send_message" name="uart_fifo_send_message">
+<area shape="rect" id="node1" title="Sends a message through the serial port to the queue." alt="" coords="5,56,168,83"/>
+<area shape="rect" id="node2" href="$queue_8c.html#a3cee3a5d5662c76d3fa1ab3a37dfeb27" title="Devolve o elemento da frente da Queue." alt="" coords="224,5,311,32"/>
+<area shape="rect" id="node3" href="$queue_8c.html#ab1f6625e397bfad97b22aa372f0b15e5" title="Verifica se a Queue está vazia." alt="" coords="367,31,472,57"/>
+<area shape="rect" id="node4" href="$uart_8c.html#a0d2f75bb0c90f1c13bc02036c8669f7e" title="writes in the uart reg given as the arg the byte" alt="" coords="216,107,319,133"/>
+</map>

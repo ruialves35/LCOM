@@ -1,0 +1,41 @@
+LCOM - Theoretical content
+TIMER 
+-------------------
+4 registers:
+ -TIMER0 (0x40) --> Operations: Write lsb or msb bytes
+ -TIMER1	--> Operations: Write lsb or msb bytes
+ -TIMER2	--> Operations: Write lsb or msb bytes
+ -Control(0x43) --> Operations: Write Read Back Command(2MSB are 1, read config of a timer) or Control Word(change config of a timer)
+
+____________________
+
+IRQ BASIC OPERATIONS 
+--------------------
+
+sys_irqsetpolicy(TIMER0_IRQ, IRQ_REENABLE, &timer_hook_id) // TIMER0IRQ is IRQ port and timer_hook_id is an int global variable
+
+(CICLO ESTá NOS SLIDES)
+
+sys_irqrmpolicy(&timer_hook_id)
+
+____________________
+
+KEYBOARD
+--------------------
+
+2 register:
+ -IN_BUF / STATUS_REG --> Operations: When reading, acts as status register. When writing, acts as Input Buffer (takes commands that might have args or return values)
+ -OUT_BUF --> Operations: Reads (return values from commands passed to IN_BUF) or Writes (Args from commands passed to IN_BUF)
+
+For both input and output operations, reading the STATUS_REG(0x64) is needed, to check if there is any parity or timeout
+error, as well as checking if the Input / Output Buffer is full.
+
+Example: To write a new command byte: 
+1. Read the status from STATUS_REG and check if there is no errors
+2. check if Input Buffer(IBF) is full (continue if not full)
+3. (OPTIONAL) Write the command to read the Command byte if you wish to mantain a certain part of the config, 
+then read the status again and check this time if OUT_BUF is full(valid if full), since you will read the command byte from 0x60.
+4. Repeat 1 and 2 and then write the command to write the new Command byte(0x60) to the IN_BUF(0x64)
+5. Write to the OUT_BUF(0x60) the new command byte. (This operation doesn't need to check status, since its only the argument)
+6. DONE :)
+

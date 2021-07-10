@@ -1,0 +1,203 @@
+\hypertarget{rtc_8c}{}\doxysection{rtc.\+c File Reference}
+\label{rtc_8c}\index{rtc.c@{rtc.c}}
+{\ttfamily \#include \char`\"{}rtc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}utils.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include $<$machine/int86.\+h$>$}\newline
+Include dependency graph for rtc.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{rtc_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{rtc_8c_a1a9d7e84980d0db1893045246ca7a026}{write\+R\+TC}} (uint8\+\_\+t \mbox{\hyperlink{trace_8txt_a7000ca3803655ba3fb9231465884d5ed}{addr}})
+\item 
+int \mbox{\hyperlink{rtc_8c_ac8cf78aad3e7e4ad4374d8fb274c439f}{convert\+\_\+bcd\+\_\+to\+\_\+int}} (uint8\+\_\+t value)
+\item 
+int \mbox{\hyperlink{rtc_8c_a93262ca901ff33bfdcf405d1a0212df3}{read\+R\+T\+Cdate}} (\mbox{\hyperlink{struct_date}{Date}} $\ast$date)
+\item 
+int \mbox{\hyperlink{rtc_8c_a10e84c8c44435c757dcf19fed1254bb7}{write\+Rtc\+Data}} (uint8\+\_\+t data)
+\item 
+int \mbox{\hyperlink{rtc_8c_a1bedffa69eaabc0f705509e6722c4790}{read\+Rtc\+Data}} (uint8\+\_\+t $\ast$data)
+\begin{DoxyCompactList}\small\item\em Reads data from the rtc to the var data. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{rtc_8c_a6bbe679f115cec90d36d50eb2aac1b89}{rtc\+\_\+subscribe\+\_\+int}} (uint8\+\_\+t $\ast$bit\+\_\+no)
+\begin{DoxyCompactList}\small\item\em Subscribes to R\+TC interrupts. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{rtc_8c_a9d4850bb2a488644672d43287f160622}{rtc\+\_\+unsubscribe\+\_\+int}} ()
+\begin{DoxyCompactList}\small\item\em Unsubscribes the rtc interruptions. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{rtc_8c_a889efd9f1f0e4ed85e630336c110b5e3}{setup\+Update\+Interrupts}} (\mbox{\hyperlink{rtc_8h_afb28c1e93e4392feb92bba3a13860de6}{interrupts}} int\+Type)
+\begin{DoxyCompactList}\small\item\em Updates Register B to enable interrupt given as argument. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{rtc_8c_ab24206c20ad4073660373189feaad4ca}{rtc\+\_\+ih}} (\mbox{\hyperlink{struct_date}{Date}} $\ast$date)
+\begin{DoxyCompactList}\small\item\em handles rtc interrupt \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{rtc_8c_a1718ff7f55f03d03649bcb205014ebcc}{time\+Between\+Dates}} (\mbox{\hyperlink{struct_date}{Date}} $\ast$d1, \mbox{\hyperlink{struct_date}{Date}} $\ast$d2)
+\begin{DoxyCompactList}\small\item\em Calculate time between 2 dates. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{rtc_8c_a6c52a1d32571a429369253ce7c3a3d7a}{rtc\+\_\+hook\+\_\+id}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{rtc_8c_ac8cf78aad3e7e4ad4374d8fb274c439f}\label{rtc_8c_ac8cf78aad3e7e4ad4374d8fb274c439f}} 
+\index{rtc.c@{rtc.c}!convert\_bcd\_to\_int@{convert\_bcd\_to\_int}}
+\index{convert\_bcd\_to\_int@{convert\_bcd\_to\_int}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{convert\_bcd\_to\_int()}{convert\_bcd\_to\_int()}}
+{\footnotesize\ttfamily int convert\+\_\+bcd\+\_\+to\+\_\+int (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+Convert bcd to int \mbox{\Hypertarget{rtc_8c_a1bedffa69eaabc0f705509e6722c4790}\label{rtc_8c_a1bedffa69eaabc0f705509e6722c4790}} 
+\index{rtc.c@{rtc.c}!readRtcData@{readRtcData}}
+\index{readRtcData@{readRtcData}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{readRtcData()}{readRtcData()}}
+{\footnotesize\ttfamily int read\+Rtc\+Data (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Reads data from the rtc to the var data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{rtc_8c_a1bedffa69eaabc0f705509e6722c4790_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{rtc_8c_a93262ca901ff33bfdcf405d1a0212df3}\label{rtc_8c_a93262ca901ff33bfdcf405d1a0212df3}} 
+\index{rtc.c@{rtc.c}!readRTCdate@{readRTCdate}}
+\index{readRTCdate@{readRTCdate}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{readRTCdate()}{readRTCdate()}}
+{\footnotesize\ttfamily int read\+R\+T\+Cdate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_date}{Date}} $\ast$}]{date }\end{DoxyParamCaption})}
+
+Reads R\+T\+C\+\_\+\+D\+A\+T\+A\+\_\+\+R\+EG to get information Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=287pt]{rtc_8c_a93262ca901ff33bfdcf405d1a0212df3_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{rtc_8c_ab24206c20ad4073660373189feaad4ca}\label{rtc_8c_ab24206c20ad4073660373189feaad4ca}} 
+\index{rtc.c@{rtc.c}!rtc\_ih@{rtc\_ih}}
+\index{rtc\_ih@{rtc\_ih}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{rtc\_ih()}{rtc\_ih()}}
+{\footnotesize\ttfamily void rtc\+\_\+ih (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_date}{Date}} $\ast$}]{date }\end{DoxyParamCaption})}
+
+
+
+handles rtc interrupt 
+
+
+\begin{DoxyParams}{Parameters}
+{\em date} & paramater that will be updated \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rtc_8c_ab24206c20ad4073660373189feaad4ca_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{rtc_8c_a6bbe679f115cec90d36d50eb2aac1b89}\label{rtc_8c_a6bbe679f115cec90d36d50eb2aac1b89}} 
+\index{rtc.c@{rtc.c}!rtc\_subscribe\_int@{rtc\_subscribe\_int}}
+\index{rtc\_subscribe\_int@{rtc\_subscribe\_int}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{rtc\_subscribe\_int()}{rtc\_subscribe\_int()}}
+{\footnotesize\ttfamily int() rtc\+\_\+subscribe\+\_\+int (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{bit\+\_\+no }\end{DoxyParamCaption})}
+
+
+
+Subscribes to R\+TC interrupts. 
+
+\begin{DoxyItemize}
+\item bit\+\_\+no pointer to an 8 bit variable that will hold the bit mask of the rtc irq \begin{DoxyReturn}{Returns}
+returns 0 upon success, 1 otherwise 
+\end{DoxyReturn}
+\end{DoxyItemize}
+\mbox{\Hypertarget{rtc_8c_a9d4850bb2a488644672d43287f160622}\label{rtc_8c_a9d4850bb2a488644672d43287f160622}} 
+\index{rtc.c@{rtc.c}!rtc\_unsubscribe\_int@{rtc\_unsubscribe\_int}}
+\index{rtc\_unsubscribe\_int@{rtc\_unsubscribe\_int}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{rtc\_unsubscribe\_int()}{rtc\_unsubscribe\_int()}}
+{\footnotesize\ttfamily int() rtc\+\_\+unsubscribe\+\_\+int (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Unsubscribes the rtc interruptions. 
+
+\begin{DoxyReturn}{Returns}
+returns 0 upon success, 1 otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rtc_8c_a889efd9f1f0e4ed85e630336c110b5e3}\label{rtc_8c_a889efd9f1f0e4ed85e630336c110b5e3}} 
+\index{rtc.c@{rtc.c}!setupUpdateInterrupts@{setupUpdateInterrupts}}
+\index{setupUpdateInterrupts@{setupUpdateInterrupts}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{setupUpdateInterrupts()}{setupUpdateInterrupts()}}
+{\footnotesize\ttfamily void setup\+Update\+Interrupts (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{rtc_8h_afb28c1e93e4392feb92bba3a13860de6}{interrupts}}}]{int\+Type }\end{DoxyParamCaption})}
+
+
+
+Updates Register B to enable interrupt given as argument. 
+
+\begin{DoxyItemize}
+\item int\+Type type of interrupt to enable \end{DoxyItemize}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rtc_8c_a889efd9f1f0e4ed85e630336c110b5e3_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{rtc_8c_a1718ff7f55f03d03649bcb205014ebcc}\label{rtc_8c_a1718ff7f55f03d03649bcb205014ebcc}} 
+\index{rtc.c@{rtc.c}!timeBetweenDates@{timeBetweenDates}}
+\index{timeBetweenDates@{timeBetweenDates}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{timeBetweenDates()}{timeBetweenDates()}}
+{\footnotesize\ttfamily uint8\+\_\+t time\+Between\+Dates (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_date}{Date}} $\ast$}]{d1,  }\item[{\mbox{\hyperlink{struct_date}{Date}} $\ast$}]{d2 }\end{DoxyParamCaption})}
+
+
+
+Calculate time between 2 dates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d1} & start\+Date \\
+\hline
+{\em d2} & end\+Date \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t time between the 2 dates 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rtc_8c_a1a9d7e84980d0db1893045246ca7a026}\label{rtc_8c_a1a9d7e84980d0db1893045246ca7a026}} 
+\index{rtc.c@{rtc.c}!writeRTC@{writeRTC}}
+\index{writeRTC@{writeRTC}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{writeRTC()}{writeRTC()}}
+{\footnotesize\ttfamily int write\+R\+TC (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{addr }\end{DoxyParamCaption})}
+
+loads R\+TC address Register with the address of the R\+TC register to be accessed Return 0 if success, 1 otherwise \mbox{\Hypertarget{rtc_8c_a10e84c8c44435c757dcf19fed1254bb7}\label{rtc_8c_a10e84c8c44435c757dcf19fed1254bb7}} 
+\index{rtc.c@{rtc.c}!writeRtcData@{writeRtcData}}
+\index{writeRtcData@{writeRtcData}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{writeRtcData()}{writeRtcData()}}
+{\footnotesize\ttfamily int write\+Rtc\+Data (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{data }\end{DoxyParamCaption})}
+
+Writes data to R\+TC data register 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{rtc_8c_a6c52a1d32571a429369253ce7c3a3d7a}\label{rtc_8c_a6c52a1d32571a429369253ce7c3a3d7a}} 
+\index{rtc.c@{rtc.c}!rtc\_hook\_id@{rtc\_hook\_id}}
+\index{rtc\_hook\_id@{rtc\_hook\_id}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{rtc\_hook\_id}{rtc\_hook\_id}}
+{\footnotesize\ttfamily int rtc\+\_\+hook\+\_\+id}
+

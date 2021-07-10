@@ -1,0 +1,5 @@
+<map id="create_animSprite" name="create_animSprite">
+<area shape="rect" id="node1" title="Create a animSprite object." alt="" coords="5,31,132,57"/>
+<area shape="rect" id="node2" href="$sprite_8c.html#ad959e0b1459a62fefc65956f3bac1130" title="Create a sprite object." alt="" coords="183,5,281,32"/>
+<area shape="rect" id="node3" href="$sprite_8c.html#af16c6befaac9ffb673b9e3c798d542ed" title="destroys a sprite object" alt="" coords="180,56,284,83"/>
+</map>

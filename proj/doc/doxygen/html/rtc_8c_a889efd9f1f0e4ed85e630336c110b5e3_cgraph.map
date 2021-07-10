@@ -1,0 +1,7 @@
+<map id="setupUpdateInterrupts" name="setupUpdateInterrupts">
+<area shape="rect" id="node1" title="Updates Register B to enable interrupt given as argument." alt="" coords="5,56,155,83"/>
+<area shape="rect" id="node2" href="$rtc_8c.html#a1bedffa69eaabc0f705509e6722c4790" title="Reads data from the rtc to the var data." alt="" coords="203,5,298,32"/>
+<area shape="rect" id="node4" href="$rtc_8c.html#a1a9d7e84980d0db1893045246ca7a026" title=" " alt="" coords="213,56,288,83"/>
+<area shape="rect" id="node5" href="$rtc_8c.html#a10e84c8c44435c757dcf19fed1254bb7" title=" " alt="" coords="203,107,299,133"/>
+<area shape="rect" id="node3" href="$utils_8c.html#a79a031a8611f5b2d6afa4158e92b0fb4" title=" " alt="" coords="347,5,437,32"/>
+</map>

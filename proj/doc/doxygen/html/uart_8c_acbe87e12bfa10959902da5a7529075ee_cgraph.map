@@ -1,0 +1,5 @@
+<map id="uart_read_message" name="uart_read_message">
+<area shape="rect" id="node1" title="Reads a message through the serial port." alt="" coords="5,5,141,32"/>
+<area shape="rect" id="node2" href="$uart_8c.html#aa62a1fd216f328e78b85e4b27d4627d7" title="Reads from the reg given as argument." alt="" coords="189,5,291,32"/>
+<area shape="rect" id="node3" href="$utils_8c.html#a79a031a8611f5b2d6afa4158e92b0fb4" title=" " alt="" coords="339,5,429,32"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="addToQueue" name="addToQueue">
+<area shape="rect" id="node1" title="Adiciona um Item à Queue." alt="" coords="5,5,100,32"/>
+<area shape="rect" id="node2" href="$queue_8c.html#af4e82852438367eaf3ecdf47887ecb9d" title="Verifica se a Queue está cheia." alt="" coords="148,5,236,32"/>
+</map>

@@ -1,0 +1,437 @@
+\hypertarget{uart_8c}{}\doxysection{uart.\+c File Reference}
+\label{uart_8c}\index{uart.c@{uart.c}}
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include $<$machine/int86.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}queue.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}uart.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}utils.\+h\char`\"{}}\newline
+Include dependency graph for uart.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{uart_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int() \mbox{\hyperlink{uart_8c_aa12b7563cba242a7eefc7f1c74cd7483}{uart\+\_\+subscribe\+\_\+int}} (uint8\+\_\+t $\ast$bit\+\_\+no)
+\begin{DoxyCompactList}\small\item\em Subscribes interrupts from the serial port. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{uart_8c_a89beffcfd47d3f718580e8c54d2d9380}{uart\+\_\+unsubscribe\+\_\+int}} ()
+\begin{DoxyCompactList}\small\item\em Unsubscribes interrupts from the serial port. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{uart_8c_a0d2f75bb0c90f1c13bc02036c8669f7e}{uart\+\_\+write\+\_\+reg}} (uint8\+\_\+t reg\+Num, uint8\+\_\+t byte)
+\begin{DoxyCompactList}\small\item\em writes in the uart reg given as the arg the byte \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{uart_8c_aa62a1fd216f328e78b85e4b27d4627d7}{uart\+\_\+read\+\_\+reg}} (uint8\+\_\+t reg\+Num, uint8\+\_\+t $\ast$variable)
+\begin{DoxyCompactList}\small\item\em Reads from the reg given as argument. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{uart_8c_abc4203ec358dc25de70dd6dd341f701e}{uart\+\_\+setup\+\_\+lcr}} (uint8\+\_\+t word\+Length, uint8\+\_\+t stop\+Bits, \mbox{\hyperlink{uart_8h_a91cea1153e9db030b2a0fba6e7cec8d7}{parity\+Types}} parity)
+\begin{DoxyCompactList}\small\item\em changes the line control register byte in accordance to the args (Except B\+IT 6 and 7) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{uart_8c_ae17156e078d7fc999d700d896c66728d}{uart\+\_\+set\+\_\+dlb}} (bool dlb)
+\begin{DoxyCompactList}\small\item\em Enables divisor latch access on the Line Control Reg. if dlb is true. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{uart_8c_a7884cf6ee38a38305009b533c91822c7}{uart\+\_\+en\+\_\+interrupts}} ()
+\begin{DoxyCompactList}\small\item\em Enables the desired interrupts. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{uart_8c_a84d7057bb3d3e03a7783efad09c5a095}{uart\+\_\+set\+\_\+bit\+\_\+rate}} (int bit\+\_\+rate)
+\begin{DoxyCompactList}\small\item\em Set the bitrate to the one specified as the argument. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{uart_8c_aa4552416dcf7782e19c22002204f66a2}{uart\+\_\+en\+\_\+fifo}} (uint8\+\_\+t trigger\+Level)
+\begin{DoxyCompactList}\small\item\em E\+N\+A\+B\+L\+ES F\+I\+FO, clears Transmitter and Receiver F\+I\+FO and sets trigger level. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{uart_8c_a3c1b230231f6f74ab6ba6b396b9ce04e}{uart\+\_\+send\+\_\+message}} (uint8\+\_\+t message)
+\begin{DoxyCompactList}\small\item\em Sends a message through the serial port. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{uart_8c_acf88516f9aaea06470adbb16ad85c6b6}{uart\+\_\+fifo\+\_\+send\+\_\+message}} (\mbox{\hyperlink{struct_queue}{Queue}} $\ast$queue)
+\begin{DoxyCompactList}\small\item\em Sends a message through the serial port to the queue. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{uart_8c_acbe87e12bfa10959902da5a7529075ee}{uart\+\_\+read\+\_\+message}} (uint8\+\_\+t $\ast$message)
+\begin{DoxyCompactList}\small\item\em Reads a message through the serial port. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{uart_8c_afef5c2a1427c77b83cdeb0c13af971c2}{uart\+\_\+fifo\+\_\+read\+\_\+message}} (\mbox{\hyperlink{struct_queue}{Queue}} $\ast$queue)
+\begin{DoxyCompactList}\small\item\em Reads a message through the serial port and inserts on the queue. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{uart_8c_a89b12c76cc3c9595a88a72ea5d102dec}{uart\+\_\+check\+\_\+send}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the user can send a new message. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{uart_8c_a34d24c101166525cadda68f923b5f1d2}{uart\+\_\+check\+\_\+read}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the user can read a new message. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{uart_8c_ac359a74525a0c1d17ffd4b57a09b9c24}{uart\+\_\+ih}} (\mbox{\hyperlink{struct_queue}{Queue}} $\ast$receiver\+Buffer)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{uart_8c_abcfd925961ff79b871c3a3f9b449e9d9}{uart\+Send}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{uart_8c_afacfea9341fb57b51162708d3ebd244b}{uart\+Receive}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{uart_8c_af7c5cf386daf55d00108cdfbeb327644}{received\+Score}}
+\item 
+int \mbox{\hyperlink{uart_8c_a69e7d4998df04ca9ee6ac04b140df2fd}{uart\+\_\+hook\+\_\+id}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{uart_8c_a34d24c101166525cadda68f923b5f1d2}\label{uart_8c_a34d24c101166525cadda68f923b5f1d2}} 
+\index{uart.c@{uart.c}!uart\_check\_read@{uart\_check\_read}}
+\index{uart\_check\_read@{uart\_check\_read}!uart.c@{uart.c}}
+\doxysubsubsection{\texorpdfstring{uart\_check\_read()}{uart\_check\_read()}}
+{\footnotesize\ttfamily bool uart\+\_\+check\+\_\+read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks if the user can read a new message. 
+
+\begin{DoxyReturn}{Returns}
+true if available, false otherwise 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{uart_8c_a34d24c101166525cadda68f923b5f1d2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{uart_8c_a89b12c76cc3c9595a88a72ea5d102dec}\label{uart_8c_a89b12c76cc3c9595a88a72ea5d102dec}} 
+\index{uart.c@{uart.c}!uart\_check\_send@{uart\_check\_send}}
+\index{uart\_check\_send@{uart\_check\_send}!uart.c@{uart.c}}
+\doxysubsubsection{\texorpdfstring{uart\_check\_send()}{uart\_check\_send()}}
+{\footnotesize\ttfamily bool uart\+\_\+check\+\_\+send (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks if the user can send a new message. 
+
+\begin{DoxyReturn}{Returns}
+true if available, false otherwise 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{uart_8c_a89b12c76cc3c9595a88a72ea5d102dec_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{uart_8c_aa4552416dcf7782e19c22002204f66a2}\label{uart_8c_aa4552416dcf7782e19c22002204f66a2}} 
+\index{uart.c@{uart.c}!uart\_en\_fifo@{uart\_en\_fifo}}
+\index{uart\_en\_fifo@{uart\_en\_fifo}!uart.c@{uart.c}}
+\doxysubsubsection{\texorpdfstring{uart\_en\_fifo()}{uart\_en\_fifo()}}
+{\footnotesize\ttfamily void uart\+\_\+en\+\_\+fifo (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{trigger\+Level }\end{DoxyParamCaption})}
+
+
+
+E\+N\+A\+B\+L\+ES F\+I\+FO, clears Transmitter and Receiver F\+I\+FO and sets trigger level. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em trigger\+Level} & \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{uart_8c_aa4552416dcf7782e19c22002204f66a2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{uart_8c_a7884cf6ee38a38305009b533c91822c7}\label{uart_8c_a7884cf6ee38a38305009b533c91822c7}} 
+\index{uart.c@{uart.c}!uart\_en\_interrupts@{uart\_en\_interrupts}}
+\index{uart\_en\_interrupts@{uart\_en\_interrupts}!uart.c@{uart.c}}
+\doxysubsubsection{\texorpdfstring{uart\_en\_interrupts()}{uart\_en\_interrupts()}}
+{\footnotesize\ttfamily void uart\+\_\+en\+\_\+interrupts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Enables the desired interrupts. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=279pt]{uart_8c_a7884cf6ee38a38305009b533c91822c7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{uart_8c_afef5c2a1427c77b83cdeb0c13af971c2}\label{uart_8c_afef5c2a1427c77b83cdeb0c13af971c2}} 
+\index{uart.c@{uart.c}!uart\_fifo\_read\_message@{uart\_fifo\_read\_message}}
+\index{uart\_fifo\_read\_message@{uart\_fifo\_read\_message}!uart.c@{uart.c}}
+\doxysubsubsection{\texorpdfstring{uart\_fifo\_read\_message()}{uart\_fifo\_read\_message()}}
+{\footnotesize\ttfamily int uart\+\_\+fifo\+\_\+read\+\_\+message (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_queue}{Queue}} $\ast$}]{queue }\end{DoxyParamCaption})}
+
+
+
+Reads a message through the serial port and inserts on the queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em queue} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 0 if succesfull, 1 otherwise 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{uart_8c_afef5c2a1427c77b83cdeb0c13af971c2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{uart_8c_acf88516f9aaea06470adbb16ad85c6b6}\label{uart_8c_acf88516f9aaea06470adbb16ad85c6b6}} 
+\index{uart.c@{uart.c}!uart\_fifo\_send\_message@{uart\_fifo\_send\_message}}
+\index{uart\_fifo\_send\_message@{uart\_fifo\_send\_message}!uart.c@{uart.c}}
+\doxysubsubsection{\texorpdfstring{uart\_fifo\_send\_message()}{uart\_fifo\_send\_message()}}
+{\footnotesize\ttfamily int uart\+\_\+fifo\+\_\+send\+\_\+message (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_queue}{Queue}} $\ast$}]{queue }\end{DoxyParamCaption})}
+
+
+
+Sends a message through the serial port to the queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 0 if succesfull, 1 otherwise 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{uart_8c_acf88516f9aaea06470adbb16ad85c6b6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{uart_8c_ac359a74525a0c1d17ffd4b57a09b9c24}\label{uart_8c_ac359a74525a0c1d17ffd4b57a09b9c24}} 
+\index{uart.c@{uart.c}!uart\_ih@{uart\_ih}}
+\index{uart\_ih@{uart\_ih}!uart.c@{uart.c}}
+\doxysubsubsection{\texorpdfstring{uart\_ih()}{uart\_ih()}}
+{\footnotesize\ttfamily void uart\+\_\+ih (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_queue}{Queue}} $\ast$}]{receiver\+Buffer }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{uart_8c_ac359a74525a0c1d17ffd4b57a09b9c24_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{uart_8c_acbe87e12bfa10959902da5a7529075ee}\label{uart_8c_acbe87e12bfa10959902da5a7529075ee}} 
+\index{uart.c@{uart.c}!uart\_read\_message@{uart\_read\_message}}
+\index{uart\_read\_message@{uart\_read\_message}!uart.c@{uart.c}}
+\doxysubsubsection{\texorpdfstring{uart\_read\_message()}{uart\_read\_message()}}
+{\footnotesize\ttfamily int uart\+\_\+read\+\_\+message (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{message }\end{DoxyParamCaption})}
+
+
+
+Reads a message through the serial port. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 0 if succesfull, 1 otherwise 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{uart_8c_acbe87e12bfa10959902da5a7529075ee_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{uart_8c_aa62a1fd216f328e78b85e4b27d4627d7}\label{uart_8c_aa62a1fd216f328e78b85e4b27d4627d7}} 
+\index{uart.c@{uart.c}!uart\_read\_reg@{uart\_read\_reg}}
+\index{uart\_read\_reg@{uart\_read\_reg}!uart.c@{uart.c}}
+\doxysubsubsection{\texorpdfstring{uart\_read\_reg()}{uart\_read\_reg()}}
+{\footnotesize\ttfamily int uart\+\_\+read\+\_\+reg (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{reg\+Num,  }\item[{uint8\+\_\+t $\ast$}]{variable }\end{DoxyParamCaption})}
+
+
+
+Reads from the reg given as argument. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reg\+Num} & reg where we are going to read from \\
+\hline
+{\em variable} & variable that will store the value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{uart_8c_aa62a1fd216f328e78b85e4b27d4627d7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{uart_8c_a3c1b230231f6f74ab6ba6b396b9ce04e}\label{uart_8c_a3c1b230231f6f74ab6ba6b396b9ce04e}} 
+\index{uart.c@{uart.c}!uart\_send\_message@{uart\_send\_message}}
+\index{uart\_send\_message@{uart\_send\_message}!uart.c@{uart.c}}
+\doxysubsubsection{\texorpdfstring{uart\_send\_message()}{uart\_send\_message()}}
+{\footnotesize\ttfamily int uart\+\_\+send\+\_\+message (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{message }\end{DoxyParamCaption})}
+
+
+
+Sends a message through the serial port. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 0 if succesfull, 1 otherwise 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{uart_8c_a3c1b230231f6f74ab6ba6b396b9ce04e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{uart_8c_a84d7057bb3d3e03a7783efad09c5a095}\label{uart_8c_a84d7057bb3d3e03a7783efad09c5a095}} 
+\index{uart.c@{uart.c}!uart\_set\_bit\_rate@{uart\_set\_bit\_rate}}
+\index{uart\_set\_bit\_rate@{uart\_set\_bit\_rate}!uart.c@{uart.c}}
+\doxysubsubsection{\texorpdfstring{uart\_set\_bit\_rate()}{uart\_set\_bit\_rate()}}
+{\footnotesize\ttfamily void uart\+\_\+set\+\_\+bit\+\_\+rate (\begin{DoxyParamCaption}\item[{int}]{bit\+\_\+rate }\end{DoxyParamCaption})}
+
+
+
+Set the bitrate to the one specified as the argument. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bit\+\_\+rate} & \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{uart_8c_a84d7057bb3d3e03a7783efad09c5a095_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{uart_8c_ae17156e078d7fc999d700d896c66728d}\label{uart_8c_ae17156e078d7fc999d700d896c66728d}} 
+\index{uart.c@{uart.c}!uart\_set\_dlb@{uart\_set\_dlb}}
+\index{uart\_set\_dlb@{uart\_set\_dlb}!uart.c@{uart.c}}
+\doxysubsubsection{\texorpdfstring{uart\_set\_dlb()}{uart\_set\_dlb()}}
+{\footnotesize\ttfamily void uart\+\_\+set\+\_\+dlb (\begin{DoxyParamCaption}\item[{bool}]{dlb }\end{DoxyParamCaption})}
+
+
+
+Enables divisor latch access on the Line Control Reg. if dlb is true. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dlb} & indicates whether to turn dlb on / off \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{uart_8c_ae17156e078d7fc999d700d896c66728d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{uart_8c_abc4203ec358dc25de70dd6dd341f701e}\label{uart_8c_abc4203ec358dc25de70dd6dd341f701e}} 
+\index{uart.c@{uart.c}!uart\_setup\_lcr@{uart\_setup\_lcr}}
+\index{uart\_setup\_lcr@{uart\_setup\_lcr}!uart.c@{uart.c}}
+\doxysubsubsection{\texorpdfstring{uart\_setup\_lcr()}{uart\_setup\_lcr()}}
+{\footnotesize\ttfamily void uart\+\_\+setup\+\_\+lcr (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{word\+Length,  }\item[{uint8\+\_\+t}]{stop\+Bits,  }\item[{\mbox{\hyperlink{uart_8h_a91cea1153e9db030b2a0fba6e7cec8d7}{parity\+Types}}}]{parity }\end{DoxyParamCaption})}
+
+
+
+changes the line control register byte in accordance to the args (Except B\+IT 6 and 7) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em word\+Length} & bits per char \\
+\hline
+{\em stop\+Bits} & nº stop bits \\
+\hline
+{\em parity} & type of parity \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{uart_8c_abc4203ec358dc25de70dd6dd341f701e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{uart_8c_aa12b7563cba242a7eefc7f1c74cd7483}\label{uart_8c_aa12b7563cba242a7eefc7f1c74cd7483}} 
+\index{uart.c@{uart.c}!uart\_subscribe\_int@{uart\_subscribe\_int}}
+\index{uart\_subscribe\_int@{uart\_subscribe\_int}!uart.c@{uart.c}}
+\doxysubsubsection{\texorpdfstring{uart\_subscribe\_int()}{uart\_subscribe\_int()}}
+{\footnotesize\ttfamily int() uart\+\_\+subscribe\+\_\+int (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{bit\+\_\+no }\end{DoxyParamCaption})}
+
+
+
+Subscribes interrupts from the serial port. 
+
+\begin{DoxyItemize}
+\item bit\+\_\+no variable that will hold the bit mask for the identifying interrupts \end{DoxyItemize}
+\mbox{\Hypertarget{uart_8c_a89beffcfd47d3f718580e8c54d2d9380}\label{uart_8c_a89beffcfd47d3f718580e8c54d2d9380}} 
+\index{uart.c@{uart.c}!uart\_unsubscribe\_int@{uart\_unsubscribe\_int}}
+\index{uart\_unsubscribe\_int@{uart\_unsubscribe\_int}!uart.c@{uart.c}}
+\doxysubsubsection{\texorpdfstring{uart\_unsubscribe\_int()}{uart\_unsubscribe\_int()}}
+{\footnotesize\ttfamily int() uart\+\_\+unsubscribe\+\_\+int (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Unsubscribes interrupts from the serial port. 
+
+\mbox{\Hypertarget{uart_8c_a0d2f75bb0c90f1c13bc02036c8669f7e}\label{uart_8c_a0d2f75bb0c90f1c13bc02036c8669f7e}} 
+\index{uart.c@{uart.c}!uart\_write\_reg@{uart\_write\_reg}}
+\index{uart\_write\_reg@{uart\_write\_reg}!uart.c@{uart.c}}
+\doxysubsubsection{\texorpdfstring{uart\_write\_reg()}{uart\_write\_reg()}}
+{\footnotesize\ttfamily int uart\+\_\+write\+\_\+reg (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{reg\+Num,  }\item[{uint8\+\_\+t}]{byte }\end{DoxyParamCaption})}
+
+
+
+writes in the uart reg given as the arg the byte 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reg\+Num} & reg where we are going to write \\
+\hline
+{\em byte} & byte to write \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{uart_8c_af7c5cf386daf55d00108cdfbeb327644}\label{uart_8c_af7c5cf386daf55d00108cdfbeb327644}} 
+\index{uart.c@{uart.c}!receivedScore@{receivedScore}}
+\index{receivedScore@{receivedScore}!uart.c@{uart.c}}
+\doxysubsubsection{\texorpdfstring{receivedScore}{receivedScore}}
+{\footnotesize\ttfamily uint8\+\_\+t received\+Score\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{uart_8c_a69e7d4998df04ca9ee6ac04b140df2fd}\label{uart_8c_a69e7d4998df04ca9ee6ac04b140df2fd}} 
+\index{uart.c@{uart.c}!uart\_hook\_id@{uart\_hook\_id}}
+\index{uart\_hook\_id@{uart\_hook\_id}!uart.c@{uart.c}}
+\doxysubsubsection{\texorpdfstring{uart\_hook\_id}{uart\_hook\_id}}
+{\footnotesize\ttfamily int uart\+\_\+hook\+\_\+id}
+
+\mbox{\Hypertarget{uart_8c_afacfea9341fb57b51162708d3ebd244b}\label{uart_8c_afacfea9341fb57b51162708d3ebd244b}} 
+\index{uart.c@{uart.c}!uartReceive@{uartReceive}}
+\index{uartReceive@{uartReceive}!uart.c@{uart.c}}
+\doxysubsubsection{\texorpdfstring{uartReceive}{uartReceive}}
+{\footnotesize\ttfamily uint8\+\_\+t uart\+Receive\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{uart_8c_abcfd925961ff79b871c3a3f9b449e9d9}\label{uart_8c_abcfd925961ff79b871c3a3f9b449e9d9}} 
+\index{uart.c@{uart.c}!uartSend@{uartSend}}
+\index{uartSend@{uartSend}!uart.c@{uart.c}}
+\doxysubsubsection{\texorpdfstring{uartSend}{uartSend}}
+{\footnotesize\ttfamily uint8\+\_\+t uart\+Send\hspace{0.3cm}{\ttfamily [extern]}}
+

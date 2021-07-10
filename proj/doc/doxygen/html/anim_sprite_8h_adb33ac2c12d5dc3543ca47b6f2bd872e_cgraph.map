@@ -1,0 +1,8 @@
+<map id="draw_animated_sprite" name="draw_animated_sprite">
+<area shape="rect" id="node1" title=" " alt="" coords="5,81,153,108"/>
+<area shape="rect" id="node2" href="$anim_sprite_8c.html#a2ae9348124af6a57267c3be86afbf8c7" title=" " alt="" coords="201,81,371,108"/>
+<area shape="rect" id="node3" href="$vbe__utils_8c.html#a1c8a2e27d94c35040f9fd915639c957a" title="calculates size in bytes, given the size in bits" alt="" coords="419,5,580,32"/>
+<area shape="rect" id="node4" href="$vbe_8c.html#a29911e110d87d372e97e0676d2768c95" title=" " alt="" coords="436,56,563,83"/>
+<area shape="rect" id="node5" href="$vbe_8c.html#a1cb8d2f949b208688572ecea7bdd80c1" title=" " alt="" coords="460,107,539,133"/>
+<area shape="rect" id="node6" href="$vbe_8c.html#a2151525935e20e57fc0087ad189d833d" title=" " alt="" coords="460,157,539,184"/>
+</map>

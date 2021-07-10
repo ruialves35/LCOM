@@ -1,0 +1,4 @@
+<map id="queueFront" name="queueFront">
+<area shape="rect" id="node1" title="Devolve o elemento da frente da Queue." alt="" coords="5,5,92,32"/>
+<area shape="rect" id="node2" href="$queue_8c.html#ab1f6625e397bfad97b22aa372f0b15e5" title="Verifica se a Queue está vazia." alt="" coords="140,5,245,32"/>
+</map>

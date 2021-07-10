@@ -1,0 +1,186 @@
+\hypertarget{sprite_8c}{}\doxysection{sprite.\+c File Reference}
+\label{sprite_8c}\index{sprite.c@{sprite.c}}
+{\ttfamily \#include $<$lcom/lab5.\+h$>$}\newline
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include $<$machine/int86.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}game.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sprite.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}vbe.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}vbe\+\_\+utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}vc\+Macros.\+h\char`\"{}}\newline
+Include dependency graph for sprite.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{sprite_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$ \mbox{\hyperlink{sprite_8c_ad959e0b1459a62fefc65956f3bac1130}{create\+\_\+sprite}} (xpm\+\_\+map\+\_\+t xpm, int x, int y, int xspeed, int yspeed, enum xpm\+\_\+image\+\_\+type type)
+\begin{DoxyCompactList}\small\item\em Create a sprite object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sprite_8c_af16c6befaac9ffb673b9e3c798d542ed}{destroy\+\_\+sprite}} (\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$sp)
+\begin{DoxyCompactList}\small\item\em destroys a sprite object \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{sprite_8c_a89f1990315453247c90b2c0ea575ddc9}{animate\+\_\+sprite}} (\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$sp)
+\item 
+void \mbox{\hyperlink{sprite_8c_a740994f8c16c38bf18eaabac1f5eeeb9}{draw\+\_\+sprite}} (\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$sp)
+\item 
+void \mbox{\hyperlink{sprite_8c_a92557072532e4f8c75e7b8d07670683d}{draw\+\_\+sprite\+\_\+on}} (\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$sp, uint8\+\_\+t $\ast$buffer)
+\item 
+void \mbox{\hyperlink{sprite_8c_a47ce0b6689091a5276ccb9e6e76385b9}{draw\+\_\+sprite\+\_\+without\+\_\+transparency}} (\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$sp, uint8\+\_\+t $\ast$buffer)
+\item 
+void \mbox{\hyperlink{sprite_8c_ad41459c7f6cebf69bf08d7f81b4a1d01}{draw\+\_\+background}} (\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$sp, uint8\+\_\+t $\ast$buffer)
+\item 
+void \mbox{\hyperlink{sprite_8c_a2ef176738adbb3526e7300ad10fdc6cc}{copy\+Position}} (\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$sp1, \mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$sp2)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{sprite_8c_a1e6304079d2ed39f1e942020ed2c2bb5}{mapped\+\_\+mem}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{sprite_8c_a7cb4a54ac15920e2e23a0ee1d91664bf}{mapped\+\_\+mem2}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{sprite_8c_a89f1990315453247c90b2c0ea575ddc9}\label{sprite_8c_a89f1990315453247c90b2c0ea575ddc9}} 
+\index{sprite.c@{sprite.c}!animate\_sprite@{animate\_sprite}}
+\index{animate\_sprite@{animate\_sprite}!sprite.c@{sprite.c}}
+\doxysubsubsection{\texorpdfstring{animate\_sprite()}{animate\_sprite()}}
+{\footnotesize\ttfamily int animate\+\_\+sprite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$}]{sp }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+0 if it didn\textquotesingle{}t reach the end of the animation, 1 otherwise 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{sprite_8c_a89f1990315453247c90b2c0ea575ddc9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{sprite_8c_a2ef176738adbb3526e7300ad10fdc6cc}\label{sprite_8c_a2ef176738adbb3526e7300ad10fdc6cc}} 
+\index{sprite.c@{sprite.c}!copyPosition@{copyPosition}}
+\index{copyPosition@{copyPosition}!sprite.c@{sprite.c}}
+\doxysubsubsection{\texorpdfstring{copyPosition()}{copyPosition()}}
+{\footnotesize\ttfamily void copy\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$}]{sp1,  }\item[{\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$}]{sp2 }\end{DoxyParamCaption})}
+
+Copies sp1 pos to sp2 \mbox{\Hypertarget{sprite_8c_ad959e0b1459a62fefc65956f3bac1130}\label{sprite_8c_ad959e0b1459a62fefc65956f3bac1130}} 
+\index{sprite.c@{sprite.c}!create\_sprite@{create\_sprite}}
+\index{create\_sprite@{create\_sprite}!sprite.c@{sprite.c}}
+\doxysubsubsection{\texorpdfstring{create\_sprite()}{create\_sprite()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_sprite}{Sprite}}$\ast$ create\+\_\+sprite (\begin{DoxyParamCaption}\item[{xpm\+\_\+map\+\_\+t}]{xpm,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{xspeed,  }\item[{int}]{yspeed,  }\item[{enum xpm\+\_\+image\+\_\+type}]{type }\end{DoxyParamCaption})}
+
+
+
+Create a sprite object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xpm} & pixmap \\
+\hline
+{\em x} & x coord \\
+\hline
+{\em y} & y coord \\
+\hline
+{\em xspeed} & speed on the x axis \\
+\hline
+{\em yspeed} & speed on the y axis \\
+\hline
+{\em type} & color mode \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Sprite$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{sprite_8c_af16c6befaac9ffb673b9e3c798d542ed}\label{sprite_8c_af16c6befaac9ffb673b9e3c798d542ed}} 
+\index{sprite.c@{sprite.c}!destroy\_sprite@{destroy\_sprite}}
+\index{destroy\_sprite@{destroy\_sprite}!sprite.c@{sprite.c}}
+\doxysubsubsection{\texorpdfstring{destroy\_sprite()}{destroy\_sprite()}}
+{\footnotesize\ttfamily void destroy\+\_\+sprite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$}]{sp }\end{DoxyParamCaption})}
+
+
+
+destroys a sprite object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sp} & sprite to be destroyed \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{sprite_8c_ad41459c7f6cebf69bf08d7f81b4a1d01}\label{sprite_8c_ad41459c7f6cebf69bf08d7f81b4a1d01}} 
+\index{sprite.c@{sprite.c}!draw\_background@{draw\_background}}
+\index{draw\_background@{draw\_background}!sprite.c@{sprite.c}}
+\doxysubsubsection{\texorpdfstring{draw\_background()}{draw\_background()}}
+{\footnotesize\ttfamily void draw\+\_\+background (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$}]{sp,  }\item[{uint8\+\_\+t $\ast$}]{buffer }\end{DoxyParamCaption})}
+
+Draws a background by simply copying the whole buffer to V\+R\+AM Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=329pt]{sprite_8c_ad41459c7f6cebf69bf08d7f81b4a1d01_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{sprite_8c_a740994f8c16c38bf18eaabac1f5eeeb9}\label{sprite_8c_a740994f8c16c38bf18eaabac1f5eeeb9}} 
+\index{sprite.c@{sprite.c}!draw\_sprite@{draw\_sprite}}
+\index{draw\_sprite@{draw\_sprite}!sprite.c@{sprite.c}}
+\doxysubsubsection{\texorpdfstring{draw\_sprite()}{draw\_sprite()}}
+{\footnotesize\ttfamily void draw\+\_\+sprite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$}]{sp }\end{DoxyParamCaption})}
+
+Draws the pixmap directly on the V\+R\+AM, by updating the mapped\+\_\+mem Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{sprite_8c_a740994f8c16c38bf18eaabac1f5eeeb9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{sprite_8c_a92557072532e4f8c75e7b8d07670683d}\label{sprite_8c_a92557072532e4f8c75e7b8d07670683d}} 
+\index{sprite.c@{sprite.c}!draw\_sprite\_on@{draw\_sprite\_on}}
+\index{draw\_sprite\_on@{draw\_sprite\_on}!sprite.c@{sprite.c}}
+\doxysubsubsection{\texorpdfstring{draw\_sprite\_on()}{draw\_sprite\_on()}}
+{\footnotesize\ttfamily void draw\+\_\+sprite\+\_\+on (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$}]{sp,  }\item[{uint8\+\_\+t $\ast$}]{buffer }\end{DoxyParamCaption})}
+
+Draws the pixmap on the buffer specified in its argument Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{sprite_8c_a92557072532e4f8c75e7b8d07670683d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{sprite_8c_a47ce0b6689091a5276ccb9e6e76385b9}\label{sprite_8c_a47ce0b6689091a5276ccb9e6e76385b9}} 
+\index{sprite.c@{sprite.c}!draw\_sprite\_without\_transparency@{draw\_sprite\_without\_transparency}}
+\index{draw\_sprite\_without\_transparency@{draw\_sprite\_without\_transparency}!sprite.c@{sprite.c}}
+\doxysubsubsection{\texorpdfstring{draw\_sprite\_without\_transparency()}{draw\_sprite\_without\_transparency()}}
+{\footnotesize\ttfamily void draw\+\_\+sprite\+\_\+without\+\_\+transparency (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$}]{sp,  }\item[{uint8\+\_\+t $\ast$}]{buffer }\end{DoxyParamCaption})}
+
+Draws a pixmap faster, by using memcpy on each row (no need to check transparency) Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=339pt]{sprite_8c_a47ce0b6689091a5276ccb9e6e76385b9_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{sprite_8c_a1e6304079d2ed39f1e942020ed2c2bb5}\label{sprite_8c_a1e6304079d2ed39f1e942020ed2c2bb5}} 
+\index{sprite.c@{sprite.c}!mapped\_mem@{mapped\_mem}}
+\index{mapped\_mem@{mapped\_mem}!sprite.c@{sprite.c}}
+\doxysubsubsection{\texorpdfstring{mapped\_mem}{mapped\_mem}}
+{\footnotesize\ttfamily uint8\+\_\+t$\ast$ mapped\+\_\+mem\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{sprite_8c_a7cb4a54ac15920e2e23a0ee1d91664bf}\label{sprite_8c_a7cb4a54ac15920e2e23a0ee1d91664bf}} 
+\index{sprite.c@{sprite.c}!mapped\_mem2@{mapped\_mem2}}
+\index{mapped\_mem2@{mapped\_mem2}!sprite.c@{sprite.c}}
+\doxysubsubsection{\texorpdfstring{mapped\_mem2}{mapped\_mem2}}
+{\footnotesize\ttfamily uint8\+\_\+t mapped\+\_\+mem2}
+

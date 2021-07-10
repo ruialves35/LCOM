@@ -1,0 +1,201 @@
+\hypertarget{queue_8h}{}\doxysection{queue.\+h File Reference}
+\label{queue_8h}\index{queue.h@{queue.h}}
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+Include dependency graph for queue.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=139pt]{queue_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=269pt]{queue_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_queue}{Queue}}
+\begin{DoxyCompactList}\small\item\em Struct relativa à Transmissão/\+Receção de Informação da Serial Port. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_queue}{Queue}} $\ast$ \mbox{\hyperlink{queue_8h_acc14ce4fa2e4e399059846467cdcebed}{create\+Queue}} (unsigned capacity)
+\begin{DoxyCompactList}\small\item\em Aloca memória e cria a \mbox{\hyperlink{struct_queue}{Queue}}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{queue_8h_af4e82852438367eaf3ecdf47887ecb9d}{queue\+Is\+Full}} (\mbox{\hyperlink{struct_queue}{Queue}} $\ast$queue)
+\begin{DoxyCompactList}\small\item\em Verifica se a \mbox{\hyperlink{struct_queue}{Queue}} está cheia. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{queue_8h_ab1f6625e397bfad97b22aa372f0b15e5}{queue\+Is\+Empty}} (\mbox{\hyperlink{struct_queue}{Queue}} $\ast$queue)
+\begin{DoxyCompactList}\small\item\em Verifica se a \mbox{\hyperlink{struct_queue}{Queue}} está vazia. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{queue_8h_ae63457f729849c954e9c9842571c982b}{add\+To\+Queue}} (\mbox{\hyperlink{struct_queue}{Queue}} $\ast$queue, uint8\+\_\+t item)
+\begin{DoxyCompactList}\small\item\em Adiciona um Item à \mbox{\hyperlink{struct_queue}{Queue}}. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{queue_8h_a71ee47d1b336dc49a3a7c883307ed130}{remove\+From\+Queue}} (\mbox{\hyperlink{struct_queue}{Queue}} $\ast$queue)
+\begin{DoxyCompactList}\small\item\em Remove um Item da \mbox{\hyperlink{struct_queue}{Queue}}. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{queue_8h_a3cee3a5d5662c76d3fa1ab3a37dfeb27}{queue\+Front}} (\mbox{\hyperlink{struct_queue}{Queue}} $\ast$queue)
+\begin{DoxyCompactList}\small\item\em Devolve o elemento da frente da \mbox{\hyperlink{struct_queue}{Queue}}. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{queue_8h_a1b46405b2ca2844c6fb569d41aa8f40f}{queue\+Rear}} (\mbox{\hyperlink{struct_queue}{Queue}} $\ast$queue)
+\begin{DoxyCompactList}\small\item\em Devolve o último elemento da \mbox{\hyperlink{struct_queue}{Queue}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{queue_8h_ae63457f729849c954e9c9842571c982b}\label{queue_8h_ae63457f729849c954e9c9842571c982b}} 
+\index{queue.h@{queue.h}!addToQueue@{addToQueue}}
+\index{addToQueue@{addToQueue}!queue.h@{queue.h}}
+\doxysubsubsection{\texorpdfstring{addToQueue()}{addToQueue()}}
+{\footnotesize\ttfamily void add\+To\+Queue (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_queue}{Queue}} $\ast$}]{queue,  }\item[{uint8\+\_\+t}]{item }\end{DoxyParamCaption})}
+
+
+
+Adiciona um Item à \mbox{\hyperlink{struct_queue}{Queue}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em queue} & \mbox{\hyperlink{struct_queue}{Queue}} à qual se vai adicionar o Item \\
+\hline
+{\em item} & Item a adicionar à \mbox{\hyperlink{struct_queue}{Queue}} \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{queue_8h_ae63457f729849c954e9c9842571c982b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{queue_8h_acc14ce4fa2e4e399059846467cdcebed}\label{queue_8h_acc14ce4fa2e4e399059846467cdcebed}} 
+\index{queue.h@{queue.h}!createQueue@{createQueue}}
+\index{createQueue@{createQueue}!queue.h@{queue.h}}
+\doxysubsubsection{\texorpdfstring{createQueue()}{createQueue()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_queue}{Queue}}$\ast$ create\+Queue (\begin{DoxyParamCaption}\item[{unsigned}]{capacity }\end{DoxyParamCaption})}
+
+
+
+Aloca memória e cria a \mbox{\hyperlink{struct_queue}{Queue}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em capacity} & Número máximo de elementos da \mbox{\hyperlink{struct_queue}{Queue}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{struct_queue}{Queue}} criada 
+\end{DoxyReturn}
+\mbox{\Hypertarget{queue_8h_a3cee3a5d5662c76d3fa1ab3a37dfeb27}\label{queue_8h_a3cee3a5d5662c76d3fa1ab3a37dfeb27}} 
+\index{queue.h@{queue.h}!queueFront@{queueFront}}
+\index{queueFront@{queueFront}!queue.h@{queue.h}}
+\doxysubsubsection{\texorpdfstring{queueFront()}{queueFront()}}
+{\footnotesize\ttfamily uint8\+\_\+t queue\+Front (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_queue}{Queue}} $\ast$}]{queue }\end{DoxyParamCaption})}
+
+
+
+Devolve o elemento da frente da \mbox{\hyperlink{struct_queue}{Queue}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em queue} & \mbox{\hyperlink{struct_queue}{Queue}} da qual se vai devolver o elemento da frente \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Elemento da frente da \mbox{\hyperlink{struct_queue}{Queue}} 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{queue_8h_a3cee3a5d5662c76d3fa1ab3a37dfeb27_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{queue_8h_ab1f6625e397bfad97b22aa372f0b15e5}\label{queue_8h_ab1f6625e397bfad97b22aa372f0b15e5}} 
+\index{queue.h@{queue.h}!queueIsEmpty@{queueIsEmpty}}
+\index{queueIsEmpty@{queueIsEmpty}!queue.h@{queue.h}}
+\doxysubsubsection{\texorpdfstring{queueIsEmpty()}{queueIsEmpty()}}
+{\footnotesize\ttfamily int queue\+Is\+Empty (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_queue}{Queue}} $\ast$}]{queue }\end{DoxyParamCaption})}
+
+
+
+Verifica se a \mbox{\hyperlink{struct_queue}{Queue}} está vazia. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em queue} & \mbox{\hyperlink{struct_queue}{Queue}} a verificar se está vazia \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 se a \mbox{\hyperlink{struct_queue}{Queue}} estiver Vazia, 0 caso contrário 
+\end{DoxyReturn}
+\mbox{\Hypertarget{queue_8h_af4e82852438367eaf3ecdf47887ecb9d}\label{queue_8h_af4e82852438367eaf3ecdf47887ecb9d}} 
+\index{queue.h@{queue.h}!queueIsFull@{queueIsFull}}
+\index{queueIsFull@{queueIsFull}!queue.h@{queue.h}}
+\doxysubsubsection{\texorpdfstring{queueIsFull()}{queueIsFull()}}
+{\footnotesize\ttfamily int queue\+Is\+Full (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_queue}{Queue}} $\ast$}]{queue }\end{DoxyParamCaption})}
+
+
+
+Verifica se a \mbox{\hyperlink{struct_queue}{Queue}} está cheia. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em queue} & \mbox{\hyperlink{struct_queue}{Queue}} a verificar se está cheia \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 se a \mbox{\hyperlink{struct_queue}{Queue}} estiver Cheia, 0 caso contrário 
+\end{DoxyReturn}
+\mbox{\Hypertarget{queue_8h_a1b46405b2ca2844c6fb569d41aa8f40f}\label{queue_8h_a1b46405b2ca2844c6fb569d41aa8f40f}} 
+\index{queue.h@{queue.h}!queueRear@{queueRear}}
+\index{queueRear@{queueRear}!queue.h@{queue.h}}
+\doxysubsubsection{\texorpdfstring{queueRear()}{queueRear()}}
+{\footnotesize\ttfamily uint8\+\_\+t queue\+Rear (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_queue}{Queue}} $\ast$}]{queue }\end{DoxyParamCaption})}
+
+
+
+Devolve o último elemento da \mbox{\hyperlink{struct_queue}{Queue}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em queue} & \mbox{\hyperlink{struct_queue}{Queue}} da qual se vai devolver o último elemento \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 em caso de sucesso, 1 caso contrário 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{queue_8h_a1b46405b2ca2844c6fb569d41aa8f40f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{queue_8h_a71ee47d1b336dc49a3a7c883307ed130}\label{queue_8h_a71ee47d1b336dc49a3a7c883307ed130}} 
+\index{queue.h@{queue.h}!removeFromQueue@{removeFromQueue}}
+\index{removeFromQueue@{removeFromQueue}!queue.h@{queue.h}}
+\doxysubsubsection{\texorpdfstring{removeFromQueue()}{removeFromQueue()}}
+{\footnotesize\ttfamily uint8\+\_\+t remove\+From\+Queue (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_queue}{Queue}} $\ast$}]{queue }\end{DoxyParamCaption})}
+
+
+
+Remove um Item da \mbox{\hyperlink{struct_queue}{Queue}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em queue} & \mbox{\hyperlink{struct_queue}{Queue}} da qual se vai remover o Item \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Elemento removido da \mbox{\hyperlink{struct_queue}{Queue}} 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=293pt]{queue_8h_a71ee47d1b336dc49a3a7c883307ed130_cgraph}
+\end{center}
+\end{figure}

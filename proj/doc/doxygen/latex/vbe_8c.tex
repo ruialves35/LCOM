@@ -1,0 +1,335 @@
+\hypertarget{vbe_8c}{}\doxysection{vbe.\+c File Reference}
+\label{vbe_8c}\index{vbe.c@{vbe.c}}
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include $<$machine/int86.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}vbe.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}vbe\+\_\+utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}vc\+Macros.\+h\char`\"{}}\newline
+Include dependency graph for vbe.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{vbe_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int() \mbox{\hyperlink{vbe_8c_a82f8da2c0f2973010eb5b1e8c1949fb3}{set\+\_\+video\+\_\+mode}} (uint16\+\_\+t mode)
+\item 
+int() \mbox{\hyperlink{vbe_8c_a6f3d80d4f03a6331647972f8db8ab6c9}{init\+\_\+graphic\+\_\+mode}} (uint16\+\_\+t mode)
+\item 
+int() \mbox{\hyperlink{vbe_8c_a99d2da2559e11200c6b40c469e9977ec}{vg\+\_\+draw\+\_\+rectangle}} (uint16\+\_\+t x, uint16\+\_\+t y, uint16\+\_\+t width, uint16\+\_\+t height, uint32\+\_\+t color)
+\item 
+int() \mbox{\hyperlink{vbe_8c_ab99f2e54d7a5f33aa7a4ba05f32fa58c}{vg\+\_\+draw\+\_\+rectangle\+\_\+on}} (uint16\+\_\+t x, uint16\+\_\+t y, uint16\+\_\+t width, uint16\+\_\+t height, uint32\+\_\+t color, uint8\+\_\+t $\ast$buffer)
+\begin{DoxyCompactList}\small\item\em Draws a rectangle in desired buffer. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{vbe_8c_a5e5b25bd525250f61f40b9e9f212d5e6}{vg\+\_\+draw\+\_\+hline}} (uint16\+\_\+t x, uint16\+\_\+t y, uint16\+\_\+t len, uint32\+\_\+t color)
+\item 
+int() \mbox{\hyperlink{vbe_8c_a1a6b9de2852b4ed1f8d82679749abe50}{vg\+\_\+draw\+\_\+hline\+\_\+on}} (uint16\+\_\+t x, uint16\+\_\+t y, uint16\+\_\+t len, uint32\+\_\+t color, uint8\+\_\+t $\ast$buffer)
+\begin{DoxyCompactList}\small\item\em Draws horizontal line in desired buffer. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{vbe_8c_a0655e84fd5af3ef2f87a07b58d73b0be}{vbe\+\_\+get\+\_\+mode\+\_\+info2}} (uint16\+\_\+t mode, vbe\+\_\+mode\+\_\+info\+\_\+t $\ast$vbe\+\_\+mode\+\_\+info)
+\item 
+void $\ast$ \mbox{\hyperlink{vbe_8c_a0fd97b0811cb45aedcb054f7c55c0f7e}{retry\+\_\+lm\+\_\+alloc}} (size\+\_\+t \mbox{\hyperlink{trace_8txt_a7cf495e93d98b212613526c158bcd39b}{size}}, mmap\+\_\+t $\ast$mmap)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{vbe_8c_a266541ae2a46ff67b5d3d1ed23455e7f}{get\+\_\+pattern\+\_\+color}} (uint32\+\_\+t first, uint8\+\_\+t row, uint8\+\_\+t col, uint8\+\_\+t step, uint8\+\_\+t no\+\_\+rectangles)
+\item 
+int() \mbox{\hyperlink{vbe_8c_a6a9e3b2a4db5f3230f4ad05b8514d286}{draw\+\_\+image}} (uint16\+\_\+t x, uint16\+\_\+t y, xpm\+\_\+image\+\_\+t $\ast$img, enum xpm\+\_\+image\+\_\+type type)
+\item 
+void \mbox{\hyperlink{vbe_8c_a3e308c94b955be0db5ccc04dd95dcc27}{swap\+\_\+buffers}} (uint8\+\_\+t $\ast$buffer)
+\item 
+void \mbox{\hyperlink{vbe_8c_a47cad99790e552a7eea8430badbda692}{clear\+\_\+buffer}} (uint8\+\_\+t $\ast$buffer, uint8\+\_\+t color)
+\item 
+int() \mbox{\hyperlink{vbe_8c_ab0b1692a0719fcd23da377a4e1907638}{set\+\_\+display\+\_\+start}} (uint16\+\_\+t buffer\+\_\+y\+\_\+start)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{vbe_8c_a29911e110d87d372e97e0676d2768c95}{get\+\_\+bits\+\_\+per\+\_\+pixel}} ()
+\item 
+uint16\+\_\+t \mbox{\hyperlink{vbe_8c_a1cb8d2f949b208688572ecea7bdd80c1}{get\+\_\+x\+\_\+res}} ()
+\item 
+uint16\+\_\+t \mbox{\hyperlink{vbe_8c_a2151525935e20e57fc0087ad189d833d}{get\+\_\+y\+\_\+res}} ()
+\item 
+uint8\+\_\+t \mbox{\hyperlink{vbe_8c_aee3838c12a8543f378920ab8f6c3cae2}{get\+\_\+memory\+\_\+model}} ()
+\item 
+uint8\+\_\+t \mbox{\hyperlink{vbe_8c_a805a424dab93550a563fb3a52d7559bd}{get\+\_\+red\+\_\+mask\+\_\+size}} ()
+\item 
+uint8\+\_\+t \mbox{\hyperlink{vbe_8c_a93504e02a2cec289e1e75c6a36dc3750}{get\+\_\+red\+\_\+field\+\_\+position}} ()
+\item 
+uint8\+\_\+t \mbox{\hyperlink{vbe_8c_ad6eb39b398a9ab35e6e5be3044601132}{get\+\_\+blue\+\_\+mask\+\_\+size}} ()
+\item 
+uint8\+\_\+t \mbox{\hyperlink{vbe_8c_ad4ab9735e7cea5515ec3b75970bdfa4c}{get\+\_\+blue\+\_\+field\+\_\+position}} ()
+\item 
+uint8\+\_\+t \mbox{\hyperlink{vbe_8c_a9824d95a17cff19dd9366bc31d22107b}{get\+\_\+green\+\_\+mask\+\_\+size}} ()
+\item 
+uint8\+\_\+t \mbox{\hyperlink{vbe_8c_aefc5f019e36a27e729ff238210362422}{get\+\_\+green\+\_\+field\+\_\+position}} ()
+\item 
+uint8\+\_\+t \mbox{\hyperlink{vbe_8c_a00cecea8b2cbf576255fdca41bc0f7ec}{get\+\_\+rsvd\+\_\+mask\+\_\+size}} ()
+\item 
+uint8\+\_\+t \mbox{\hyperlink{vbe_8c_a5107d722786c12a6f7d6f059654c699a}{get\+\_\+rsvd\+\_\+field\+\_\+position}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{vbe_8c_a1e6304079d2ed39f1e942020ed2c2bb5}{mapped\+\_\+mem}}
+\item 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{vbe_8c_a5ae65c885b085b1238dedfadc7dd6724}{mapped\+\_\+mem2}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{vbe_8c_a47cad99790e552a7eea8430badbda692}\label{vbe_8c_a47cad99790e552a7eea8430badbda692}} 
+\index{vbe.c@{vbe.c}!clear\_buffer@{clear\_buffer}}
+\index{clear\_buffer@{clear\_buffer}!vbe.c@{vbe.c}}
+\doxysubsubsection{\texorpdfstring{clear\_buffer()}{clear\_buffer()}}
+{\footnotesize\ttfamily void clear\+\_\+buffer (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{buffer,  }\item[{uint8\+\_\+t}]{color }\end{DoxyParamCaption})}
+
+Clears the specified buffer by setting all bytes to the specified color Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=303pt]{vbe_8c_a47cad99790e552a7eea8430badbda692_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{vbe_8c_a6a9e3b2a4db5f3230f4ad05b8514d286}\label{vbe_8c_a6a9e3b2a4db5f3230f4ad05b8514d286}} 
+\index{vbe.c@{vbe.c}!draw\_image@{draw\_image}}
+\index{draw\_image@{draw\_image}!vbe.c@{vbe.c}}
+\doxysubsubsection{\texorpdfstring{draw\_image()}{draw\_image()}}
+{\footnotesize\ttfamily int() draw\+\_\+image (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x,  }\item[{uint16\+\_\+t}]{y,  }\item[{xpm\+\_\+image\+\_\+t $\ast$}]{img,  }\item[{enum xpm\+\_\+image\+\_\+type}]{type }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=305pt]{vbe_8c_a6a9e3b2a4db5f3230f4ad05b8514d286_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{vbe_8c_a29911e110d87d372e97e0676d2768c95}\label{vbe_8c_a29911e110d87d372e97e0676d2768c95}} 
+\index{vbe.c@{vbe.c}!get\_bits\_per\_pixel@{get\_bits\_per\_pixel}}
+\index{get\_bits\_per\_pixel@{get\_bits\_per\_pixel}!vbe.c@{vbe.c}}
+\doxysubsubsection{\texorpdfstring{get\_bits\_per\_pixel()}{get\_bits\_per\_pixel()}}
+{\footnotesize\ttfamily uint8\+\_\+t get\+\_\+bits\+\_\+per\+\_\+pixel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vbe_8c_ad4ab9735e7cea5515ec3b75970bdfa4c}\label{vbe_8c_ad4ab9735e7cea5515ec3b75970bdfa4c}} 
+\index{vbe.c@{vbe.c}!get\_blue\_field\_position@{get\_blue\_field\_position}}
+\index{get\_blue\_field\_position@{get\_blue\_field\_position}!vbe.c@{vbe.c}}
+\doxysubsubsection{\texorpdfstring{get\_blue\_field\_position()}{get\_blue\_field\_position()}}
+{\footnotesize\ttfamily uint8\+\_\+t get\+\_\+blue\+\_\+field\+\_\+position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vbe_8c_ad6eb39b398a9ab35e6e5be3044601132}\label{vbe_8c_ad6eb39b398a9ab35e6e5be3044601132}} 
+\index{vbe.c@{vbe.c}!get\_blue\_mask\_size@{get\_blue\_mask\_size}}
+\index{get\_blue\_mask\_size@{get\_blue\_mask\_size}!vbe.c@{vbe.c}}
+\doxysubsubsection{\texorpdfstring{get\_blue\_mask\_size()}{get\_blue\_mask\_size()}}
+{\footnotesize\ttfamily uint8\+\_\+t get\+\_\+blue\+\_\+mask\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vbe_8c_aefc5f019e36a27e729ff238210362422}\label{vbe_8c_aefc5f019e36a27e729ff238210362422}} 
+\index{vbe.c@{vbe.c}!get\_green\_field\_position@{get\_green\_field\_position}}
+\index{get\_green\_field\_position@{get\_green\_field\_position}!vbe.c@{vbe.c}}
+\doxysubsubsection{\texorpdfstring{get\_green\_field\_position()}{get\_green\_field\_position()}}
+{\footnotesize\ttfamily uint8\+\_\+t get\+\_\+green\+\_\+field\+\_\+position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vbe_8c_a9824d95a17cff19dd9366bc31d22107b}\label{vbe_8c_a9824d95a17cff19dd9366bc31d22107b}} 
+\index{vbe.c@{vbe.c}!get\_green\_mask\_size@{get\_green\_mask\_size}}
+\index{get\_green\_mask\_size@{get\_green\_mask\_size}!vbe.c@{vbe.c}}
+\doxysubsubsection{\texorpdfstring{get\_green\_mask\_size()}{get\_green\_mask\_size()}}
+{\footnotesize\ttfamily uint8\+\_\+t get\+\_\+green\+\_\+mask\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vbe_8c_aee3838c12a8543f378920ab8f6c3cae2}\label{vbe_8c_aee3838c12a8543f378920ab8f6c3cae2}} 
+\index{vbe.c@{vbe.c}!get\_memory\_model@{get\_memory\_model}}
+\index{get\_memory\_model@{get\_memory\_model}!vbe.c@{vbe.c}}
+\doxysubsubsection{\texorpdfstring{get\_memory\_model()}{get\_memory\_model()}}
+{\footnotesize\ttfamily uint8\+\_\+t get\+\_\+memory\+\_\+model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vbe_8c_a266541ae2a46ff67b5d3d1ed23455e7f}\label{vbe_8c_a266541ae2a46ff67b5d3d1ed23455e7f}} 
+\index{vbe.c@{vbe.c}!get\_pattern\_color@{get\_pattern\_color}}
+\index{get\_pattern\_color@{get\_pattern\_color}!vbe.c@{vbe.c}}
+\doxysubsubsection{\texorpdfstring{get\_pattern\_color()}{get\_pattern\_color()}}
+{\footnotesize\ttfamily uint32\+\_\+t get\+\_\+pattern\+\_\+color (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{first,  }\item[{uint8\+\_\+t}]{row,  }\item[{uint8\+\_\+t}]{col,  }\item[{uint8\+\_\+t}]{step,  }\item[{uint8\+\_\+t}]{no\+\_\+rectangles }\end{DoxyParamCaption})}
+
+Calculate the color for the elem in a specific row and col Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=329pt]{vbe_8c_a266541ae2a46ff67b5d3d1ed23455e7f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{vbe_8c_a93504e02a2cec289e1e75c6a36dc3750}\label{vbe_8c_a93504e02a2cec289e1e75c6a36dc3750}} 
+\index{vbe.c@{vbe.c}!get\_red\_field\_position@{get\_red\_field\_position}}
+\index{get\_red\_field\_position@{get\_red\_field\_position}!vbe.c@{vbe.c}}
+\doxysubsubsection{\texorpdfstring{get\_red\_field\_position()}{get\_red\_field\_position()}}
+{\footnotesize\ttfamily uint8\+\_\+t get\+\_\+red\+\_\+field\+\_\+position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vbe_8c_a805a424dab93550a563fb3a52d7559bd}\label{vbe_8c_a805a424dab93550a563fb3a52d7559bd}} 
+\index{vbe.c@{vbe.c}!get\_red\_mask\_size@{get\_red\_mask\_size}}
+\index{get\_red\_mask\_size@{get\_red\_mask\_size}!vbe.c@{vbe.c}}
+\doxysubsubsection{\texorpdfstring{get\_red\_mask\_size()}{get\_red\_mask\_size()}}
+{\footnotesize\ttfamily uint8\+\_\+t get\+\_\+red\+\_\+mask\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vbe_8c_a5107d722786c12a6f7d6f059654c699a}\label{vbe_8c_a5107d722786c12a6f7d6f059654c699a}} 
+\index{vbe.c@{vbe.c}!get\_rsvd\_field\_position@{get\_rsvd\_field\_position}}
+\index{get\_rsvd\_field\_position@{get\_rsvd\_field\_position}!vbe.c@{vbe.c}}
+\doxysubsubsection{\texorpdfstring{get\_rsvd\_field\_position()}{get\_rsvd\_field\_position()}}
+{\footnotesize\ttfamily uint8\+\_\+t get\+\_\+rsvd\+\_\+field\+\_\+position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vbe_8c_a00cecea8b2cbf576255fdca41bc0f7ec}\label{vbe_8c_a00cecea8b2cbf576255fdca41bc0f7ec}} 
+\index{vbe.c@{vbe.c}!get\_rsvd\_mask\_size@{get\_rsvd\_mask\_size}}
+\index{get\_rsvd\_mask\_size@{get\_rsvd\_mask\_size}!vbe.c@{vbe.c}}
+\doxysubsubsection{\texorpdfstring{get\_rsvd\_mask\_size()}{get\_rsvd\_mask\_size()}}
+{\footnotesize\ttfamily uint8\+\_\+t get\+\_\+rsvd\+\_\+mask\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vbe_8c_a1cb8d2f949b208688572ecea7bdd80c1}\label{vbe_8c_a1cb8d2f949b208688572ecea7bdd80c1}} 
+\index{vbe.c@{vbe.c}!get\_x\_res@{get\_x\_res}}
+\index{get\_x\_res@{get\_x\_res}!vbe.c@{vbe.c}}
+\doxysubsubsection{\texorpdfstring{get\_x\_res()}{get\_x\_res()}}
+{\footnotesize\ttfamily uint16\+\_\+t get\+\_\+x\+\_\+res (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vbe_8c_a2151525935e20e57fc0087ad189d833d}\label{vbe_8c_a2151525935e20e57fc0087ad189d833d}} 
+\index{vbe.c@{vbe.c}!get\_y\_res@{get\_y\_res}}
+\index{get\_y\_res@{get\_y\_res}!vbe.c@{vbe.c}}
+\doxysubsubsection{\texorpdfstring{get\_y\_res()}{get\_y\_res()}}
+{\footnotesize\ttfamily uint16\+\_\+t get\+\_\+y\+\_\+res (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vbe_8c_a6f3d80d4f03a6331647972f8db8ab6c9}\label{vbe_8c_a6f3d80d4f03a6331647972f8db8ab6c9}} 
+\index{vbe.c@{vbe.c}!init\_graphic\_mode@{init\_graphic\_mode}}
+\index{init\_graphic\_mode@{init\_graphic\_mode}!vbe.c@{vbe.c}}
+\doxysubsubsection{\texorpdfstring{init\_graphic\_mode()}{init\_graphic\_mode()}}
+{\footnotesize\ttfamily int() init\+\_\+graphic\+\_\+mode (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{mode }\end{DoxyParamCaption})}
+
+Maps the physical memory to a virtual memory stored in mapped\+\_\+mem. Initiates the mode passed as argument and grabs information relative to that mode Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=315pt]{vbe_8c_a6f3d80d4f03a6331647972f8db8ab6c9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{vbe_8c_a0fd97b0811cb45aedcb054f7c55c0f7e}\label{vbe_8c_a0fd97b0811cb45aedcb054f7c55c0f7e}} 
+\index{vbe.c@{vbe.c}!retry\_lm\_alloc@{retry\_lm\_alloc}}
+\index{retry\_lm\_alloc@{retry\_lm\_alloc}!vbe.c@{vbe.c}}
+\doxysubsubsection{\texorpdfstring{retry\_lm\_alloc()}{retry\_lm\_alloc()}}
+{\footnotesize\ttfamily void$\ast$ retry\+\_\+lm\+\_\+alloc (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{size,  }\item[{mmap\+\_\+t $\ast$}]{mmap }\end{DoxyParamCaption})}
+
+Tries to allocates a memory block in low memory area with the specified size 5 times and initializes the input mmap\+\_\+t struct with the mapping information Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{vbe_8c_a0fd97b0811cb45aedcb054f7c55c0f7e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{vbe_8c_ab0b1692a0719fcd23da377a4e1907638}\label{vbe_8c_ab0b1692a0719fcd23da377a4e1907638}} 
+\index{vbe.c@{vbe.c}!set\_display\_start@{set\_display\_start}}
+\index{set\_display\_start@{set\_display\_start}!vbe.c@{vbe.c}}
+\doxysubsubsection{\texorpdfstring{set\_display\_start()}{set\_display\_start()}}
+{\footnotesize\ttfamily int() set\+\_\+display\+\_\+start (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{buffer\+\_\+y\+\_\+start }\end{DoxyParamCaption})}
+
+\begin{DoxyItemize}
+\item buffer\+\_\+y\+\_\+start line of the starting pixel in the V\+R\+AM (Y position) \end{DoxyItemize}
+\mbox{\Hypertarget{vbe_8c_a82f8da2c0f2973010eb5b1e8c1949fb3}\label{vbe_8c_a82f8da2c0f2973010eb5b1e8c1949fb3}} 
+\index{vbe.c@{vbe.c}!set\_video\_mode@{set\_video\_mode}}
+\index{set\_video\_mode@{set\_video\_mode}!vbe.c@{vbe.c}}
+\doxysubsubsection{\texorpdfstring{set\_video\_mode()}{set\_video\_mode()}}
+{\footnotesize\ttfamily int() set\+\_\+video\+\_\+mode (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{mode }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vbe_8c_a3e308c94b955be0db5ccc04dd95dcc27}\label{vbe_8c_a3e308c94b955be0db5ccc04dd95dcc27}} 
+\index{vbe.c@{vbe.c}!swap\_buffers@{swap\_buffers}}
+\index{swap\_buffers@{swap\_buffers}!vbe.c@{vbe.c}}
+\doxysubsubsection{\texorpdfstring{swap\_buffers()}{swap\_buffers()}}
+{\footnotesize\ttfamily void swap\+\_\+buffers (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{buffer }\end{DoxyParamCaption})}
+
+Updates the V\+R\+AM with the new pixmap, by copying the backbuffer to the mapped\+\_\+mem Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{vbe_8c_a3e308c94b955be0db5ccc04dd95dcc27_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{vbe_8c_a0655e84fd5af3ef2f87a07b58d73b0be}\label{vbe_8c_a0655e84fd5af3ef2f87a07b58d73b0be}} 
+\index{vbe.c@{vbe.c}!vbe\_get\_mode\_info2@{vbe\_get\_mode\_info2}}
+\index{vbe\_get\_mode\_info2@{vbe\_get\_mode\_info2}!vbe.c@{vbe.c}}
+\doxysubsubsection{\texorpdfstring{vbe\_get\_mode\_info2()}{vbe\_get\_mode\_info2()}}
+{\footnotesize\ttfamily int() vbe\+\_\+get\+\_\+mode\+\_\+info2 (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{mode,  }\item[{vbe\+\_\+mode\+\_\+info\+\_\+t $\ast$}]{vbe\+\_\+mode\+\_\+info }\end{DoxyParamCaption})}
+
+Fills the vbe\+\_\+mode\+\_\+info\+\_\+t structure with info from the mode \mbox{\Hypertarget{vbe_8c_a5e5b25bd525250f61f40b9e9f212d5e6}\label{vbe_8c_a5e5b25bd525250f61f40b9e9f212d5e6}} 
+\index{vbe.c@{vbe.c}!vg\_draw\_hline@{vg\_draw\_hline}}
+\index{vg\_draw\_hline@{vg\_draw\_hline}!vbe.c@{vbe.c}}
+\doxysubsubsection{\texorpdfstring{vg\_draw\_hline()}{vg\_draw\_hline()}}
+{\footnotesize\ttfamily int() vg\+\_\+draw\+\_\+hline (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x,  }\item[{uint16\+\_\+t}]{y,  }\item[{uint16\+\_\+t}]{len,  }\item[{uint32\+\_\+t}]{color }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{vbe_8c_a5e5b25bd525250f61f40b9e9f212d5e6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{vbe_8c_a1a6b9de2852b4ed1f8d82679749abe50}\label{vbe_8c_a1a6b9de2852b4ed1f8d82679749abe50}} 
+\index{vbe.c@{vbe.c}!vg\_draw\_hline\_on@{vg\_draw\_hline\_on}}
+\index{vg\_draw\_hline\_on@{vg\_draw\_hline\_on}!vbe.c@{vbe.c}}
+\doxysubsubsection{\texorpdfstring{vg\_draw\_hline\_on()}{vg\_draw\_hline\_on()}}
+{\footnotesize\ttfamily int() vg\+\_\+draw\+\_\+hline\+\_\+on (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x,  }\item[{uint16\+\_\+t}]{y,  }\item[{uint16\+\_\+t}]{len,  }\item[{uint32\+\_\+t}]{color,  }\item[{uint8\+\_\+t $\ast$}]{buffer }\end{DoxyParamCaption})}
+
+
+
+Draws horizontal line in desired buffer. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=329pt]{vbe_8c_a1a6b9de2852b4ed1f8d82679749abe50_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{vbe_8c_a99d2da2559e11200c6b40c469e9977ec}\label{vbe_8c_a99d2da2559e11200c6b40c469e9977ec}} 
+\index{vbe.c@{vbe.c}!vg\_draw\_rectangle@{vg\_draw\_rectangle}}
+\index{vg\_draw\_rectangle@{vg\_draw\_rectangle}!vbe.c@{vbe.c}}
+\doxysubsubsection{\texorpdfstring{vg\_draw\_rectangle()}{vg\_draw\_rectangle()}}
+{\footnotesize\ttfamily int() vg\+\_\+draw\+\_\+rectangle (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x,  }\item[{uint16\+\_\+t}]{y,  }\item[{uint16\+\_\+t}]{width,  }\item[{uint16\+\_\+t}]{height,  }\item[{uint32\+\_\+t}]{color }\end{DoxyParamCaption})}
+
+Draws a rectangle Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{vbe_8c_a99d2da2559e11200c6b40c469e9977ec_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{vbe_8c_ab99f2e54d7a5f33aa7a4ba05f32fa58c}\label{vbe_8c_ab99f2e54d7a5f33aa7a4ba05f32fa58c}} 
+\index{vbe.c@{vbe.c}!vg\_draw\_rectangle\_on@{vg\_draw\_rectangle\_on}}
+\index{vg\_draw\_rectangle\_on@{vg\_draw\_rectangle\_on}!vbe.c@{vbe.c}}
+\doxysubsubsection{\texorpdfstring{vg\_draw\_rectangle\_on()}{vg\_draw\_rectangle\_on()}}
+{\footnotesize\ttfamily int() vg\+\_\+draw\+\_\+rectangle\+\_\+on (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x,  }\item[{uint16\+\_\+t}]{y,  }\item[{uint16\+\_\+t}]{width,  }\item[{uint16\+\_\+t}]{height,  }\item[{uint32\+\_\+t}]{color,  }\item[{uint8\+\_\+t $\ast$}]{buffer }\end{DoxyParamCaption})}
+
+
+
+Draws a rectangle in desired buffer. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{vbe_8c_ab99f2e54d7a5f33aa7a4ba05f32fa58c_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{vbe_8c_a1e6304079d2ed39f1e942020ed2c2bb5}\label{vbe_8c_a1e6304079d2ed39f1e942020ed2c2bb5}} 
+\index{vbe.c@{vbe.c}!mapped\_mem@{mapped\_mem}}
+\index{mapped\_mem@{mapped\_mem}!vbe.c@{vbe.c}}
+\doxysubsubsection{\texorpdfstring{mapped\_mem}{mapped\_mem}}
+{\footnotesize\ttfamily uint8\+\_\+t$\ast$ mapped\+\_\+mem}
+
+\mbox{\Hypertarget{vbe_8c_a5ae65c885b085b1238dedfadc7dd6724}\label{vbe_8c_a5ae65c885b085b1238dedfadc7dd6724}} 
+\index{vbe.c@{vbe.c}!mapped\_mem2@{mapped\_mem2}}
+\index{mapped\_mem2@{mapped\_mem2}!vbe.c@{vbe.c}}
+\doxysubsubsection{\texorpdfstring{mapped\_mem2}{mapped\_mem2}}
+{\footnotesize\ttfamily uint8\+\_\+t$\ast$ mapped\+\_\+mem2}
+

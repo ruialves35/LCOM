@@ -1,0 +1,106 @@
+\hypertarget{kbc_8h}{}\doxysection{kbc.\+h File Reference}
+\label{kbc_8h}\index{kbc.h@{kbc.h}}
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+Include dependency graph for kbc.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{kbc_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{kbc_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int() \mbox{\hyperlink{kbc_8h_a178b1db0b319dccad2840cc3fd273132}{keyboard\+\_\+subscribe\+\_\+int}} (uint8\+\_\+t $\ast$bit\+\_\+no)
+\item 
+int() \mbox{\hyperlink{kbc_8h_a32cc4de66854f8a7bd909e7aa8b901ed}{keyboard\+\_\+unsubscribe\+\_\+int}} ()
+\item 
+int() \mbox{\hyperlink{kbc_8h_a17d8d4b782b3532e90105727a14af608}{keyboard\+\_\+handle\+\_\+interruption}} (uint8\+\_\+t bit\+\_\+no)
+\item 
+int() \mbox{\hyperlink{kbc_8h_a53715ef851410526143640345873f9a0}{keyboard\+\_\+polling}} ()
+\item 
+int() \mbox{\hyperlink{kbc_8h_a1f93405c76d35332cb8bff343c3664bc}{keyboard\+\_\+enable\+\_\+interruptions}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{kbc_8h_a1f93405c76d35332cb8bff343c3664bc}\label{kbc_8h_a1f93405c76d35332cb8bff343c3664bc}} 
+\index{kbc.h@{kbc.h}!keyboard\_enable\_interruptions@{keyboard\_enable\_interruptions}}
+\index{keyboard\_enable\_interruptions@{keyboard\_enable\_interruptions}!kbc.h@{kbc.h}}
+\doxysubsubsection{\texorpdfstring{keyboard\_enable\_interruptions()}{keyboard\_enable\_interruptions()}}
+{\footnotesize\ttfamily int() keyboard\+\_\+enable\+\_\+interruptions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Enables keyboard interruptions Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{kbc_8h_a1f93405c76d35332cb8bff343c3664bc_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{kbc_8h_a17d8d4b782b3532e90105727a14af608}\label{kbc_8h_a17d8d4b782b3532e90105727a14af608}} 
+\index{kbc.h@{kbc.h}!keyboard\_handle\_interruption@{keyboard\_handle\_interruption}}
+\index{keyboard\_handle\_interruption@{keyboard\_handle\_interruption}!kbc.h@{kbc.h}}
+\doxysubsubsection{\texorpdfstring{keyboard\_handle\_interruption()}{keyboard\_handle\_interruption()}}
+{\footnotesize\ttfamily int() keyboard\+\_\+handle\+\_\+interruption (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{bit\+\_\+no }\end{DoxyParamCaption})}
+
+Handles keyboard interruptions 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{kbc_8h_a17d8d4b782b3532e90105727a14af608_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{kbc_8h_a53715ef851410526143640345873f9a0}\label{kbc_8h_a53715ef851410526143640345873f9a0}} 
+\index{kbc.h@{kbc.h}!keyboard\_polling@{keyboard\_polling}}
+\index{keyboard\_polling@{keyboard\_polling}!kbc.h@{kbc.h}}
+\doxysubsubsection{\texorpdfstring{keyboard\_polling()}{keyboard\_polling()}}
+{\footnotesize\ttfamily int() keyboard\+\_\+polling (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Cycle that detects keyboard presses by using polling technique with a specified delay(\+D\+E\+L\+A\+Y\+U\+S), and prints the specific key. Cycle stops when you press \textquotesingle{}E\+SC\textquotesingle{} key. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{kbc_8h_a53715ef851410526143640345873f9a0_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{kbc_8h_a178b1db0b319dccad2840cc3fd273132}\label{kbc_8h_a178b1db0b319dccad2840cc3fd273132}} 
+\index{kbc.h@{kbc.h}!keyboard\_subscribe\_int@{keyboard\_subscribe\_int}}
+\index{keyboard\_subscribe\_int@{keyboard\_subscribe\_int}!kbc.h@{kbc.h}}
+\doxysubsubsection{\texorpdfstring{keyboard\_subscribe\_int()}{keyboard\_subscribe\_int()}}
+{\footnotesize\ttfamily int() keyboard\+\_\+subscribe\+\_\+int (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{bit\+\_\+no }\end{DoxyParamCaption})}
+
+Subscribes keybaord for interrupts 
+\begin{DoxyParams}{Parameters}
+{\em bit\+\_\+no} & variable that will get the value for interrupts notifications \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success, 1 otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{kbc_8h_a32cc4de66854f8a7bd909e7aa8b901ed}\label{kbc_8h_a32cc4de66854f8a7bd909e7aa8b901ed}} 
+\index{kbc.h@{kbc.h}!keyboard\_unsubscribe\_int@{keyboard\_unsubscribe\_int}}
+\index{keyboard\_unsubscribe\_int@{keyboard\_unsubscribe\_int}!kbc.h@{kbc.h}}
+\doxysubsubsection{\texorpdfstring{keyboard\_unsubscribe\_int()}{keyboard\_unsubscribe\_int()}}
+{\footnotesize\ttfamily int() keyboard\+\_\+unsubscribe\+\_\+int (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+unsubscribes an interrupt \begin{DoxyReturn}{Returns}
+0 if success, 1 otherwise 
+\end{DoxyReturn}

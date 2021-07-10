@@ -1,0 +1,8 @@
+<map id="rtc_ih" name="rtc_ih">
+<area shape="rect" id="node1" title="handles rtc interrupt" alt="" coords="5,56,60,83"/>
+<area shape="rect" id="node2" href="$rtc_8c.html#a1bedffa69eaabc0f705509e6722c4790" title="Reads data from the rtc to the var data." alt="" coords="109,5,204,32"/>
+<area shape="rect" id="node4" href="$rtc_8c.html#a93262ca901ff33bfdcf405d1a0212df3" title=" " alt="" coords="108,56,205,83"/>
+<area shape="rect" id="node6" href="$rtc_8c.html#a1a9d7e84980d0db1893045246ca7a026" title=" " alt="" coords="281,107,356,133"/>
+<area shape="rect" id="node3" href="$utils_8c.html#a79a031a8611f5b2d6afa4158e92b0fb4" title=" " alt="" coords="273,5,364,32"/>
+<area shape="rect" id="node5" href="$rtc_8c.html#ac8cf78aad3e7e4ad4374d8fb274c439f" title=" " alt="" coords="253,56,384,83"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="uart_set_dlb" name="uart_set_dlb">
+<area shape="rect" id="node1" title="Enables divisor latch access on the Line Control Reg. if dlb is true." alt="" coords="5,31,99,57"/>
+<area shape="rect" id="node2" href="$uart_8c.html#aa62a1fd216f328e78b85e4b27d4627d7" title="Reads from the reg given as argument." alt="" coords="147,5,249,32"/>
+<area shape="rect" id="node4" href="$uart_8c.html#a0d2f75bb0c90f1c13bc02036c8669f7e" title="writes in the uart reg given as the arg the byte" alt="" coords="147,56,249,83"/>
+<area shape="rect" id="node3" href="$utils_8c.html#a79a031a8611f5b2d6afa4158e92b0fb4" title=" " alt="" coords="297,5,388,32"/>
+</map>

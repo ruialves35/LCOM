@@ -1,0 +1,61 @@
+\hypertarget{vbe__utils_8c}{}\doxysection{vbe\+\_\+utils.\+c File Reference}
+\label{vbe__utils_8c}\index{vbe\_utils.c@{vbe\_utils.c}}
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}vbe\+\_\+utils.\+h\char`\"{}}\newline
+Include dependency graph for vbe\+\_\+utils.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=172pt]{vbe__utils_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{vbe__utils_8c_a86fd4404b140711fdb77326609c0f393}{B\+Y\+T\+E\+\_\+\+S\+I\+ZE}}~8
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{vbe__utils_8c_a1c8a2e27d94c35040f9fd915639c957a}{calculate\+\_\+size\+\_\+in\+\_\+bytes}} (uint8\+\_\+t bits)
+\begin{DoxyCompactList}\small\item\em calculates size in bytes, given the size in bits \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{vbe__utils_8c_a1e7283abaeee5fa5ffe3a558f9fd592b}{set\+\_\+bits\+\_\+mask}} (uint8\+\_\+t n)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{vbe__utils_8c_a86fd4404b140711fdb77326609c0f393}\label{vbe__utils_8c_a86fd4404b140711fdb77326609c0f393}} 
+\index{vbe\_utils.c@{vbe\_utils.c}!BYTE\_SIZE@{BYTE\_SIZE}}
+\index{BYTE\_SIZE@{BYTE\_SIZE}!vbe\_utils.c@{vbe\_utils.c}}
+\doxysubsubsection{\texorpdfstring{BYTE\_SIZE}{BYTE\_SIZE}}
+{\footnotesize\ttfamily \#define B\+Y\+T\+E\+\_\+\+S\+I\+ZE~8}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{vbe__utils_8c_a1c8a2e27d94c35040f9fd915639c957a}\label{vbe__utils_8c_a1c8a2e27d94c35040f9fd915639c957a}} 
+\index{vbe\_utils.c@{vbe\_utils.c}!calculate\_size\_in\_bytes@{calculate\_size\_in\_bytes}}
+\index{calculate\_size\_in\_bytes@{calculate\_size\_in\_bytes}!vbe\_utils.c@{vbe\_utils.c}}
+\doxysubsubsection{\texorpdfstring{calculate\_size\_in\_bytes()}{calculate\_size\_in\_bytes()}}
+{\footnotesize\ttfamily uint8\+\_\+t calculate\+\_\+size\+\_\+in\+\_\+bytes (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{bits }\end{DoxyParamCaption})}
+
+
+
+calculates size in bytes, given the size in bits 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bits} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t 
+\end{DoxyReturn}
+\mbox{\Hypertarget{vbe__utils_8c_a1e7283abaeee5fa5ffe3a558f9fd592b}\label{vbe__utils_8c_a1e7283abaeee5fa5ffe3a558f9fd592b}} 
+\index{vbe\_utils.c@{vbe\_utils.c}!set\_bits\_mask@{set\_bits\_mask}}
+\index{set\_bits\_mask@{set\_bits\_mask}!vbe\_utils.c@{vbe\_utils.c}}
+\doxysubsubsection{\texorpdfstring{set\_bits\_mask()}{set\_bits\_mask()}}
+{\footnotesize\ttfamily uint32\+\_\+t set\+\_\+bits\+\_\+mask (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{n }\end{DoxyParamCaption})}
+
+Creates a bit mask of the n L\+SB 

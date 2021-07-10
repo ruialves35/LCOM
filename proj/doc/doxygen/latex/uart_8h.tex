@@ -1,0 +1,1183 @@
+\hypertarget{uart_8h}{}\doxysection{uart.\+h File Reference}
+\label{uart_8h}\index{uart.h@{uart.h}}
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}queue.\+h\char`\"{}}\newline
+Include dependency graph for uart.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=162pt]{uart_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{uart_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{uart_8h_a9a9f956b13f320742556368e4df12d7c}{U\+A\+R\+T\+\_\+\+C\+O\+M1\+\_\+\+I\+RQ}}~4
+\begin{DoxyCompactList}\small\item\em U\+A\+RT C\+O\+M1 I\+RQ Line ~\newline
+ \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_af554301f7c32e616a97a8dd29b94a22e}{U\+A\+R\+T\+\_\+\+C\+O\+M2\+\_\+\+I\+RQ}}~3
+\begin{DoxyCompactList}\small\item\em U\+A\+RT C\+O\+M2 I\+RQ Line ~\newline
+ \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_ab644ce405934ea4027ce999913e6d3e7}{U\+A\+R\+T\+\_\+\+D\+L\+\_\+\+B\+I\+T\+R\+A\+T\+E\+\_\+\+D\+I\+V\+I\+S\+OR}}~115200
+\item 
+\#define \mbox{\hyperlink{uart_8h_a578c24864dafab30baa901080a6dccd4}{D\+E\+F\+A\+U\+L\+T\+\_\+\+B\+I\+T\+\_\+\+R\+A\+TE}}~9600
+\item 
+\#define \mbox{\hyperlink{uart_8h_a881f6d108170ae9d64a67eb878a9b62f}{U\+A\+R\+T\+\_\+\+B\+I\+T\+\_\+\+R\+A\+T\+E\+\_\+\+L\+SB}}(bit\+\_\+rate)~(  (bit\+\_\+rate) \& 0x00\+FF)
+\item 
+\#define \mbox{\hyperlink{uart_8h_ab285bcd278c8b3dc32de87df92c24a80}{U\+A\+R\+T\+\_\+\+B\+I\+T\+\_\+\+R\+A\+T\+E\+\_\+\+M\+SB}}(bit\+\_\+rate)~( ((bit\+\_\+rate) \& 0x\+F\+F00) $>$$>$ 8 )
+\item 
+\#define \mbox{\hyperlink{uart_8h_a846c77d7fd058769dbe42e834eec168f}{U\+A\+R\+T\+\_\+\+C\+O\+M1\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+DR}}~0x3\+F8
+\begin{DoxyCompactList}\small\item\em U\+A\+RT\textquotesingle{}s C\+O\+M1 base address register. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_abb28c7011a6f4c3070ecb767f5dd4b08}{U\+A\+R\+T\+\_\+\+C\+O\+M2\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+DR}}~0x2\+F8
+\begin{DoxyCompactList}\small\item\em U\+A\+RT\textquotesingle{}s C\+O\+M2 base address register. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_a3eb7d5a767dae7774aa2b4be28e20a7e}{U\+A\+R\+T\+\_\+\+R\+BR}}~0
+\begin{DoxyCompactList}\small\item\em Receiver Buffer Register. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_a7a676f075475e46d27eb878977b867ec}{U\+A\+R\+T\+\_\+\+T\+HR}}~0
+\begin{DoxyCompactList}\small\item\em Transmitter Holding Register. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_aaf7aaa372e86b3aa99e6c78242be2722}{U\+A\+R\+T\+\_\+\+I\+ER}}~1
+\begin{DoxyCompactList}\small\item\em Interrupt Enable Register. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_a16add7e6b9f91a6698c5910704111b68}{U\+A\+R\+T\+\_\+\+I\+IR}}~2
+\begin{DoxyCompactList}\small\item\em Interrupt Identification Register. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_a220a678f91ca8244b30fe813200c26c1}{U\+A\+R\+T\+\_\+\+F\+CR}}~2
+\begin{DoxyCompactList}\small\item\em F\+I\+FO Control Register. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_a36c30861e332468c7f1998648e706740}{U\+A\+R\+T\+\_\+\+L\+CR}}~3
+\begin{DoxyCompactList}\small\item\em Line Control Register. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_a8ef39bc0942ddd0411d87001d12224f4}{U\+A\+R\+T\+\_\+\+M\+CR}}~4
+\begin{DoxyCompactList}\small\item\em Modem Control Register. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_a0f8ac527073d763bac90daba987361c6}{U\+A\+R\+T\+\_\+\+L\+SR}}~5
+\begin{DoxyCompactList}\small\item\em Line Status Register. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_a71067c48bdde7dc6c5d0a1c56746e776}{U\+A\+R\+T\+\_\+\+M\+SR}}~6
+\begin{DoxyCompactList}\small\item\em Modem Status Register. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_a88135060cd7c85ef5c49d605ea9b4cae}{U\+A\+R\+T\+\_\+\+SR}}~7
+\begin{DoxyCompactList}\small\item\em Scratchpad Register. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_a7ff21e0cfc73a2db80c3907c5cac5a61}{U\+A\+R\+T\+\_\+\+D\+LL}}~0
+\begin{DoxyCompactList}\small\item\em Divisor Latch L\+SB. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_a63f95172026aa533407e357e73b04551}{U\+A\+R\+T\+\_\+\+D\+LM}}~1
+\begin{DoxyCompactList}\small\item\em Divisor Latch M\+SB. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_af814b87aa793854747a77ed2f072dc20}{U\+A\+R\+T\+\_\+\+L\+C\+R\+\_\+5\+B\+PC}}~0
+\begin{DoxyCompactList}\small\item\em 5 bits per char \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_a4844fb962714cda28664f9954407b9ea}{U\+A\+R\+T\+\_\+\+L\+C\+R\+\_\+6\+B\+PC}}~B\+IT(0)
+\begin{DoxyCompactList}\small\item\em 6 bits per char \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_afe73719d4b5cb3c714fc4036ad714ec2}{U\+A\+R\+T\+\_\+\+L\+C\+R\+\_\+7\+B\+PC}}~B\+IT(1)
+\begin{DoxyCompactList}\small\item\em 7 bits per char \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_aab31cf950b5399e6964bcc12c86911cf}{U\+A\+R\+T\+\_\+\+L\+C\+R\+\_\+8\+B\+PC}}~(B\+IT(0) $\vert$ B\+IT(1))
+\begin{DoxyCompactList}\small\item\em 8 bits per char \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_a40a6104f9bce3ed7c72914875ebc537b}{U\+A\+R\+T\+\_\+\+L\+C\+R\+\_\+1\+\_\+\+S\+T\+O\+P\+B\+IT}}~0
+\begin{DoxyCompactList}\small\item\em 1 stop bit \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_aa01a1ccdb662006394e253737af5d5d7}{U\+A\+R\+T\+\_\+\+L\+C\+R\+\_\+2\+\_\+\+S\+T\+O\+P\+B\+IT}}~B\+IT(2)
+\begin{DoxyCompactList}\small\item\em 2 stop bits (1 and 1/2 when 5 bits char) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_a736fba4eebaaee1b796b1f1537c67545}{U\+A\+R\+T\+\_\+\+L\+C\+R\+\_\+\+N\+O\+\_\+\+P\+A\+R\+I\+TY}}~0
+\begin{DoxyCompactList}\small\item\em No parity. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_adb6680c72ae76442fa69a510902e755f}{U\+A\+R\+T\+\_\+\+L\+C\+R\+\_\+\+O\+D\+D\+\_\+\+P\+A\+R\+I\+TY}}~B\+IT(3)
+\begin{DoxyCompactList}\small\item\em Odd parity. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_ad18ed7ccd6de4b367b724f92d552b928}{U\+A\+R\+T\+\_\+\+L\+C\+R\+\_\+\+E\+V\+E\+N\+\_\+\+P\+A\+R\+I\+TY}}~(B\+IT(3) $\vert$ B\+IT(4))
+\begin{DoxyCompactList}\small\item\em Even parity. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_aa194e3982531b22579adfc38cf435988}{U\+A\+R\+T\+\_\+\+L\+C\+R\+\_\+\+B\+R\+E\+A\+K\+\_\+\+C\+T\+RL}}~B\+IT(6)
+\begin{DoxyCompactList}\small\item\em Break control\+: sets serial output to 0 (low) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_ac2e0b56a5909d564e6fea1aee2aa6dc4}{U\+A\+R\+T\+\_\+\+L\+C\+R\+\_\+\+D\+L\+AB}}~B\+IT(7)
+\begin{DoxyCompactList}\small\item\em 0 -\/ Divisor Latch Access / 1 -\/ R\+BR (read) or T\+HR (write) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_ae5032eb40f36a2ca25efafd2d1a02a4f}{U\+A\+R\+T\+\_\+\+L\+C\+R\+\_\+\+O\+P\+P\+O\+S\+I\+T\+E\+\_\+\+M\+A\+SK}}~B\+IT(0) $\vert$ B\+IT(1) $\vert$ B\+IT(2) $\vert$ B\+IT(3) $\vert$ B\+IT(4) $\vert$ B\+IT(5) $\vert$ B\+IT(6)
+\item 
+\#define \mbox{\hyperlink{uart_8h_ac6727eae97e61cbe7553ca2c00f49151}{U\+A\+R\+T\+\_\+\+L\+S\+R\+\_\+\+R\+C\+V\+\_\+\+D\+A\+TA}}~B\+IT(0)
+\begin{DoxyCompactList}\small\item\em Set to 1 when there is data for receiving. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_a5041d8fd3dc0a0c3ca70cfc4916998b6}{U\+A\+R\+T\+\_\+\+L\+S\+R\+\_\+\+O\+V\+R\+\_\+\+E\+R\+R\+OR}}~B\+IT(1)
+\begin{DoxyCompactList}\small\item\em Set to 1 when a characters received is overwritten by another one. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_ab61e8e9e2488d84bddfbc467eec367f9}{U\+A\+R\+T\+\_\+\+L\+S\+R\+\_\+\+P\+A\+R\+\_\+\+E\+R\+R\+OR}}~B\+IT(2)
+\begin{DoxyCompactList}\small\item\em Set to 1 when a character with a parity error is received. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_a77c922f232fae6c36657d6c0501c680d}{U\+A\+R\+T\+\_\+\+L\+S\+R\+\_\+\+F\+R\+M\+\_\+\+E\+R\+R\+OR}}~B\+IT(3)
+\begin{DoxyCompactList}\small\item\em Set to 1 when a received character does not have a valid Stop bit. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_a9fc0dee5197c9197b40a46c35c4a31ee}{U\+A\+R\+T\+\_\+\+L\+S\+R\+\_\+\+B\+R\+K\+\_\+\+I\+NT}}~B\+IT(4)
+\begin{DoxyCompactList}\small\item\em Set to 1 when the serial data input line is held in the low level for longer than a full “word” transmission. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_ae05118527ef8873b9d7b1b0be0153019}{U\+A\+R\+T\+\_\+\+L\+S\+R\+\_\+\+T\+H\+RE}}~B\+IT(5)
+\begin{DoxyCompactList}\small\item\em When set, means that the U\+A\+RT is ready to accept a new character for transmitting. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_aed48bc81751c033ef2401aed2426fcc8}{U\+A\+R\+T\+\_\+\+L\+S\+R\+\_\+\+T\+ER}}~B\+IT(6)
+\begin{DoxyCompactList}\small\item\em When set, means that both the T\+HR and the Transmitter Shift Register are both empty. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_a3e58bc0582036e1b98297bb2b6b8fe4e}{U\+A\+R\+T\+\_\+\+L\+S\+R\+\_\+\+F\+I\+F\+O\+\_\+\+E\+R\+R\+OR}}~B\+IT(7)
+\begin{DoxyCompactList}\small\item\em Set to 1 when there is at least one parity error or framing error or break indication in the F\+I\+FO Reset to 0 when the L\+SR is read, if there are no subsequent errors in the F\+I\+FO. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_aa7bf15627ab73f08c9b3a5d8737c0359}{U\+A\+R\+T\+\_\+\+I\+E\+R\+\_\+\+R\+C\+V\+D\+\_\+\+D\+A\+T\+A\+\_\+\+I\+NT}}~B\+IT(0)
+\begin{DoxyCompactList}\small\item\em Enables the Received Data Available Interrupt. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_a59e12f3c0bdf9d5b0a0633854f57be0a}{U\+A\+R\+T\+\_\+\+I\+E\+R\+\_\+\+T\+H\+R\+E\+\_\+\+I\+NT}}~B\+IT(1)
+\begin{DoxyCompactList}\small\item\em Enables the Transmitter Holding Register Empty Interrupt. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_aad1a5f5edd83835e0f6d2481449144f8}{U\+A\+R\+T\+\_\+\+I\+E\+R\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+NT}}~B\+IT(2)
+\begin{DoxyCompactList}\small\item\em Enables the Receiver Line Status Interrupt This event is generated when there is a change in the state of bits 1 to 4, i.\+e. the error bits, of the L\+SR. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_abdf71f2c283d162e7cef26f2189d6d49}{U\+A\+R\+T\+\_\+\+I\+E\+R\+\_\+\+M\+O\+D\+E\+M\+\_\+\+S\+T\+A\+T\+\_\+\+I\+NT}}~B\+IT(3)
+\begin{DoxyCompactList}\small\item\em Enables the M\+O\+D\+EM Status Interrupt. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_a667479fe75bda26bd25e1fcc8fe6acd0}{U\+A\+R\+T\+\_\+\+I\+I\+R\+\_\+\+N\+O\+\_\+\+I\+NT}}~B\+IT(0)
+\begin{DoxyCompactList}\small\item\em If set, no interrupt is pending. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_a8a0cd1e57face3a5ac397f15bb25b1a6}{U\+A\+R\+T\+\_\+\+I\+I\+R\+\_\+\+R\+LS}}~(B\+IT(1) $\vert$ B\+IT(2))
+\begin{DoxyCompactList}\small\item\em Receiver Line Status. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_a9896460f43c49cd668cc37077fb3bb2f}{U\+A\+R\+T\+\_\+\+I\+I\+R\+\_\+\+R\+DA}}~B\+IT(2)
+\begin{DoxyCompactList}\small\item\em Received Data Available. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_a606ab9fe92cc136585d17b067ea594b7}{U\+A\+R\+T\+\_\+\+I\+I\+R\+\_\+\+F\+I\+F\+O\+\_\+\+C\+\_\+\+T\+I\+M\+E\+O\+UT}}~(B\+IT(2) $\vert$ B\+IT(3))
+\begin{DoxyCompactList}\small\item\em Character Timeout (F\+I\+FO) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_a5beef163e4470a45938764fbe1b2200b}{U\+A\+R\+T\+\_\+\+I\+I\+R\+\_\+\+T\+H\+RE}}~B\+IT(1)
+\begin{DoxyCompactList}\small\item\em Transmitter Holding Register Empty. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_a0b5a0a6a23d8b68b229f0812b710d80c}{U\+A\+R\+T\+\_\+\+I\+I\+R\+\_\+\+M\+O\+D\+E\+M\+\_\+\+S\+T\+A\+T\+US}}~0
+\begin{DoxyCompactList}\small\item\em Modem Status. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_a3e7f7c72ec6c1704c599d7c37ccb6197}{U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+I\+D\+\_\+\+M\+A\+SK}}~(B\+IT(1) $\vert$ B\+IT(2) $\vert$ B\+IT(3))
+\item 
+\#define \mbox{\hyperlink{uart_8h_a49bfbb0b985215ca80b36f4be7f840aa}{U\+A\+R\+T\+\_\+\+F\+C\+R\+\_\+\+EN}}~B\+IT(0)
+\item 
+\#define \mbox{\hyperlink{uart_8h_a44c72f8aca89d69f85635c82273d5fdf}{U\+A\+R\+T\+\_\+\+F\+C\+R\+\_\+\+C\+L\+E\+A\+R\+\_\+\+R\+C\+VR}}~B\+IT(1)
+\item 
+\#define \mbox{\hyperlink{uart_8h_a448a416566b76a0fe8ff0f880ec33d38}{U\+A\+R\+T\+\_\+\+F\+C\+R\+\_\+\+C\+L\+E\+A\+R\+\_\+\+X\+M\+IT}}~B\+IT(2)
+\item 
+\#define \mbox{\hyperlink{uart_8h_a6819e5705cfe6257e3fed31b0420ced0}{U\+A\+R\+T\+\_\+\+F\+C\+R\+\_\+\+T\+R\+I\+G\+G\+E\+R\+\_\+1}}~0
+\item 
+\#define \mbox{\hyperlink{uart_8h_a9b61ae00ad70fc5444fce1f8b4087378}{U\+A\+R\+T\+\_\+\+F\+C\+R\+\_\+\+T\+R\+I\+G\+G\+E\+R\+\_\+4}}~B\+IT(6)
+\item 
+\#define \mbox{\hyperlink{uart_8h_acece0c1d6a2a4dd683124103b580a644}{U\+A\+R\+T\+\_\+\+F\+C\+R\+\_\+\+T\+R\+I\+G\+G\+E\+R\+\_\+8}}~B\+IT(7)
+\item 
+\#define \mbox{\hyperlink{uart_8h_a56b748b44feea964c34b5f53d0f32a3c}{U\+A\+R\+T\+\_\+\+F\+C\+R\+\_\+\+T\+R\+I\+G\+G\+E\+R\+\_\+14}}~B\+IT(6) $\vert$ B\+IT(7)
+\item 
+\#define \mbox{\hyperlink{uart_8h_a84ef9143f96c82ef0f9c3f4ce3978a92}{U\+A\+R\+T\+\_\+5\+L\+S\+B\+\_\+\+M\+A\+SK}}~B\+IT(0) $\vert$ B\+IT(1) $\vert$ B\+IT(2) $\vert$ B\+IT(3) $\vert$ B\+IT(4)
+\item 
+\#define \mbox{\hyperlink{uart_8h_a9ff438b7d3ab9840d7be83f091d30eb2}{U\+A\+R\+T\+\_\+\+L6\+S\+B\+\_\+\+M\+A\+SK}}~B\+IT(0) $\vert$ B\+IT(1) $\vert$ B\+IT(2) $\vert$ B\+IT(3) $\vert$ B\+IT(4) $\vert$ B\+IT(5)
+\item 
+\#define \mbox{\hyperlink{uart_8h_a203c802a97321c7869cf539a7b210eb0}{U\+A\+R\+T\+\_\+\+L\+V\+L1\+\_\+\+C\+O\+M\+P\+L\+E\+TE}}~3
+\item 
+\#define \mbox{\hyperlink{uart_8h_ac727239d57753b0ef56919d855d08868}{U\+A\+R\+T\+\_\+\+L\+V\+L2\+\_\+\+C\+O\+M\+P\+L\+E\+TE}}~6
+\item 
+\#define \mbox{\hyperlink{uart_8h_a01e22161da1db0a7bf06146f8bb29e56}{U\+A\+R\+T\+\_\+\+W\+ON}}~9
+\item 
+\#define \mbox{\hyperlink{uart_8h_ac698659ac7486a4bc3f0433c72f27140}{U\+A\+R\+T\+\_\+\+L\+V\+L1\+\_\+\+L\+O\+SE}}~12
+\item 
+\#define \mbox{\hyperlink{uart_8h_af1f98503aae15a4f73d8abd30101d9f7}{U\+A\+R\+T\+\_\+\+L\+V\+L2\+\_\+\+L\+O\+SE}}~15
+\item 
+\#define \mbox{\hyperlink{uart_8h_a506605dbf5b2ecefe45b3f6370db4afb}{U\+A\+R\+T\+\_\+\+L\+V\+L3\+\_\+\+L\+O\+SE}}~18
+\item 
+\#define \mbox{\hyperlink{uart_8h_aad02d036cfa65385388b852e93cb22f1}{U\+A\+R\+T\+\_\+\+P\+L\+A\+Y\+E\+R\+\_\+\+J\+O\+I\+N\+ED}}~7
+\item 
+\#define \mbox{\hyperlink{uart_8h_a5788bc84a477a71e73468f22ec048a31}{U\+A\+R\+T\+\_\+\+O\+N\+\_\+\+S\+C\+O\+R\+E\+B\+O\+A\+RD}}~17
+\item 
+\#define \mbox{\hyperlink{uart_8h_a51c78220ce486ddf17965b25acbc4b4d}{U\+A\+R\+T\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+T\+I\+ME}}~90
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{uart_8h_a91cea1153e9db030b2a0fba6e7cec8d7}{parity\+Types}} \{ \newline
+\mbox{\hyperlink{uart_8h_a91cea1153e9db030b2a0fba6e7cec8d7a90674e2854f8cd4ce76ea0b4cd4546cc}{P\+A\+R\+I\+T\+Y\+\_\+\+N\+O\+NE}}, 
+\mbox{\hyperlink{uart_8h_a91cea1153e9db030b2a0fba6e7cec8d7a41443d13b163ffeaf59c4667472bc49c}{P\+A\+R\+I\+T\+Y\+\_\+\+O\+DD}}, 
+\mbox{\hyperlink{uart_8h_a91cea1153e9db030b2a0fba6e7cec8d7ae6172576b70fc73aefabd529c103c9b8}{P\+A\+R\+I\+T\+Y\+\_\+\+E\+V\+EN}}, 
+\mbox{\hyperlink{uart_8h_a91cea1153e9db030b2a0fba6e7cec8d7adfe51f49e99b7a80054e1412d72bf936}{P\+A\+R\+I\+T\+Y\+\_\+1}}, 
+\newline
+\mbox{\hyperlink{uart_8h_a91cea1153e9db030b2a0fba6e7cec8d7ae16c5f35e8ca31527731060dcdd1a2c4}{P\+A\+R\+I\+T\+Y\+\_\+0}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int() \mbox{\hyperlink{uart_8h_aa12b7563cba242a7eefc7f1c74cd7483}{uart\+\_\+subscribe\+\_\+int}} (uint8\+\_\+t $\ast$bit\+\_\+no)
+\begin{DoxyCompactList}\small\item\em Subscribes interrupts from the serial port. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{uart_8h_a89beffcfd47d3f718580e8c54d2d9380}{uart\+\_\+unsubscribe\+\_\+int}} ()
+\begin{DoxyCompactList}\small\item\em Unsubscribes interrupts from the serial port. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{uart_8h_a0d2f75bb0c90f1c13bc02036c8669f7e}{uart\+\_\+write\+\_\+reg}} (uint8\+\_\+t reg\+Num, uint8\+\_\+t byte)
+\begin{DoxyCompactList}\small\item\em writes in the uart reg given as the arg the byte \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{uart_8h_aa62a1fd216f328e78b85e4b27d4627d7}{uart\+\_\+read\+\_\+reg}} (uint8\+\_\+t reg\+Num, uint8\+\_\+t $\ast$variable)
+\begin{DoxyCompactList}\small\item\em Reads from the reg given as argument. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{uart_8h_abc4203ec358dc25de70dd6dd341f701e}{uart\+\_\+setup\+\_\+lcr}} (uint8\+\_\+t word\+Length, uint8\+\_\+t stop\+Bits, \mbox{\hyperlink{uart_8h_a91cea1153e9db030b2a0fba6e7cec8d7}{parity\+Types}} parity)
+\begin{DoxyCompactList}\small\item\em changes the line control register byte in accordance to the args (Except B\+IT 6 and 7) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{uart_8h_ae17156e078d7fc999d700d896c66728d}{uart\+\_\+set\+\_\+dlb}} (bool dlb)
+\begin{DoxyCompactList}\small\item\em Enables divisor latch access on the Line Control Reg. if dlb is true. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{uart_8h_a7884cf6ee38a38305009b533c91822c7}{uart\+\_\+en\+\_\+interrupts}} ()
+\begin{DoxyCompactList}\small\item\em Enables the desired interrupts. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{uart_8h_a84d7057bb3d3e03a7783efad09c5a095}{uart\+\_\+set\+\_\+bit\+\_\+rate}} (int bit\+\_\+rate)
+\begin{DoxyCompactList}\small\item\em Set the bitrate to the one specified as the argument. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{uart_8h_aa4552416dcf7782e19c22002204f66a2}{uart\+\_\+en\+\_\+fifo}} (uint8\+\_\+t trigger\+Level)
+\begin{DoxyCompactList}\small\item\em E\+N\+A\+B\+L\+ES F\+I\+FO, clears Transmitter and Receiver F\+I\+FO and sets trigger level. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{uart_8h_a3c1b230231f6f74ab6ba6b396b9ce04e}{uart\+\_\+send\+\_\+message}} (uint8\+\_\+t message)
+\begin{DoxyCompactList}\small\item\em Sends a message through the serial port. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{uart_8h_acf88516f9aaea06470adbb16ad85c6b6}{uart\+\_\+fifo\+\_\+send\+\_\+message}} (\mbox{\hyperlink{struct_queue}{Queue}} $\ast$queue)
+\begin{DoxyCompactList}\small\item\em Sends a message through the serial port to the queue. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{uart_8h_afef5c2a1427c77b83cdeb0c13af971c2}{uart\+\_\+fifo\+\_\+read\+\_\+message}} (\mbox{\hyperlink{struct_queue}{Queue}} $\ast$queue)
+\begin{DoxyCompactList}\small\item\em Reads a message through the serial port and inserts on the queue. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{uart_8h_acbe87e12bfa10959902da5a7529075ee}{uart\+\_\+read\+\_\+message}} (uint8\+\_\+t $\ast$message)
+\begin{DoxyCompactList}\small\item\em Reads a message through the serial port. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{uart_8h_a89b12c76cc3c9595a88a72ea5d102dec}{uart\+\_\+check\+\_\+send}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the user can send a new message. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{uart_8h_a34d24c101166525cadda68f923b5f1d2}{uart\+\_\+check\+\_\+read}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the user can read a new message. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{uart_8h_a67d2da4dd20c731989c130bbe2cd4c85}{uart\+\_\+ih}} ()
+\begin{DoxyCompactList}\small\item\em handles the uart interrupts \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{uart_8h_a578c24864dafab30baa901080a6dccd4}\label{uart_8h_a578c24864dafab30baa901080a6dccd4}} 
+\index{uart.h@{uart.h}!DEFAULT\_BIT\_RATE@{DEFAULT\_BIT\_RATE}}
+\index{DEFAULT\_BIT\_RATE@{DEFAULT\_BIT\_RATE}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{DEFAULT\_BIT\_RATE}{DEFAULT\_BIT\_RATE}}
+{\footnotesize\ttfamily \#define D\+E\+F\+A\+U\+L\+T\+\_\+\+B\+I\+T\+\_\+\+R\+A\+TE~9600}
+
+\mbox{\Hypertarget{uart_8h_a84ef9143f96c82ef0f9c3f4ce3978a92}\label{uart_8h_a84ef9143f96c82ef0f9c3f4ce3978a92}} 
+\index{uart.h@{uart.h}!UART\_5LSB\_MASK@{UART\_5LSB\_MASK}}
+\index{UART\_5LSB\_MASK@{UART\_5LSB\_MASK}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_5LSB\_MASK}{UART\_5LSB\_MASK}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+5\+L\+S\+B\+\_\+\+M\+A\+SK~B\+IT(0) $\vert$ B\+IT(1) $\vert$ B\+IT(2) $\vert$ B\+IT(3) $\vert$ B\+IT(4)}
+
+\mbox{\Hypertarget{uart_8h_a881f6d108170ae9d64a67eb878a9b62f}\label{uart_8h_a881f6d108170ae9d64a67eb878a9b62f}} 
+\index{uart.h@{uart.h}!UART\_BIT\_RATE\_LSB@{UART\_BIT\_RATE\_LSB}}
+\index{UART\_BIT\_RATE\_LSB@{UART\_BIT\_RATE\_LSB}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_BIT\_RATE\_LSB}{UART\_BIT\_RATE\_LSB}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+B\+I\+T\+\_\+\+R\+A\+T\+E\+\_\+\+L\+SB(\begin{DoxyParamCaption}\item[{}]{bit\+\_\+rate }\end{DoxyParamCaption})~(  (bit\+\_\+rate) \& 0x00\+FF)}
+
+\mbox{\Hypertarget{uart_8h_ab285bcd278c8b3dc32de87df92c24a80}\label{uart_8h_ab285bcd278c8b3dc32de87df92c24a80}} 
+\index{uart.h@{uart.h}!UART\_BIT\_RATE\_MSB@{UART\_BIT\_RATE\_MSB}}
+\index{UART\_BIT\_RATE\_MSB@{UART\_BIT\_RATE\_MSB}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_BIT\_RATE\_MSB}{UART\_BIT\_RATE\_MSB}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+B\+I\+T\+\_\+\+R\+A\+T\+E\+\_\+\+M\+SB(\begin{DoxyParamCaption}\item[{}]{bit\+\_\+rate }\end{DoxyParamCaption})~( ((bit\+\_\+rate) \& 0x\+F\+F00) $>$$>$ 8 )}
+
+\mbox{\Hypertarget{uart_8h_a846c77d7fd058769dbe42e834eec168f}\label{uart_8h_a846c77d7fd058769dbe42e834eec168f}} 
+\index{uart.h@{uart.h}!UART\_COM1\_BASE\_ADDR@{UART\_COM1\_BASE\_ADDR}}
+\index{UART\_COM1\_BASE\_ADDR@{UART\_COM1\_BASE\_ADDR}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_COM1\_BASE\_ADDR}{UART\_COM1\_BASE\_ADDR}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+C\+O\+M1\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+DR~0x3\+F8}
+
+
+
+U\+A\+RT\textquotesingle{}s C\+O\+M1 base address register. 
+
+\mbox{\Hypertarget{uart_8h_a9a9f956b13f320742556368e4df12d7c}\label{uart_8h_a9a9f956b13f320742556368e4df12d7c}} 
+\index{uart.h@{uart.h}!UART\_COM1\_IRQ@{UART\_COM1\_IRQ}}
+\index{UART\_COM1\_IRQ@{UART\_COM1\_IRQ}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_COM1\_IRQ}{UART\_COM1\_IRQ}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+C\+O\+M1\+\_\+\+I\+RQ~4}
+
+
+
+U\+A\+RT C\+O\+M1 I\+RQ Line ~\newline
+ 
+
+\mbox{\Hypertarget{uart_8h_abb28c7011a6f4c3070ecb767f5dd4b08}\label{uart_8h_abb28c7011a6f4c3070ecb767f5dd4b08}} 
+\index{uart.h@{uart.h}!UART\_COM2\_BASE\_ADDR@{UART\_COM2\_BASE\_ADDR}}
+\index{UART\_COM2\_BASE\_ADDR@{UART\_COM2\_BASE\_ADDR}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_COM2\_BASE\_ADDR}{UART\_COM2\_BASE\_ADDR}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+C\+O\+M2\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+DR~0x2\+F8}
+
+
+
+U\+A\+RT\textquotesingle{}s C\+O\+M2 base address register. 
+
+\mbox{\Hypertarget{uart_8h_af554301f7c32e616a97a8dd29b94a22e}\label{uart_8h_af554301f7c32e616a97a8dd29b94a22e}} 
+\index{uart.h@{uart.h}!UART\_COM2\_IRQ@{UART\_COM2\_IRQ}}
+\index{UART\_COM2\_IRQ@{UART\_COM2\_IRQ}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_COM2\_IRQ}{UART\_COM2\_IRQ}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+C\+O\+M2\+\_\+\+I\+RQ~3}
+
+
+
+U\+A\+RT C\+O\+M2 I\+RQ Line ~\newline
+ 
+
+\mbox{\Hypertarget{uart_8h_ab644ce405934ea4027ce999913e6d3e7}\label{uart_8h_ab644ce405934ea4027ce999913e6d3e7}} 
+\index{uart.h@{uart.h}!UART\_DL\_BITRATE\_DIVISOR@{UART\_DL\_BITRATE\_DIVISOR}}
+\index{UART\_DL\_BITRATE\_DIVISOR@{UART\_DL\_BITRATE\_DIVISOR}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_DL\_BITRATE\_DIVISOR}{UART\_DL\_BITRATE\_DIVISOR}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+D\+L\+\_\+\+B\+I\+T\+R\+A\+T\+E\+\_\+\+D\+I\+V\+I\+S\+OR~115200}
+
+Divisor latch value must be set to 115200/bit\+\_\+rate to set the bit\+\_\+rate \mbox{\Hypertarget{uart_8h_a7ff21e0cfc73a2db80c3907c5cac5a61}\label{uart_8h_a7ff21e0cfc73a2db80c3907c5cac5a61}} 
+\index{uart.h@{uart.h}!UART\_DLL@{UART\_DLL}}
+\index{UART\_DLL@{UART\_DLL}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_DLL}{UART\_DLL}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+D\+LL~0}
+
+
+
+Divisor Latch L\+SB. 
+
+\mbox{\Hypertarget{uart_8h_a63f95172026aa533407e357e73b04551}\label{uart_8h_a63f95172026aa533407e357e73b04551}} 
+\index{uart.h@{uart.h}!UART\_DLM@{UART\_DLM}}
+\index{UART\_DLM@{UART\_DLM}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_DLM}{UART\_DLM}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+D\+LM~1}
+
+
+
+Divisor Latch M\+SB. 
+
+\mbox{\Hypertarget{uart_8h_a220a678f91ca8244b30fe813200c26c1}\label{uart_8h_a220a678f91ca8244b30fe813200c26c1}} 
+\index{uart.h@{uart.h}!UART\_FCR@{UART\_FCR}}
+\index{UART\_FCR@{UART\_FCR}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_FCR}{UART\_FCR}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+F\+CR~2}
+
+
+
+F\+I\+FO Control Register. 
+
+\mbox{\Hypertarget{uart_8h_a44c72f8aca89d69f85635c82273d5fdf}\label{uart_8h_a44c72f8aca89d69f85635c82273d5fdf}} 
+\index{uart.h@{uart.h}!UART\_FCR\_CLEAR\_RCVR@{UART\_FCR\_CLEAR\_RCVR}}
+\index{UART\_FCR\_CLEAR\_RCVR@{UART\_FCR\_CLEAR\_RCVR}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_FCR\_CLEAR\_RCVR}{UART\_FCR\_CLEAR\_RCVR}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+F\+C\+R\+\_\+\+C\+L\+E\+A\+R\+\_\+\+R\+C\+VR~B\+IT(1)}
+
+\mbox{\Hypertarget{uart_8h_a448a416566b76a0fe8ff0f880ec33d38}\label{uart_8h_a448a416566b76a0fe8ff0f880ec33d38}} 
+\index{uart.h@{uart.h}!UART\_FCR\_CLEAR\_XMIT@{UART\_FCR\_CLEAR\_XMIT}}
+\index{UART\_FCR\_CLEAR\_XMIT@{UART\_FCR\_CLEAR\_XMIT}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_FCR\_CLEAR\_XMIT}{UART\_FCR\_CLEAR\_XMIT}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+F\+C\+R\+\_\+\+C\+L\+E\+A\+R\+\_\+\+X\+M\+IT~B\+IT(2)}
+
+\mbox{\Hypertarget{uart_8h_a49bfbb0b985215ca80b36f4be7f840aa}\label{uart_8h_a49bfbb0b985215ca80b36f4be7f840aa}} 
+\index{uart.h@{uart.h}!UART\_FCR\_EN@{UART\_FCR\_EN}}
+\index{UART\_FCR\_EN@{UART\_FCR\_EN}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_FCR\_EN}{UART\_FCR\_EN}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+F\+C\+R\+\_\+\+EN~B\+IT(0)}
+
+\mbox{\Hypertarget{uart_8h_a6819e5705cfe6257e3fed31b0420ced0}\label{uart_8h_a6819e5705cfe6257e3fed31b0420ced0}} 
+\index{uart.h@{uart.h}!UART\_FCR\_TRIGGER\_1@{UART\_FCR\_TRIGGER\_1}}
+\index{UART\_FCR\_TRIGGER\_1@{UART\_FCR\_TRIGGER\_1}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_FCR\_TRIGGER\_1}{UART\_FCR\_TRIGGER\_1}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+F\+C\+R\+\_\+\+T\+R\+I\+G\+G\+E\+R\+\_\+1~0}
+
+\mbox{\Hypertarget{uart_8h_a56b748b44feea964c34b5f53d0f32a3c}\label{uart_8h_a56b748b44feea964c34b5f53d0f32a3c}} 
+\index{uart.h@{uart.h}!UART\_FCR\_TRIGGER\_14@{UART\_FCR\_TRIGGER\_14}}
+\index{UART\_FCR\_TRIGGER\_14@{UART\_FCR\_TRIGGER\_14}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_FCR\_TRIGGER\_14}{UART\_FCR\_TRIGGER\_14}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+F\+C\+R\+\_\+\+T\+R\+I\+G\+G\+E\+R\+\_\+14~B\+IT(6) $\vert$ B\+IT(7)}
+
+\mbox{\Hypertarget{uart_8h_a9b61ae00ad70fc5444fce1f8b4087378}\label{uart_8h_a9b61ae00ad70fc5444fce1f8b4087378}} 
+\index{uart.h@{uart.h}!UART\_FCR\_TRIGGER\_4@{UART\_FCR\_TRIGGER\_4}}
+\index{UART\_FCR\_TRIGGER\_4@{UART\_FCR\_TRIGGER\_4}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_FCR\_TRIGGER\_4}{UART\_FCR\_TRIGGER\_4}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+F\+C\+R\+\_\+\+T\+R\+I\+G\+G\+E\+R\+\_\+4~B\+IT(6)}
+
+\mbox{\Hypertarget{uart_8h_acece0c1d6a2a4dd683124103b580a644}\label{uart_8h_acece0c1d6a2a4dd683124103b580a644}} 
+\index{uart.h@{uart.h}!UART\_FCR\_TRIGGER\_8@{UART\_FCR\_TRIGGER\_8}}
+\index{UART\_FCR\_TRIGGER\_8@{UART\_FCR\_TRIGGER\_8}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_FCR\_TRIGGER\_8}{UART\_FCR\_TRIGGER\_8}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+F\+C\+R\+\_\+\+T\+R\+I\+G\+G\+E\+R\+\_\+8~B\+IT(7)}
+
+\mbox{\Hypertarget{uart_8h_aaf7aaa372e86b3aa99e6c78242be2722}\label{uart_8h_aaf7aaa372e86b3aa99e6c78242be2722}} 
+\index{uart.h@{uart.h}!UART\_IER@{UART\_IER}}
+\index{UART\_IER@{UART\_IER}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_IER}{UART\_IER}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+I\+ER~1}
+
+
+
+Interrupt Enable Register. 
+
+\mbox{\Hypertarget{uart_8h_aad1a5f5edd83835e0f6d2481449144f8}\label{uart_8h_aad1a5f5edd83835e0f6d2481449144f8}} 
+\index{uart.h@{uart.h}!UART\_IER\_ERROR\_INT@{UART\_IER\_ERROR\_INT}}
+\index{UART\_IER\_ERROR\_INT@{UART\_IER\_ERROR\_INT}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_IER\_ERROR\_INT}{UART\_IER\_ERROR\_INT}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+I\+E\+R\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+NT~B\+IT(2)}
+
+
+
+Enables the Receiver Line Status Interrupt This event is generated when there is a change in the state of bits 1 to 4, i.\+e. the error bits, of the L\+SR. 
+
+\mbox{\Hypertarget{uart_8h_abdf71f2c283d162e7cef26f2189d6d49}\label{uart_8h_abdf71f2c283d162e7cef26f2189d6d49}} 
+\index{uart.h@{uart.h}!UART\_IER\_MODEM\_STAT\_INT@{UART\_IER\_MODEM\_STAT\_INT}}
+\index{UART\_IER\_MODEM\_STAT\_INT@{UART\_IER\_MODEM\_STAT\_INT}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_IER\_MODEM\_STAT\_INT}{UART\_IER\_MODEM\_STAT\_INT}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+I\+E\+R\+\_\+\+M\+O\+D\+E\+M\+\_\+\+S\+T\+A\+T\+\_\+\+I\+NT~B\+IT(3)}
+
+
+
+Enables the M\+O\+D\+EM Status Interrupt. 
+
+\mbox{\Hypertarget{uart_8h_aa7bf15627ab73f08c9b3a5d8737c0359}\label{uart_8h_aa7bf15627ab73f08c9b3a5d8737c0359}} 
+\index{uart.h@{uart.h}!UART\_IER\_RCVD\_DATA\_INT@{UART\_IER\_RCVD\_DATA\_INT}}
+\index{UART\_IER\_RCVD\_DATA\_INT@{UART\_IER\_RCVD\_DATA\_INT}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_IER\_RCVD\_DATA\_INT}{UART\_IER\_RCVD\_DATA\_INT}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+I\+E\+R\+\_\+\+R\+C\+V\+D\+\_\+\+D\+A\+T\+A\+\_\+\+I\+NT~B\+IT(0)}
+
+
+
+Enables the Received Data Available Interrupt. 
+
+\mbox{\Hypertarget{uart_8h_a59e12f3c0bdf9d5b0a0633854f57be0a}\label{uart_8h_a59e12f3c0bdf9d5b0a0633854f57be0a}} 
+\index{uart.h@{uart.h}!UART\_IER\_THRE\_INT@{UART\_IER\_THRE\_INT}}
+\index{UART\_IER\_THRE\_INT@{UART\_IER\_THRE\_INT}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_IER\_THRE\_INT}{UART\_IER\_THRE\_INT}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+I\+E\+R\+\_\+\+T\+H\+R\+E\+\_\+\+I\+NT~B\+IT(1)}
+
+
+
+Enables the Transmitter Holding Register Empty Interrupt. 
+
+\mbox{\Hypertarget{uart_8h_a16add7e6b9f91a6698c5910704111b68}\label{uart_8h_a16add7e6b9f91a6698c5910704111b68}} 
+\index{uart.h@{uart.h}!UART\_IIR@{UART\_IIR}}
+\index{UART\_IIR@{UART\_IIR}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_IIR}{UART\_IIR}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+I\+IR~2}
+
+
+
+Interrupt Identification Register. 
+
+\mbox{\Hypertarget{uart_8h_a606ab9fe92cc136585d17b067ea594b7}\label{uart_8h_a606ab9fe92cc136585d17b067ea594b7}} 
+\index{uart.h@{uart.h}!UART\_IIR\_FIFO\_C\_TIMEOUT@{UART\_IIR\_FIFO\_C\_TIMEOUT}}
+\index{UART\_IIR\_FIFO\_C\_TIMEOUT@{UART\_IIR\_FIFO\_C\_TIMEOUT}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_IIR\_FIFO\_C\_TIMEOUT}{UART\_IIR\_FIFO\_C\_TIMEOUT}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+I\+I\+R\+\_\+\+F\+I\+F\+O\+\_\+\+C\+\_\+\+T\+I\+M\+E\+O\+UT~(B\+IT(2) $\vert$ B\+IT(3))}
+
+
+
+Character Timeout (F\+I\+FO) 
+
+\mbox{\Hypertarget{uart_8h_a0b5a0a6a23d8b68b229f0812b710d80c}\label{uart_8h_a0b5a0a6a23d8b68b229f0812b710d80c}} 
+\index{uart.h@{uart.h}!UART\_IIR\_MODEM\_STATUS@{UART\_IIR\_MODEM\_STATUS}}
+\index{UART\_IIR\_MODEM\_STATUS@{UART\_IIR\_MODEM\_STATUS}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_IIR\_MODEM\_STATUS}{UART\_IIR\_MODEM\_STATUS}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+I\+I\+R\+\_\+\+M\+O\+D\+E\+M\+\_\+\+S\+T\+A\+T\+US~0}
+
+
+
+Modem Status. 
+
+\mbox{\Hypertarget{uart_8h_a667479fe75bda26bd25e1fcc8fe6acd0}\label{uart_8h_a667479fe75bda26bd25e1fcc8fe6acd0}} 
+\index{uart.h@{uart.h}!UART\_IIR\_NO\_INT@{UART\_IIR\_NO\_INT}}
+\index{UART\_IIR\_NO\_INT@{UART\_IIR\_NO\_INT}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_IIR\_NO\_INT}{UART\_IIR\_NO\_INT}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+I\+I\+R\+\_\+\+N\+O\+\_\+\+I\+NT~B\+IT(0)}
+
+
+
+If set, no interrupt is pending. 
+
+\mbox{\Hypertarget{uart_8h_a9896460f43c49cd668cc37077fb3bb2f}\label{uart_8h_a9896460f43c49cd668cc37077fb3bb2f}} 
+\index{uart.h@{uart.h}!UART\_IIR\_RDA@{UART\_IIR\_RDA}}
+\index{UART\_IIR\_RDA@{UART\_IIR\_RDA}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_IIR\_RDA}{UART\_IIR\_RDA}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+I\+I\+R\+\_\+\+R\+DA~B\+IT(2)}
+
+
+
+Received Data Available. 
+
+\mbox{\Hypertarget{uart_8h_a8a0cd1e57face3a5ac397f15bb25b1a6}\label{uart_8h_a8a0cd1e57face3a5ac397f15bb25b1a6}} 
+\index{uart.h@{uart.h}!UART\_IIR\_RLS@{UART\_IIR\_RLS}}
+\index{UART\_IIR\_RLS@{UART\_IIR\_RLS}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_IIR\_RLS}{UART\_IIR\_RLS}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+I\+I\+R\+\_\+\+R\+LS~(B\+IT(1) $\vert$ B\+IT(2))}
+
+
+
+Receiver Line Status. 
+
+\mbox{\Hypertarget{uart_8h_a5beef163e4470a45938764fbe1b2200b}\label{uart_8h_a5beef163e4470a45938764fbe1b2200b}} 
+\index{uart.h@{uart.h}!UART\_IIR\_THRE@{UART\_IIR\_THRE}}
+\index{UART\_IIR\_THRE@{UART\_IIR\_THRE}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_IIR\_THRE}{UART\_IIR\_THRE}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+I\+I\+R\+\_\+\+T\+H\+RE~B\+IT(1)}
+
+
+
+Transmitter Holding Register Empty. 
+
+\mbox{\Hypertarget{uart_8h_a3e7f7c72ec6c1704c599d7c37ccb6197}\label{uart_8h_a3e7f7c72ec6c1704c599d7c37ccb6197}} 
+\index{uart.h@{uart.h}!UART\_INT\_ID\_MASK@{UART\_INT\_ID\_MASK}}
+\index{UART\_INT\_ID\_MASK@{UART\_INT\_ID\_MASK}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_INT\_ID\_MASK}{UART\_INT\_ID\_MASK}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+\+I\+D\+\_\+\+M\+A\+SK~(B\+IT(1) $\vert$ B\+IT(2) $\vert$ B\+IT(3))}
+
+\mbox{\Hypertarget{uart_8h_a9ff438b7d3ab9840d7be83f091d30eb2}\label{uart_8h_a9ff438b7d3ab9840d7be83f091d30eb2}} 
+\index{uart.h@{uart.h}!UART\_L6SB\_MASK@{UART\_L6SB\_MASK}}
+\index{UART\_L6SB\_MASK@{UART\_L6SB\_MASK}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_L6SB\_MASK}{UART\_L6SB\_MASK}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+L6\+S\+B\+\_\+\+M\+A\+SK~B\+IT(0) $\vert$ B\+IT(1) $\vert$ B\+IT(2) $\vert$ B\+IT(3) $\vert$ B\+IT(4) $\vert$ B\+IT(5)}
+
+\mbox{\Hypertarget{uart_8h_a36c30861e332468c7f1998648e706740}\label{uart_8h_a36c30861e332468c7f1998648e706740}} 
+\index{uart.h@{uart.h}!UART\_LCR@{UART\_LCR}}
+\index{UART\_LCR@{UART\_LCR}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_LCR}{UART\_LCR}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+L\+CR~3}
+
+
+
+Line Control Register. 
+
+\mbox{\Hypertarget{uart_8h_a40a6104f9bce3ed7c72914875ebc537b}\label{uart_8h_a40a6104f9bce3ed7c72914875ebc537b}} 
+\index{uart.h@{uart.h}!UART\_LCR\_1\_STOPBIT@{UART\_LCR\_1\_STOPBIT}}
+\index{UART\_LCR\_1\_STOPBIT@{UART\_LCR\_1\_STOPBIT}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_LCR\_1\_STOPBIT}{UART\_LCR\_1\_STOPBIT}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+L\+C\+R\+\_\+1\+\_\+\+S\+T\+O\+P\+B\+IT~0}
+
+
+
+1 stop bit 
+
+\mbox{\Hypertarget{uart_8h_aa01a1ccdb662006394e253737af5d5d7}\label{uart_8h_aa01a1ccdb662006394e253737af5d5d7}} 
+\index{uart.h@{uart.h}!UART\_LCR\_2\_STOPBIT@{UART\_LCR\_2\_STOPBIT}}
+\index{UART\_LCR\_2\_STOPBIT@{UART\_LCR\_2\_STOPBIT}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_LCR\_2\_STOPBIT}{UART\_LCR\_2\_STOPBIT}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+L\+C\+R\+\_\+2\+\_\+\+S\+T\+O\+P\+B\+IT~B\+IT(2)}
+
+
+
+2 stop bits (1 and 1/2 when 5 bits char) 
+
+\mbox{\Hypertarget{uart_8h_af814b87aa793854747a77ed2f072dc20}\label{uart_8h_af814b87aa793854747a77ed2f072dc20}} 
+\index{uart.h@{uart.h}!UART\_LCR\_5BPC@{UART\_LCR\_5BPC}}
+\index{UART\_LCR\_5BPC@{UART\_LCR\_5BPC}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_LCR\_5BPC}{UART\_LCR\_5BPC}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+L\+C\+R\+\_\+5\+B\+PC~0}
+
+
+
+5 bits per char 
+
+\mbox{\Hypertarget{uart_8h_a4844fb962714cda28664f9954407b9ea}\label{uart_8h_a4844fb962714cda28664f9954407b9ea}} 
+\index{uart.h@{uart.h}!UART\_LCR\_6BPC@{UART\_LCR\_6BPC}}
+\index{UART\_LCR\_6BPC@{UART\_LCR\_6BPC}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_LCR\_6BPC}{UART\_LCR\_6BPC}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+L\+C\+R\+\_\+6\+B\+PC~B\+IT(0)}
+
+
+
+6 bits per char 
+
+\mbox{\Hypertarget{uart_8h_afe73719d4b5cb3c714fc4036ad714ec2}\label{uart_8h_afe73719d4b5cb3c714fc4036ad714ec2}} 
+\index{uart.h@{uart.h}!UART\_LCR\_7BPC@{UART\_LCR\_7BPC}}
+\index{UART\_LCR\_7BPC@{UART\_LCR\_7BPC}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_LCR\_7BPC}{UART\_LCR\_7BPC}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+L\+C\+R\+\_\+7\+B\+PC~B\+IT(1)}
+
+
+
+7 bits per char 
+
+\mbox{\Hypertarget{uart_8h_aab31cf950b5399e6964bcc12c86911cf}\label{uart_8h_aab31cf950b5399e6964bcc12c86911cf}} 
+\index{uart.h@{uart.h}!UART\_LCR\_8BPC@{UART\_LCR\_8BPC}}
+\index{UART\_LCR\_8BPC@{UART\_LCR\_8BPC}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_LCR\_8BPC}{UART\_LCR\_8BPC}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+L\+C\+R\+\_\+8\+B\+PC~(B\+IT(0) $\vert$ B\+IT(1))}
+
+
+
+8 bits per char 
+
+\mbox{\Hypertarget{uart_8h_aa194e3982531b22579adfc38cf435988}\label{uart_8h_aa194e3982531b22579adfc38cf435988}} 
+\index{uart.h@{uart.h}!UART\_LCR\_BREAK\_CTRL@{UART\_LCR\_BREAK\_CTRL}}
+\index{UART\_LCR\_BREAK\_CTRL@{UART\_LCR\_BREAK\_CTRL}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_LCR\_BREAK\_CTRL}{UART\_LCR\_BREAK\_CTRL}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+L\+C\+R\+\_\+\+B\+R\+E\+A\+K\+\_\+\+C\+T\+RL~B\+IT(6)}
+
+
+
+Break control\+: sets serial output to 0 (low) 
+
+\mbox{\Hypertarget{uart_8h_ac2e0b56a5909d564e6fea1aee2aa6dc4}\label{uart_8h_ac2e0b56a5909d564e6fea1aee2aa6dc4}} 
+\index{uart.h@{uart.h}!UART\_LCR\_DLAB@{UART\_LCR\_DLAB}}
+\index{UART\_LCR\_DLAB@{UART\_LCR\_DLAB}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_LCR\_DLAB}{UART\_LCR\_DLAB}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+L\+C\+R\+\_\+\+D\+L\+AB~B\+IT(7)}
+
+
+
+0 -\/ Divisor Latch Access / 1 -\/ R\+BR (read) or T\+HR (write) 
+
+\mbox{\Hypertarget{uart_8h_ad18ed7ccd6de4b367b724f92d552b928}\label{uart_8h_ad18ed7ccd6de4b367b724f92d552b928}} 
+\index{uart.h@{uart.h}!UART\_LCR\_EVEN\_PARITY@{UART\_LCR\_EVEN\_PARITY}}
+\index{UART\_LCR\_EVEN\_PARITY@{UART\_LCR\_EVEN\_PARITY}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_LCR\_EVEN\_PARITY}{UART\_LCR\_EVEN\_PARITY}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+L\+C\+R\+\_\+\+E\+V\+E\+N\+\_\+\+P\+A\+R\+I\+TY~(B\+IT(3) $\vert$ B\+IT(4))}
+
+
+
+Even parity. 
+
+\mbox{\Hypertarget{uart_8h_a736fba4eebaaee1b796b1f1537c67545}\label{uart_8h_a736fba4eebaaee1b796b1f1537c67545}} 
+\index{uart.h@{uart.h}!UART\_LCR\_NO\_PARITY@{UART\_LCR\_NO\_PARITY}}
+\index{UART\_LCR\_NO\_PARITY@{UART\_LCR\_NO\_PARITY}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_LCR\_NO\_PARITY}{UART\_LCR\_NO\_PARITY}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+L\+C\+R\+\_\+\+N\+O\+\_\+\+P\+A\+R\+I\+TY~0}
+
+
+
+No parity. 
+
+\mbox{\Hypertarget{uart_8h_adb6680c72ae76442fa69a510902e755f}\label{uart_8h_adb6680c72ae76442fa69a510902e755f}} 
+\index{uart.h@{uart.h}!UART\_LCR\_ODD\_PARITY@{UART\_LCR\_ODD\_PARITY}}
+\index{UART\_LCR\_ODD\_PARITY@{UART\_LCR\_ODD\_PARITY}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_LCR\_ODD\_PARITY}{UART\_LCR\_ODD\_PARITY}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+L\+C\+R\+\_\+\+O\+D\+D\+\_\+\+P\+A\+R\+I\+TY~B\+IT(3)}
+
+
+
+Odd parity. 
+
+\mbox{\Hypertarget{uart_8h_ae5032eb40f36a2ca25efafd2d1a02a4f}\label{uart_8h_ae5032eb40f36a2ca25efafd2d1a02a4f}} 
+\index{uart.h@{uart.h}!UART\_LCR\_OPPOSITE\_MASK@{UART\_LCR\_OPPOSITE\_MASK}}
+\index{UART\_LCR\_OPPOSITE\_MASK@{UART\_LCR\_OPPOSITE\_MASK}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_LCR\_OPPOSITE\_MASK}{UART\_LCR\_OPPOSITE\_MASK}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+L\+C\+R\+\_\+\+O\+P\+P\+O\+S\+I\+T\+E\+\_\+\+M\+A\+SK~B\+IT(0) $\vert$ B\+IT(1) $\vert$ B\+IT(2) $\vert$ B\+IT(3) $\vert$ B\+IT(4) $\vert$ B\+IT(5) $\vert$ B\+IT(6)}
+
+\mbox{\Hypertarget{uart_8h_a0f8ac527073d763bac90daba987361c6}\label{uart_8h_a0f8ac527073d763bac90daba987361c6}} 
+\index{uart.h@{uart.h}!UART\_LSR@{UART\_LSR}}
+\index{UART\_LSR@{UART\_LSR}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_LSR}{UART\_LSR}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+L\+SR~5}
+
+
+
+Line Status Register. 
+
+\mbox{\Hypertarget{uart_8h_a9fc0dee5197c9197b40a46c35c4a31ee}\label{uart_8h_a9fc0dee5197c9197b40a46c35c4a31ee}} 
+\index{uart.h@{uart.h}!UART\_LSR\_BRK\_INT@{UART\_LSR\_BRK\_INT}}
+\index{UART\_LSR\_BRK\_INT@{UART\_LSR\_BRK\_INT}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_LSR\_BRK\_INT}{UART\_LSR\_BRK\_INT}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+L\+S\+R\+\_\+\+B\+R\+K\+\_\+\+I\+NT~B\+IT(4)}
+
+
+
+Set to 1 when the serial data input line is held in the low level for longer than a full “word” transmission. 
+
+\mbox{\Hypertarget{uart_8h_a3e58bc0582036e1b98297bb2b6b8fe4e}\label{uart_8h_a3e58bc0582036e1b98297bb2b6b8fe4e}} 
+\index{uart.h@{uart.h}!UART\_LSR\_FIFO\_ERROR@{UART\_LSR\_FIFO\_ERROR}}
+\index{UART\_LSR\_FIFO\_ERROR@{UART\_LSR\_FIFO\_ERROR}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_LSR\_FIFO\_ERROR}{UART\_LSR\_FIFO\_ERROR}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+L\+S\+R\+\_\+\+F\+I\+F\+O\+\_\+\+E\+R\+R\+OR~B\+IT(7)}
+
+
+
+Set to 1 when there is at least one parity error or framing error or break indication in the F\+I\+FO Reset to 0 when the L\+SR is read, if there are no subsequent errors in the F\+I\+FO. 
+
+\mbox{\Hypertarget{uart_8h_a77c922f232fae6c36657d6c0501c680d}\label{uart_8h_a77c922f232fae6c36657d6c0501c680d}} 
+\index{uart.h@{uart.h}!UART\_LSR\_FRM\_ERROR@{UART\_LSR\_FRM\_ERROR}}
+\index{UART\_LSR\_FRM\_ERROR@{UART\_LSR\_FRM\_ERROR}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_LSR\_FRM\_ERROR}{UART\_LSR\_FRM\_ERROR}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+L\+S\+R\+\_\+\+F\+R\+M\+\_\+\+E\+R\+R\+OR~B\+IT(3)}
+
+
+
+Set to 1 when a received character does not have a valid Stop bit. 
+
+\mbox{\Hypertarget{uart_8h_a5041d8fd3dc0a0c3ca70cfc4916998b6}\label{uart_8h_a5041d8fd3dc0a0c3ca70cfc4916998b6}} 
+\index{uart.h@{uart.h}!UART\_LSR\_OVR\_ERROR@{UART\_LSR\_OVR\_ERROR}}
+\index{UART\_LSR\_OVR\_ERROR@{UART\_LSR\_OVR\_ERROR}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_LSR\_OVR\_ERROR}{UART\_LSR\_OVR\_ERROR}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+L\+S\+R\+\_\+\+O\+V\+R\+\_\+\+E\+R\+R\+OR~B\+IT(1)}
+
+
+
+Set to 1 when a characters received is overwritten by another one. 
+
+\mbox{\Hypertarget{uart_8h_ab61e8e9e2488d84bddfbc467eec367f9}\label{uart_8h_ab61e8e9e2488d84bddfbc467eec367f9}} 
+\index{uart.h@{uart.h}!UART\_LSR\_PAR\_ERROR@{UART\_LSR\_PAR\_ERROR}}
+\index{UART\_LSR\_PAR\_ERROR@{UART\_LSR\_PAR\_ERROR}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_LSR\_PAR\_ERROR}{UART\_LSR\_PAR\_ERROR}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+L\+S\+R\+\_\+\+P\+A\+R\+\_\+\+E\+R\+R\+OR~B\+IT(2)}
+
+
+
+Set to 1 when a character with a parity error is received. 
+
+\mbox{\Hypertarget{uart_8h_ac6727eae97e61cbe7553ca2c00f49151}\label{uart_8h_ac6727eae97e61cbe7553ca2c00f49151}} 
+\index{uart.h@{uart.h}!UART\_LSR\_RCV\_DATA@{UART\_LSR\_RCV\_DATA}}
+\index{UART\_LSR\_RCV\_DATA@{UART\_LSR\_RCV\_DATA}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_LSR\_RCV\_DATA}{UART\_LSR\_RCV\_DATA}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+L\+S\+R\+\_\+\+R\+C\+V\+\_\+\+D\+A\+TA~B\+IT(0)}
+
+
+
+Set to 1 when there is data for receiving. 
+
+\mbox{\Hypertarget{uart_8h_aed48bc81751c033ef2401aed2426fcc8}\label{uart_8h_aed48bc81751c033ef2401aed2426fcc8}} 
+\index{uart.h@{uart.h}!UART\_LSR\_TER@{UART\_LSR\_TER}}
+\index{UART\_LSR\_TER@{UART\_LSR\_TER}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_LSR\_TER}{UART\_LSR\_TER}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+L\+S\+R\+\_\+\+T\+ER~B\+IT(6)}
+
+
+
+When set, means that both the T\+HR and the Transmitter Shift Register are both empty. 
+
+\mbox{\Hypertarget{uart_8h_ae05118527ef8873b9d7b1b0be0153019}\label{uart_8h_ae05118527ef8873b9d7b1b0be0153019}} 
+\index{uart.h@{uart.h}!UART\_LSR\_THRE@{UART\_LSR\_THRE}}
+\index{UART\_LSR\_THRE@{UART\_LSR\_THRE}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_LSR\_THRE}{UART\_LSR\_THRE}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+L\+S\+R\+\_\+\+T\+H\+RE~B\+IT(5)}
+
+
+
+When set, means that the U\+A\+RT is ready to accept a new character for transmitting. 
+
+\mbox{\Hypertarget{uart_8h_a203c802a97321c7869cf539a7b210eb0}\label{uart_8h_a203c802a97321c7869cf539a7b210eb0}} 
+\index{uart.h@{uart.h}!UART\_LVL1\_COMPLETE@{UART\_LVL1\_COMPLETE}}
+\index{UART\_LVL1\_COMPLETE@{UART\_LVL1\_COMPLETE}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_LVL1\_COMPLETE}{UART\_LVL1\_COMPLETE}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+L\+V\+L1\+\_\+\+C\+O\+M\+P\+L\+E\+TE~3}
+
+\mbox{\Hypertarget{uart_8h_ac698659ac7486a4bc3f0433c72f27140}\label{uart_8h_ac698659ac7486a4bc3f0433c72f27140}} 
+\index{uart.h@{uart.h}!UART\_LVL1\_LOSE@{UART\_LVL1\_LOSE}}
+\index{UART\_LVL1\_LOSE@{UART\_LVL1\_LOSE}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_LVL1\_LOSE}{UART\_LVL1\_LOSE}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+L\+V\+L1\+\_\+\+L\+O\+SE~12}
+
+\mbox{\Hypertarget{uart_8h_ac727239d57753b0ef56919d855d08868}\label{uart_8h_ac727239d57753b0ef56919d855d08868}} 
+\index{uart.h@{uart.h}!UART\_LVL2\_COMPLETE@{UART\_LVL2\_COMPLETE}}
+\index{UART\_LVL2\_COMPLETE@{UART\_LVL2\_COMPLETE}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_LVL2\_COMPLETE}{UART\_LVL2\_COMPLETE}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+L\+V\+L2\+\_\+\+C\+O\+M\+P\+L\+E\+TE~6}
+
+\mbox{\Hypertarget{uart_8h_af1f98503aae15a4f73d8abd30101d9f7}\label{uart_8h_af1f98503aae15a4f73d8abd30101d9f7}} 
+\index{uart.h@{uart.h}!UART\_LVL2\_LOSE@{UART\_LVL2\_LOSE}}
+\index{UART\_LVL2\_LOSE@{UART\_LVL2\_LOSE}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_LVL2\_LOSE}{UART\_LVL2\_LOSE}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+L\+V\+L2\+\_\+\+L\+O\+SE~15}
+
+\mbox{\Hypertarget{uart_8h_a506605dbf5b2ecefe45b3f6370db4afb}\label{uart_8h_a506605dbf5b2ecefe45b3f6370db4afb}} 
+\index{uart.h@{uart.h}!UART\_LVL3\_LOSE@{UART\_LVL3\_LOSE}}
+\index{UART\_LVL3\_LOSE@{UART\_LVL3\_LOSE}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_LVL3\_LOSE}{UART\_LVL3\_LOSE}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+L\+V\+L3\+\_\+\+L\+O\+SE~18}
+
+\mbox{\Hypertarget{uart_8h_a8ef39bc0942ddd0411d87001d12224f4}\label{uart_8h_a8ef39bc0942ddd0411d87001d12224f4}} 
+\index{uart.h@{uart.h}!UART\_MCR@{UART\_MCR}}
+\index{UART\_MCR@{UART\_MCR}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_MCR}{UART\_MCR}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+M\+CR~4}
+
+
+
+Modem Control Register. 
+
+\mbox{\Hypertarget{uart_8h_a71067c48bdde7dc6c5d0a1c56746e776}\label{uart_8h_a71067c48bdde7dc6c5d0a1c56746e776}} 
+\index{uart.h@{uart.h}!UART\_MSR@{UART\_MSR}}
+\index{UART\_MSR@{UART\_MSR}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_MSR}{UART\_MSR}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+M\+SR~6}
+
+
+
+Modem Status Register. 
+
+\mbox{\Hypertarget{uart_8h_a5788bc84a477a71e73468f22ec048a31}\label{uart_8h_a5788bc84a477a71e73468f22ec048a31}} 
+\index{uart.h@{uart.h}!UART\_ON\_SCOREBOARD@{UART\_ON\_SCOREBOARD}}
+\index{UART\_ON\_SCOREBOARD@{UART\_ON\_SCOREBOARD}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_ON\_SCOREBOARD}{UART\_ON\_SCOREBOARD}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+O\+N\+\_\+\+S\+C\+O\+R\+E\+B\+O\+A\+RD~17}
+
+\mbox{\Hypertarget{uart_8h_aad02d036cfa65385388b852e93cb22f1}\label{uart_8h_aad02d036cfa65385388b852e93cb22f1}} 
+\index{uart.h@{uart.h}!UART\_PLAYER\_JOINED@{UART\_PLAYER\_JOINED}}
+\index{UART\_PLAYER\_JOINED@{UART\_PLAYER\_JOINED}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_PLAYER\_JOINED}{UART\_PLAYER\_JOINED}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+P\+L\+A\+Y\+E\+R\+\_\+\+J\+O\+I\+N\+ED~7}
+
+\mbox{\Hypertarget{uart_8h_a3eb7d5a767dae7774aa2b4be28e20a7e}\label{uart_8h_a3eb7d5a767dae7774aa2b4be28e20a7e}} 
+\index{uart.h@{uart.h}!UART\_RBR@{UART\_RBR}}
+\index{UART\_RBR@{UART\_RBR}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_RBR}{UART\_RBR}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+R\+BR~0}
+
+
+
+Receiver Buffer Register. 
+
+\mbox{\Hypertarget{uart_8h_a88135060cd7c85ef5c49d605ea9b4cae}\label{uart_8h_a88135060cd7c85ef5c49d605ea9b4cae}} 
+\index{uart.h@{uart.h}!UART\_SR@{UART\_SR}}
+\index{UART\_SR@{UART\_SR}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_SR}{UART\_SR}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+SR~7}
+
+
+
+Scratchpad Register. 
+
+\mbox{\Hypertarget{uart_8h_a7a676f075475e46d27eb878977b867ec}\label{uart_8h_a7a676f075475e46d27eb878977b867ec}} 
+\index{uart.h@{uart.h}!UART\_THR@{UART\_THR}}
+\index{UART\_THR@{UART\_THR}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_THR}{UART\_THR}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+T\+HR~0}
+
+
+
+Transmitter Holding Register. 
+
+\mbox{\Hypertarget{uart_8h_a51c78220ce486ddf17965b25acbc4b4d}\label{uart_8h_a51c78220ce486ddf17965b25acbc4b4d}} 
+\index{uart.h@{uart.h}!UART\_UPDATE\_TIME@{UART\_UPDATE\_TIME}}
+\index{UART\_UPDATE\_TIME@{UART\_UPDATE\_TIME}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_UPDATE\_TIME}{UART\_UPDATE\_TIME}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+T\+I\+ME~90}
+
+\mbox{\Hypertarget{uart_8h_a01e22161da1db0a7bf06146f8bb29e56}\label{uart_8h_a01e22161da1db0a7bf06146f8bb29e56}} 
+\index{uart.h@{uart.h}!UART\_WON@{UART\_WON}}
+\index{UART\_WON@{UART\_WON}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_WON}{UART\_WON}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+W\+ON~9}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{uart_8h_a91cea1153e9db030b2a0fba6e7cec8d7}\label{uart_8h_a91cea1153e9db030b2a0fba6e7cec8d7}} 
+\index{uart.h@{uart.h}!parityTypes@{parityTypes}}
+\index{parityTypes@{parityTypes}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{parityTypes}{parityTypes}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{uart_8h_a91cea1153e9db030b2a0fba6e7cec8d7}{parity\+Types}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PARITY\_NONE@{PARITY\_NONE}!uart.h@{uart.h}}\index{uart.h@{uart.h}!PARITY\_NONE@{PARITY\_NONE}}}\mbox{\Hypertarget{uart_8h_a91cea1153e9db030b2a0fba6e7cec8d7a90674e2854f8cd4ce76ea0b4cd4546cc}\label{uart_8h_a91cea1153e9db030b2a0fba6e7cec8d7a90674e2854f8cd4ce76ea0b4cd4546cc}} 
+P\+A\+R\+I\+T\+Y\+\_\+\+N\+O\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PARITY\_ODD@{PARITY\_ODD}!uart.h@{uart.h}}\index{uart.h@{uart.h}!PARITY\_ODD@{PARITY\_ODD}}}\mbox{\Hypertarget{uart_8h_a91cea1153e9db030b2a0fba6e7cec8d7a41443d13b163ffeaf59c4667472bc49c}\label{uart_8h_a91cea1153e9db030b2a0fba6e7cec8d7a41443d13b163ffeaf59c4667472bc49c}} 
+P\+A\+R\+I\+T\+Y\+\_\+\+O\+DD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PARITY\_EVEN@{PARITY\_EVEN}!uart.h@{uart.h}}\index{uart.h@{uart.h}!PARITY\_EVEN@{PARITY\_EVEN}}}\mbox{\Hypertarget{uart_8h_a91cea1153e9db030b2a0fba6e7cec8d7ae6172576b70fc73aefabd529c103c9b8}\label{uart_8h_a91cea1153e9db030b2a0fba6e7cec8d7ae6172576b70fc73aefabd529c103c9b8}} 
+P\+A\+R\+I\+T\+Y\+\_\+\+E\+V\+EN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PARITY\_1@{PARITY\_1}!uart.h@{uart.h}}\index{uart.h@{uart.h}!PARITY\_1@{PARITY\_1}}}\mbox{\Hypertarget{uart_8h_a91cea1153e9db030b2a0fba6e7cec8d7adfe51f49e99b7a80054e1412d72bf936}\label{uart_8h_a91cea1153e9db030b2a0fba6e7cec8d7adfe51f49e99b7a80054e1412d72bf936}} 
+P\+A\+R\+I\+T\+Y\+\_\+1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PARITY\_0@{PARITY\_0}!uart.h@{uart.h}}\index{uart.h@{uart.h}!PARITY\_0@{PARITY\_0}}}\mbox{\Hypertarget{uart_8h_a91cea1153e9db030b2a0fba6e7cec8d7ae16c5f35e8ca31527731060dcdd1a2c4}\label{uart_8h_a91cea1153e9db030b2a0fba6e7cec8d7ae16c5f35e8ca31527731060dcdd1a2c4}} 
+P\+A\+R\+I\+T\+Y\+\_\+0&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{uart_8h_a34d24c101166525cadda68f923b5f1d2}\label{uart_8h_a34d24c101166525cadda68f923b5f1d2}} 
+\index{uart.h@{uart.h}!uart\_check\_read@{uart\_check\_read}}
+\index{uart\_check\_read@{uart\_check\_read}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{uart\_check\_read()}{uart\_check\_read()}}
+{\footnotesize\ttfamily bool uart\+\_\+check\+\_\+read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks if the user can read a new message. 
+
+\begin{DoxyReturn}{Returns}
+true if available, false otherwise 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{uart_8h_a34d24c101166525cadda68f923b5f1d2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{uart_8h_a89b12c76cc3c9595a88a72ea5d102dec}\label{uart_8h_a89b12c76cc3c9595a88a72ea5d102dec}} 
+\index{uart.h@{uart.h}!uart\_check\_send@{uart\_check\_send}}
+\index{uart\_check\_send@{uart\_check\_send}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{uart\_check\_send()}{uart\_check\_send()}}
+{\footnotesize\ttfamily bool uart\+\_\+check\+\_\+send (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks if the user can send a new message. 
+
+\begin{DoxyReturn}{Returns}
+true if available, false otherwise 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{uart_8h_a89b12c76cc3c9595a88a72ea5d102dec_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{uart_8h_aa4552416dcf7782e19c22002204f66a2}\label{uart_8h_aa4552416dcf7782e19c22002204f66a2}} 
+\index{uart.h@{uart.h}!uart\_en\_fifo@{uart\_en\_fifo}}
+\index{uart\_en\_fifo@{uart\_en\_fifo}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{uart\_en\_fifo()}{uart\_en\_fifo()}}
+{\footnotesize\ttfamily void uart\+\_\+en\+\_\+fifo (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{trigger\+Level }\end{DoxyParamCaption})}
+
+
+
+E\+N\+A\+B\+L\+ES F\+I\+FO, clears Transmitter and Receiver F\+I\+FO and sets trigger level. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em trigger\+Level} & \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{uart_8h_aa4552416dcf7782e19c22002204f66a2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{uart_8h_a7884cf6ee38a38305009b533c91822c7}\label{uart_8h_a7884cf6ee38a38305009b533c91822c7}} 
+\index{uart.h@{uart.h}!uart\_en\_interrupts@{uart\_en\_interrupts}}
+\index{uart\_en\_interrupts@{uart\_en\_interrupts}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{uart\_en\_interrupts()}{uart\_en\_interrupts()}}
+{\footnotesize\ttfamily void uart\+\_\+en\+\_\+interrupts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Enables the desired interrupts. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=279pt]{uart_8h_a7884cf6ee38a38305009b533c91822c7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{uart_8h_afef5c2a1427c77b83cdeb0c13af971c2}\label{uart_8h_afef5c2a1427c77b83cdeb0c13af971c2}} 
+\index{uart.h@{uart.h}!uart\_fifo\_read\_message@{uart\_fifo\_read\_message}}
+\index{uart\_fifo\_read\_message@{uart\_fifo\_read\_message}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{uart\_fifo\_read\_message()}{uart\_fifo\_read\_message()}}
+{\footnotesize\ttfamily int uart\+\_\+fifo\+\_\+read\+\_\+message (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_queue}{Queue}} $\ast$}]{queue }\end{DoxyParamCaption})}
+
+
+
+Reads a message through the serial port and inserts on the queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em queue} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 0 if succesfull, 1 otherwise 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{uart_8h_afef5c2a1427c77b83cdeb0c13af971c2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{uart_8h_acf88516f9aaea06470adbb16ad85c6b6}\label{uart_8h_acf88516f9aaea06470adbb16ad85c6b6}} 
+\index{uart.h@{uart.h}!uart\_fifo\_send\_message@{uart\_fifo\_send\_message}}
+\index{uart\_fifo\_send\_message@{uart\_fifo\_send\_message}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{uart\_fifo\_send\_message()}{uart\_fifo\_send\_message()}}
+{\footnotesize\ttfamily int uart\+\_\+fifo\+\_\+send\+\_\+message (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_queue}{Queue}} $\ast$}]{queue }\end{DoxyParamCaption})}
+
+
+
+Sends a message through the serial port to the queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 0 if succesfull, 1 otherwise 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{uart_8h_acf88516f9aaea06470adbb16ad85c6b6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{uart_8h_a67d2da4dd20c731989c130bbe2cd4c85}\label{uart_8h_a67d2da4dd20c731989c130bbe2cd4c85}} 
+\index{uart.h@{uart.h}!uart\_ih@{uart\_ih}}
+\index{uart\_ih@{uart\_ih}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{uart\_ih()}{uart\_ih()}}
+{\footnotesize\ttfamily void uart\+\_\+ih (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+handles the uart interrupts 
+
+\mbox{\Hypertarget{uart_8h_acbe87e12bfa10959902da5a7529075ee}\label{uart_8h_acbe87e12bfa10959902da5a7529075ee}} 
+\index{uart.h@{uart.h}!uart\_read\_message@{uart\_read\_message}}
+\index{uart\_read\_message@{uart\_read\_message}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{uart\_read\_message()}{uart\_read\_message()}}
+{\footnotesize\ttfamily int uart\+\_\+read\+\_\+message (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{message }\end{DoxyParamCaption})}
+
+
+
+Reads a message through the serial port. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 0 if succesfull, 1 otherwise 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{uart_8h_acbe87e12bfa10959902da5a7529075ee_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{uart_8h_aa62a1fd216f328e78b85e4b27d4627d7}\label{uart_8h_aa62a1fd216f328e78b85e4b27d4627d7}} 
+\index{uart.h@{uart.h}!uart\_read\_reg@{uart\_read\_reg}}
+\index{uart\_read\_reg@{uart\_read\_reg}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{uart\_read\_reg()}{uart\_read\_reg()}}
+{\footnotesize\ttfamily int uart\+\_\+read\+\_\+reg (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{reg\+Num,  }\item[{uint8\+\_\+t $\ast$}]{variable }\end{DoxyParamCaption})}
+
+
+
+Reads from the reg given as argument. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reg\+Num} & reg where we are going to read from \\
+\hline
+{\em variable} & variable that will store the value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{uart_8h_aa62a1fd216f328e78b85e4b27d4627d7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{uart_8h_a3c1b230231f6f74ab6ba6b396b9ce04e}\label{uart_8h_a3c1b230231f6f74ab6ba6b396b9ce04e}} 
+\index{uart.h@{uart.h}!uart\_send\_message@{uart\_send\_message}}
+\index{uart\_send\_message@{uart\_send\_message}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{uart\_send\_message()}{uart\_send\_message()}}
+{\footnotesize\ttfamily int uart\+\_\+send\+\_\+message (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{message }\end{DoxyParamCaption})}
+
+
+
+Sends a message through the serial port. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 0 if succesfull, 1 otherwise 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{uart_8h_a3c1b230231f6f74ab6ba6b396b9ce04e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{uart_8h_a84d7057bb3d3e03a7783efad09c5a095}\label{uart_8h_a84d7057bb3d3e03a7783efad09c5a095}} 
+\index{uart.h@{uart.h}!uart\_set\_bit\_rate@{uart\_set\_bit\_rate}}
+\index{uart\_set\_bit\_rate@{uart\_set\_bit\_rate}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{uart\_set\_bit\_rate()}{uart\_set\_bit\_rate()}}
+{\footnotesize\ttfamily void uart\+\_\+set\+\_\+bit\+\_\+rate (\begin{DoxyParamCaption}\item[{int}]{bit\+\_\+rate }\end{DoxyParamCaption})}
+
+
+
+Set the bitrate to the one specified as the argument. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bit\+\_\+rate} & \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{uart_8h_a84d7057bb3d3e03a7783efad09c5a095_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{uart_8h_ae17156e078d7fc999d700d896c66728d}\label{uart_8h_ae17156e078d7fc999d700d896c66728d}} 
+\index{uart.h@{uart.h}!uart\_set\_dlb@{uart\_set\_dlb}}
+\index{uart\_set\_dlb@{uart\_set\_dlb}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{uart\_set\_dlb()}{uart\_set\_dlb()}}
+{\footnotesize\ttfamily void uart\+\_\+set\+\_\+dlb (\begin{DoxyParamCaption}\item[{bool}]{dlb }\end{DoxyParamCaption})}
+
+
+
+Enables divisor latch access on the Line Control Reg. if dlb is true. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dlb} & indicates whether to turn dlb on / off \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{uart_8h_ae17156e078d7fc999d700d896c66728d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{uart_8h_abc4203ec358dc25de70dd6dd341f701e}\label{uart_8h_abc4203ec358dc25de70dd6dd341f701e}} 
+\index{uart.h@{uart.h}!uart\_setup\_lcr@{uart\_setup\_lcr}}
+\index{uart\_setup\_lcr@{uart\_setup\_lcr}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{uart\_setup\_lcr()}{uart\_setup\_lcr()}}
+{\footnotesize\ttfamily void uart\+\_\+setup\+\_\+lcr (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{word\+Length,  }\item[{uint8\+\_\+t}]{stop\+Bits,  }\item[{\mbox{\hyperlink{uart_8h_a91cea1153e9db030b2a0fba6e7cec8d7}{parity\+Types}}}]{parity }\end{DoxyParamCaption})}
+
+
+
+changes the line control register byte in accordance to the args (Except B\+IT 6 and 7) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em word\+Length} & bits per char \\
+\hline
+{\em stop\+Bits} & nº stop bits \\
+\hline
+{\em parity} & type of parity \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{uart_8h_abc4203ec358dc25de70dd6dd341f701e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{uart_8h_aa12b7563cba242a7eefc7f1c74cd7483}\label{uart_8h_aa12b7563cba242a7eefc7f1c74cd7483}} 
+\index{uart.h@{uart.h}!uart\_subscribe\_int@{uart\_subscribe\_int}}
+\index{uart\_subscribe\_int@{uart\_subscribe\_int}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{uart\_subscribe\_int()}{uart\_subscribe\_int()}}
+{\footnotesize\ttfamily int() uart\+\_\+subscribe\+\_\+int (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{bit\+\_\+no }\end{DoxyParamCaption})}
+
+
+
+Subscribes interrupts from the serial port. 
+
+\begin{DoxyItemize}
+\item bit\+\_\+no variable that will hold the bit mask for the identifying interrupts \end{DoxyItemize}
+\mbox{\Hypertarget{uart_8h_a89beffcfd47d3f718580e8c54d2d9380}\label{uart_8h_a89beffcfd47d3f718580e8c54d2d9380}} 
+\index{uart.h@{uart.h}!uart\_unsubscribe\_int@{uart\_unsubscribe\_int}}
+\index{uart\_unsubscribe\_int@{uart\_unsubscribe\_int}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{uart\_unsubscribe\_int()}{uart\_unsubscribe\_int()}}
+{\footnotesize\ttfamily int() uart\+\_\+unsubscribe\+\_\+int (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Unsubscribes interrupts from the serial port. 
+
+\mbox{\Hypertarget{uart_8h_a0d2f75bb0c90f1c13bc02036c8669f7e}\label{uart_8h_a0d2f75bb0c90f1c13bc02036c8669f7e}} 
+\index{uart.h@{uart.h}!uart\_write\_reg@{uart\_write\_reg}}
+\index{uart\_write\_reg@{uart\_write\_reg}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{uart\_write\_reg()}{uart\_write\_reg()}}
+{\footnotesize\ttfamily int uart\+\_\+write\+\_\+reg (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{reg\+Num,  }\item[{uint8\+\_\+t}]{byte }\end{DoxyParamCaption})}
+
+
+
+writes in the uart reg given as the arg the byte 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reg\+Num} & reg where we are going to write \\
+\hline
+{\em byte} & byte to write \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}

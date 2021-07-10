@@ -1,0 +1,473 @@
+\hypertarget{game_8h}{}\doxysection{game.\+h File Reference}
+\label{game_8h}\index{game.h@{game.h}}
+{\ttfamily \#include \char`\"{}sprite.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}anim\+Sprite.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rtc.\+h\char`\"{}}\newline
+Include dependency graph for game.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{game_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{game_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_mouse_movement}{Mouse\+Movement}}
+\item 
+struct \mbox{\hyperlink{struct_time_sprites}{Time\+Sprites}}
+\item 
+struct \mbox{\hyperlink{struct_game}{Game}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{game_8h_a915b2902e05c4e29541a0e9973500da8}{state\+\_\+machine}} \{ \newline
+\mbox{\hyperlink{game_8h_a915b2902e05c4e29541a0e9973500da8a4c40e60bc71a32b924ce1f08d57f9721}{M\+E\+NU}}, 
+\mbox{\hyperlink{game_8h_a915b2902e05c4e29541a0e9973500da8a4bb048d303545e49a47eb5454d8409ed}{G\+A\+M\+E\+\_\+\+M\+O\+DE}}, 
+\mbox{\hyperlink{game_8h_a915b2902e05c4e29541a0e9973500da8a6bba13c4bcb59aaf2b63eb476ba1cb99}{W\+A\+I\+T\+I\+N\+G\+\_\+\+F\+O\+R\+\_\+\+P\+L\+A\+Y\+ER}}, 
+\mbox{\hyperlink{game_8h_a915b2902e05c4e29541a0e9973500da8a5f6aff2efe946ec43f8bad546893b0af}{L\+E\+V\+E\+L1}}, 
+\newline
+\mbox{\hyperlink{game_8h_a915b2902e05c4e29541a0e9973500da8a00955312c6043316fe7dee6c67bbdc9a}{L\+E\+V\+E\+L2}}, 
+\mbox{\hyperlink{game_8h_a915b2902e05c4e29541a0e9973500da8a32187f6279619afdb13e71151dd5ed0b}{L\+E\+V\+E\+L3}}, 
+\mbox{\hyperlink{game_8h_a915b2902e05c4e29541a0e9973500da8a843dff91ff0b0e5b98a110a512b2f531}{W\+IN}}, 
+\mbox{\hyperlink{game_8h_a915b2902e05c4e29541a0e9973500da8a42495cc178524da331d4681864c72b72}{G\+A\+M\+E\+O\+V\+ER}}, 
+\newline
+\mbox{\hyperlink{game_8h_a915b2902e05c4e29541a0e9973500da8a862f5b0c6003be3d4ef124186eba945b}{S\+H\+O\+W\+\_\+\+S\+C\+O\+R\+ES}}, 
+\mbox{\hyperlink{mouse_8h_a915b2902e05c4e29541a0e9973500da8a7116db6906963fd0720c4a85be250cf4}{I\+N\+I\+T\+I\+AL}}, 
+\mbox{\hyperlink{mouse_8h_a915b2902e05c4e29541a0e9973500da8a95088f09eab764d1f4e4956fd6128680}{L\+E\+F\+T\+\_\+\+D\+R\+AW}}, 
+\mbox{\hyperlink{mouse_8h_a915b2902e05c4e29541a0e9973500da8a817f19da02007f73fd316ffef6b5901a}{V\+E\+R\+T\+IX}}, 
+\newline
+\mbox{\hyperlink{mouse_8h_a915b2902e05c4e29541a0e9973500da8ad9005327af7631b89fc6f08967ee0f62}{R\+I\+G\+H\+T\+\_\+\+D\+R\+AW}}, 
+\mbox{\hyperlink{mouse_8h_a915b2902e05c4e29541a0e9973500da8a9c954bcf443428c80b0f107b3bc48749}{D\+O\+NE}}
+ \}
+\item 
+enum \mbox{\hyperlink{game_8h_a29c96639a4cdcf5f641d8aba13c6115c}{level1\+\_\+state}} \{ \newline
+\mbox{\hyperlink{game_8h_a29c96639a4cdcf5f641d8aba13c6115ca3997b6da407624a1e045248fecad8c65}{M\+O\+V\+I\+N\+G\+\_\+\+T\+O\+\_\+\+M\+I\+D\+D\+L\+E1}}, 
+\mbox{\hyperlink{game_8h_a29c96639a4cdcf5f641d8aba13c6115ca64d76a13bf5dba4813e51d207ce02f5e}{S\+T\+O\+P\+\_\+\+A\+T\+\_\+\+M\+I\+D\+D\+L\+E1}}, 
+\mbox{\hyperlink{game_8h_a29c96639a4cdcf5f641d8aba13c6115caead7e48853d0b177da5b99806a50c335}{M\+O\+V\+I\+N\+G\+\_\+\+T\+O\+\_\+\+E\+N\+D1}}, 
+\mbox{\hyperlink{game_8h_a29c96639a4cdcf5f641d8aba13c6115ca0790ec669a150278e5496ca3bd837050}{S\+T\+O\+P\+\_\+\+A\+T\+\_\+\+E\+N\+D1}}, 
+\newline
+\mbox{\hyperlink{game_8h_a29c96639a4cdcf5f641d8aba13c6115caf3efbdb9b4d89a61dd59dae4ebbc18d1}{G\+A\+M\+E\+O\+V\+E\+R\+\_\+\+L\+V1}}
+ \}
+\item 
+enum \mbox{\hyperlink{game_8h_a41c74c32574df1342f4e3ed166a73747}{level2\+\_\+state}} \{ \newline
+\mbox{\hyperlink{game_8h_a41c74c32574df1342f4e3ed166a73747a72761d9a5f3c1a9806461c52618e0874}{M\+O\+V\+I\+N\+G\+\_\+\+T\+O\+\_\+\+M\+I\+N\+E2}}, 
+\mbox{\hyperlink{game_8h_a41c74c32574df1342f4e3ed166a73747ae5f64696376ac3551f6b5824ac0df553}{S\+T\+O\+P\+\_\+\+T\+O\+\_\+\+D\+R\+A\+W2}}, 
+\mbox{\hyperlink{game_8h_a41c74c32574df1342f4e3ed166a73747a65af5085da13c8523151e0e98aca7f78}{J\+U\+M\+P\+I\+N\+G\+\_\+\+M\+I\+N\+E2}}, 
+\mbox{\hyperlink{game_8h_a41c74c32574df1342f4e3ed166a73747ae544e3e94fcdfa2f8820fc13fa6cdfe4}{M\+O\+V\+I\+N\+G\+\_\+\+T\+O\+\_\+\+E\+N\+D2}}, 
+\newline
+\mbox{\hyperlink{game_8h_a41c74c32574df1342f4e3ed166a73747a96aef46fd19c42e74e6855dbdff4d775}{S\+T\+O\+P\+\_\+\+A\+T\+\_\+\+E\+N\+D2}}, 
+\mbox{\hyperlink{game_8h_a41c74c32574df1342f4e3ed166a73747abd008ae3be824366d58e48caa5820876}{G\+A\+M\+E\+O\+V\+E\+R\+\_\+\+L\+V2}}
+ \}
+\item 
+enum \mbox{\hyperlink{game_8h_ab3b3d0a3e715fab667d3e5fd3ff5dfab}{level3\+\_\+state}} \{ \newline
+\mbox{\hyperlink{game_8h_ab3b3d0a3e715fab667d3e5fd3ff5dfabafca90063bb1b59a651c18cacf07838c0}{M\+O\+V\+I\+N\+G\+\_\+\+T\+O\+\_\+\+B\+U\+N\+S\+H\+IN}}, 
+\mbox{\hyperlink{game_8h_ab3b3d0a3e715fab667d3e5fd3ff5dfabaaecd298a9078114de62a4bc7290960a4}{S\+T\+A\+N\+D\+I\+N\+G\+\_\+\+B\+E\+F\+\_\+\+J\+U\+T\+SU}}, 
+\mbox{\hyperlink{game_8h_ab3b3d0a3e715fab667d3e5fd3ff5dfaba372f107d4000fab9a05df0406fb41540}{K\+A\+G\+E\+\_\+\+B\+U\+N\+S\+H\+I\+N\+\_\+\+N\+O\+\_\+\+J\+U\+T\+SU}}, 
+\mbox{\hyperlink{game_8h_ab3b3d0a3e715fab667d3e5fd3ff5dfaba18c9caa80990005d23f24809e3203caf}{S\+P\+A\+W\+N\+\_\+\+B\+U\+N\+S\+H\+I\+NS}}, 
+\newline
+\mbox{\hyperlink{game_8h_ab3b3d0a3e715fab667d3e5fd3ff5dfaba23b3c8e6c11a526d73c03dcc25825a9e}{C\+H\+O\+O\+S\+E\+\_\+\+R\+E\+AL}}, 
+\mbox{\hyperlink{game_8h_ab3b3d0a3e715fab667d3e5fd3ff5dfaba7c8c12670700522f94baf1cbd341ae87}{W\+I\+N\+\_\+\+L\+V\+L3}}, 
+\mbox{\hyperlink{game_8h_ab3b3d0a3e715fab667d3e5fd3ff5dfabae0f557af9ae4408c7fbff1a929de74fd}{G\+A\+M\+E\+O\+V\+E\+R\+\_\+\+L\+V\+L3}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{game_8h_a7cbc607dedd794f4e9b0160e3f2506c2}{choose\+\_\+your\+\_\+destiny}} (\mbox{\hyperlink{struct_game}{Game}} $\ast$game)
+\begin{DoxyCompactList}\small\item\em Main loop of the game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game_8h_aefcf067809e26c01e5413d61140295e9}{setup\+Sprites}} (\mbox{\hyperlink{struct_game}{Game}} $\ast$game)
+\begin{DoxyCompactList}\small\item\em Initialization functions that creates all the needed sprites and some variables. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game_8h_adff2210798ae43e37c32d66d8b589c10}{update\+Mouse\+Sprite\+Position}} (\mbox{\hyperlink{struct_game}{Game}} $\ast$game, struct packet $\ast$packet)
+\begin{DoxyCompactList}\small\item\em Updates the cursor position based on the packets received from the mouse. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{game_8h_aca67dfe717203bac33a082e4f1b84348}{check\+Click}} (\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$sp, struct packet $\ast$packet, int x0, int x1, int y0, int y1)
+\item 
+int \mbox{\hyperlink{game_8h_ac83a816fc365d338a51abcbadc6bbacc}{paint\+Mouse\+Movement}} (\mbox{\hyperlink{struct_game}{Game}} $\ast$game, struct packet $\ast$packet)
+\begin{DoxyCompactList}\small\item\em Cheks if the mouse movement is valid and updates variables. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game_8h_a99a0e4f1133c87e87fd270a7ebe06b8d}{draw\+Cursor\+Positions}} (\mbox{\hyperlink{struct_game}{Game}} $\ast$game, uint32\+\_\+t color, uint8\+\_\+t $\ast$aux\+\_\+buffer)
+\begin{DoxyCompactList}\small\item\em Draws on the buffer the positions the cursor has travelled to. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{game_8h_ad5636bd381f117c6d575dc6b56167434}{check\+Valid\+Movement}} (\mbox{\hyperlink{struct_game}{Game}} $\ast$game)
+\begin{DoxyCompactList}\small\item\em Validates a movement, if it is following a vertical line upwards. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game_8h_a73c38b28f5840b95c9e1b5cd04060319}{reset\+Variables}} (\mbox{\hyperlink{struct_game}{Game}} $\ast$game, int $\ast$timer\+\_\+counter, int $\ast$seconds\+\_\+elapsed, int $\ast$key\+\_\+codes\+\_\+counter)
+\begin{DoxyCompactList}\small\item\em Resets the game variables to their start. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game_8h_a273ad821edce51b0a7229b86dc2aab5e}{draw\+Rtc\+Time}} (\mbox{\hyperlink{struct_game}{Game}} $\ast$game, uint8\+\_\+t $\ast$buffer)
+\item 
+void \mbox{\hyperlink{game_8h_a954762f0594d1047f59151c4832a6927}{update\+Time\+Sprites}} (\mbox{\hyperlink{struct_game}{Game}} $\ast$game, \mbox{\hyperlink{struct_date}{Date}} $\ast$date)
+\begin{DoxyCompactList}\small\item\em Updates the time\+Sprite with the date given as argument. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{game_8h_a29c96639a4cdcf5f641d8aba13c6115c}\label{game_8h_a29c96639a4cdcf5f641d8aba13c6115c}} 
+\index{game.h@{game.h}!level1\_state@{level1\_state}}
+\index{level1\_state@{level1\_state}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{level1\_state}{level1\_state}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{game_8h_a29c96639a4cdcf5f641d8aba13c6115c}{level1\+\_\+state}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MOVING\_TO\_MIDDLE1@{MOVING\_TO\_MIDDLE1}!game.h@{game.h}}\index{game.h@{game.h}!MOVING\_TO\_MIDDLE1@{MOVING\_TO\_MIDDLE1}}}\mbox{\Hypertarget{game_8h_a29c96639a4cdcf5f641d8aba13c6115ca3997b6da407624a1e045248fecad8c65}\label{game_8h_a29c96639a4cdcf5f641d8aba13c6115ca3997b6da407624a1e045248fecad8c65}} 
+M\+O\+V\+I\+N\+G\+\_\+\+T\+O\+\_\+\+M\+I\+D\+D\+L\+E1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{STOP\_AT\_MIDDLE1@{STOP\_AT\_MIDDLE1}!game.h@{game.h}}\index{game.h@{game.h}!STOP\_AT\_MIDDLE1@{STOP\_AT\_MIDDLE1}}}\mbox{\Hypertarget{game_8h_a29c96639a4cdcf5f641d8aba13c6115ca64d76a13bf5dba4813e51d207ce02f5e}\label{game_8h_a29c96639a4cdcf5f641d8aba13c6115ca64d76a13bf5dba4813e51d207ce02f5e}} 
+S\+T\+O\+P\+\_\+\+A\+T\+\_\+\+M\+I\+D\+D\+L\+E1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MOVING\_TO\_END1@{MOVING\_TO\_END1}!game.h@{game.h}}\index{game.h@{game.h}!MOVING\_TO\_END1@{MOVING\_TO\_END1}}}\mbox{\Hypertarget{game_8h_a29c96639a4cdcf5f641d8aba13c6115caead7e48853d0b177da5b99806a50c335}\label{game_8h_a29c96639a4cdcf5f641d8aba13c6115caead7e48853d0b177da5b99806a50c335}} 
+M\+O\+V\+I\+N\+G\+\_\+\+T\+O\+\_\+\+E\+N\+D1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{STOP\_AT\_END1@{STOP\_AT\_END1}!game.h@{game.h}}\index{game.h@{game.h}!STOP\_AT\_END1@{STOP\_AT\_END1}}}\mbox{\Hypertarget{game_8h_a29c96639a4cdcf5f641d8aba13c6115ca0790ec669a150278e5496ca3bd837050}\label{game_8h_a29c96639a4cdcf5f641d8aba13c6115ca0790ec669a150278e5496ca3bd837050}} 
+S\+T\+O\+P\+\_\+\+A\+T\+\_\+\+E\+N\+D1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GAMEOVER\_LV1@{GAMEOVER\_LV1}!game.h@{game.h}}\index{game.h@{game.h}!GAMEOVER\_LV1@{GAMEOVER\_LV1}}}\mbox{\Hypertarget{game_8h_a29c96639a4cdcf5f641d8aba13c6115caf3efbdb9b4d89a61dd59dae4ebbc18d1}\label{game_8h_a29c96639a4cdcf5f641d8aba13c6115caf3efbdb9b4d89a61dd59dae4ebbc18d1}} 
+G\+A\+M\+E\+O\+V\+E\+R\+\_\+\+L\+V1&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{game_8h_a41c74c32574df1342f4e3ed166a73747}\label{game_8h_a41c74c32574df1342f4e3ed166a73747}} 
+\index{game.h@{game.h}!level2\_state@{level2\_state}}
+\index{level2\_state@{level2\_state}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{level2\_state}{level2\_state}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{game_8h_a41c74c32574df1342f4e3ed166a73747}{level2\+\_\+state}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MOVING\_TO\_MINE2@{MOVING\_TO\_MINE2}!game.h@{game.h}}\index{game.h@{game.h}!MOVING\_TO\_MINE2@{MOVING\_TO\_MINE2}}}\mbox{\Hypertarget{game_8h_a41c74c32574df1342f4e3ed166a73747a72761d9a5f3c1a9806461c52618e0874}\label{game_8h_a41c74c32574df1342f4e3ed166a73747a72761d9a5f3c1a9806461c52618e0874}} 
+M\+O\+V\+I\+N\+G\+\_\+\+T\+O\+\_\+\+M\+I\+N\+E2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{STOP\_TO\_DRAW2@{STOP\_TO\_DRAW2}!game.h@{game.h}}\index{game.h@{game.h}!STOP\_TO\_DRAW2@{STOP\_TO\_DRAW2}}}\mbox{\Hypertarget{game_8h_a41c74c32574df1342f4e3ed166a73747ae5f64696376ac3551f6b5824ac0df553}\label{game_8h_a41c74c32574df1342f4e3ed166a73747ae5f64696376ac3551f6b5824ac0df553}} 
+S\+T\+O\+P\+\_\+\+T\+O\+\_\+\+D\+R\+A\+W2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{JUMPING\_MINE2@{JUMPING\_MINE2}!game.h@{game.h}}\index{game.h@{game.h}!JUMPING\_MINE2@{JUMPING\_MINE2}}}\mbox{\Hypertarget{game_8h_a41c74c32574df1342f4e3ed166a73747a65af5085da13c8523151e0e98aca7f78}\label{game_8h_a41c74c32574df1342f4e3ed166a73747a65af5085da13c8523151e0e98aca7f78}} 
+J\+U\+M\+P\+I\+N\+G\+\_\+\+M\+I\+N\+E2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MOVING\_TO\_END2@{MOVING\_TO\_END2}!game.h@{game.h}}\index{game.h@{game.h}!MOVING\_TO\_END2@{MOVING\_TO\_END2}}}\mbox{\Hypertarget{game_8h_a41c74c32574df1342f4e3ed166a73747ae544e3e94fcdfa2f8820fc13fa6cdfe4}\label{game_8h_a41c74c32574df1342f4e3ed166a73747ae544e3e94fcdfa2f8820fc13fa6cdfe4}} 
+M\+O\+V\+I\+N\+G\+\_\+\+T\+O\+\_\+\+E\+N\+D2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{STOP\_AT\_END2@{STOP\_AT\_END2}!game.h@{game.h}}\index{game.h@{game.h}!STOP\_AT\_END2@{STOP\_AT\_END2}}}\mbox{\Hypertarget{game_8h_a41c74c32574df1342f4e3ed166a73747a96aef46fd19c42e74e6855dbdff4d775}\label{game_8h_a41c74c32574df1342f4e3ed166a73747a96aef46fd19c42e74e6855dbdff4d775}} 
+S\+T\+O\+P\+\_\+\+A\+T\+\_\+\+E\+N\+D2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GAMEOVER\_LV2@{GAMEOVER\_LV2}!game.h@{game.h}}\index{game.h@{game.h}!GAMEOVER\_LV2@{GAMEOVER\_LV2}}}\mbox{\Hypertarget{game_8h_a41c74c32574df1342f4e3ed166a73747abd008ae3be824366d58e48caa5820876}\label{game_8h_a41c74c32574df1342f4e3ed166a73747abd008ae3be824366d58e48caa5820876}} 
+G\+A\+M\+E\+O\+V\+E\+R\+\_\+\+L\+V2&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{game_8h_ab3b3d0a3e715fab667d3e5fd3ff5dfab}\label{game_8h_ab3b3d0a3e715fab667d3e5fd3ff5dfab}} 
+\index{game.h@{game.h}!level3\_state@{level3\_state}}
+\index{level3\_state@{level3\_state}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{level3\_state}{level3\_state}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{game_8h_ab3b3d0a3e715fab667d3e5fd3ff5dfab}{level3\+\_\+state}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MOVING\_TO\_BUNSHIN@{MOVING\_TO\_BUNSHIN}!game.h@{game.h}}\index{game.h@{game.h}!MOVING\_TO\_BUNSHIN@{MOVING\_TO\_BUNSHIN}}}\mbox{\Hypertarget{game_8h_ab3b3d0a3e715fab667d3e5fd3ff5dfabafca90063bb1b59a651c18cacf07838c0}\label{game_8h_ab3b3d0a3e715fab667d3e5fd3ff5dfabafca90063bb1b59a651c18cacf07838c0}} 
+M\+O\+V\+I\+N\+G\+\_\+\+T\+O\+\_\+\+B\+U\+N\+S\+H\+IN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{STANDING\_BEF\_JUTSU@{STANDING\_BEF\_JUTSU}!game.h@{game.h}}\index{game.h@{game.h}!STANDING\_BEF\_JUTSU@{STANDING\_BEF\_JUTSU}}}\mbox{\Hypertarget{game_8h_ab3b3d0a3e715fab667d3e5fd3ff5dfabaaecd298a9078114de62a4bc7290960a4}\label{game_8h_ab3b3d0a3e715fab667d3e5fd3ff5dfabaaecd298a9078114de62a4bc7290960a4}} 
+S\+T\+A\+N\+D\+I\+N\+G\+\_\+\+B\+E\+F\+\_\+\+J\+U\+T\+SU&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KAGE\_BUNSHIN\_NO\_JUTSU@{KAGE\_BUNSHIN\_NO\_JUTSU}!game.h@{game.h}}\index{game.h@{game.h}!KAGE\_BUNSHIN\_NO\_JUTSU@{KAGE\_BUNSHIN\_NO\_JUTSU}}}\mbox{\Hypertarget{game_8h_ab3b3d0a3e715fab667d3e5fd3ff5dfaba372f107d4000fab9a05df0406fb41540}\label{game_8h_ab3b3d0a3e715fab667d3e5fd3ff5dfaba372f107d4000fab9a05df0406fb41540}} 
+K\+A\+G\+E\+\_\+\+B\+U\+N\+S\+H\+I\+N\+\_\+\+N\+O\+\_\+\+J\+U\+T\+SU&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPAWN\_BUNSHINS@{SPAWN\_BUNSHINS}!game.h@{game.h}}\index{game.h@{game.h}!SPAWN\_BUNSHINS@{SPAWN\_BUNSHINS}}}\mbox{\Hypertarget{game_8h_ab3b3d0a3e715fab667d3e5fd3ff5dfaba18c9caa80990005d23f24809e3203caf}\label{game_8h_ab3b3d0a3e715fab667d3e5fd3ff5dfaba18c9caa80990005d23f24809e3203caf}} 
+S\+P\+A\+W\+N\+\_\+\+B\+U\+N\+S\+H\+I\+NS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CHOOSE\_REAL@{CHOOSE\_REAL}!game.h@{game.h}}\index{game.h@{game.h}!CHOOSE\_REAL@{CHOOSE\_REAL}}}\mbox{\Hypertarget{game_8h_ab3b3d0a3e715fab667d3e5fd3ff5dfaba23b3c8e6c11a526d73c03dcc25825a9e}\label{game_8h_ab3b3d0a3e715fab667d3e5fd3ff5dfaba23b3c8e6c11a526d73c03dcc25825a9e}} 
+C\+H\+O\+O\+S\+E\+\_\+\+R\+E\+AL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WIN\_LVL3@{WIN\_LVL3}!game.h@{game.h}}\index{game.h@{game.h}!WIN\_LVL3@{WIN\_LVL3}}}\mbox{\Hypertarget{game_8h_ab3b3d0a3e715fab667d3e5fd3ff5dfaba7c8c12670700522f94baf1cbd341ae87}\label{game_8h_ab3b3d0a3e715fab667d3e5fd3ff5dfaba7c8c12670700522f94baf1cbd341ae87}} 
+W\+I\+N\+\_\+\+L\+V\+L3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GAMEOVER\_LVL3@{GAMEOVER\_LVL3}!game.h@{game.h}}\index{game.h@{game.h}!GAMEOVER\_LVL3@{GAMEOVER\_LVL3}}}\mbox{\Hypertarget{game_8h_ab3b3d0a3e715fab667d3e5fd3ff5dfabae0f557af9ae4408c7fbff1a929de74fd}\label{game_8h_ab3b3d0a3e715fab667d3e5fd3ff5dfabae0f557af9ae4408c7fbff1a929de74fd}} 
+G\+A\+M\+E\+O\+V\+E\+R\+\_\+\+L\+V\+L3&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{game_8h_a915b2902e05c4e29541a0e9973500da8}\label{game_8h_a915b2902e05c4e29541a0e9973500da8}} 
+\index{game.h@{game.h}!state\_machine@{state\_machine}}
+\index{state\_machine@{state\_machine}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{state\_machine}{state\_machine}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{game_8h_a915b2902e05c4e29541a0e9973500da8}{state\+\_\+machine}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MENU@{MENU}!game.h@{game.h}}\index{game.h@{game.h}!MENU@{MENU}}}\mbox{\Hypertarget{game_8h_a915b2902e05c4e29541a0e9973500da8a4c40e60bc71a32b924ce1f08d57f9721}\label{game_8h_a915b2902e05c4e29541a0e9973500da8a4c40e60bc71a32b924ce1f08d57f9721}} 
+M\+E\+NU&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GAME\_MODE@{GAME\_MODE}!game.h@{game.h}}\index{game.h@{game.h}!GAME\_MODE@{GAME\_MODE}}}\mbox{\Hypertarget{game_8h_a915b2902e05c4e29541a0e9973500da8a4bb048d303545e49a47eb5454d8409ed}\label{game_8h_a915b2902e05c4e29541a0e9973500da8a4bb048d303545e49a47eb5454d8409ed}} 
+G\+A\+M\+E\+\_\+\+M\+O\+DE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WAITING\_FOR\_PLAYER@{WAITING\_FOR\_PLAYER}!game.h@{game.h}}\index{game.h@{game.h}!WAITING\_FOR\_PLAYER@{WAITING\_FOR\_PLAYER}}}\mbox{\Hypertarget{game_8h_a915b2902e05c4e29541a0e9973500da8a6bba13c4bcb59aaf2b63eb476ba1cb99}\label{game_8h_a915b2902e05c4e29541a0e9973500da8a6bba13c4bcb59aaf2b63eb476ba1cb99}} 
+W\+A\+I\+T\+I\+N\+G\+\_\+\+F\+O\+R\+\_\+\+P\+L\+A\+Y\+ER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LEVEL1@{LEVEL1}!game.h@{game.h}}\index{game.h@{game.h}!LEVEL1@{LEVEL1}}}\mbox{\Hypertarget{game_8h_a915b2902e05c4e29541a0e9973500da8a5f6aff2efe946ec43f8bad546893b0af}\label{game_8h_a915b2902e05c4e29541a0e9973500da8a5f6aff2efe946ec43f8bad546893b0af}} 
+L\+E\+V\+E\+L1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LEVEL2@{LEVEL2}!game.h@{game.h}}\index{game.h@{game.h}!LEVEL2@{LEVEL2}}}\mbox{\Hypertarget{game_8h_a915b2902e05c4e29541a0e9973500da8a00955312c6043316fe7dee6c67bbdc9a}\label{game_8h_a915b2902e05c4e29541a0e9973500da8a00955312c6043316fe7dee6c67bbdc9a}} 
+L\+E\+V\+E\+L2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LEVEL3@{LEVEL3}!game.h@{game.h}}\index{game.h@{game.h}!LEVEL3@{LEVEL3}}}\mbox{\Hypertarget{game_8h_a915b2902e05c4e29541a0e9973500da8a32187f6279619afdb13e71151dd5ed0b}\label{game_8h_a915b2902e05c4e29541a0e9973500da8a32187f6279619afdb13e71151dd5ed0b}} 
+L\+E\+V\+E\+L3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WIN@{WIN}!game.h@{game.h}}\index{game.h@{game.h}!WIN@{WIN}}}\mbox{\Hypertarget{game_8h_a915b2902e05c4e29541a0e9973500da8a843dff91ff0b0e5b98a110a512b2f531}\label{game_8h_a915b2902e05c4e29541a0e9973500da8a843dff91ff0b0e5b98a110a512b2f531}} 
+W\+IN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GAMEOVER@{GAMEOVER}!game.h@{game.h}}\index{game.h@{game.h}!GAMEOVER@{GAMEOVER}}}\mbox{\Hypertarget{game_8h_a915b2902e05c4e29541a0e9973500da8a42495cc178524da331d4681864c72b72}\label{game_8h_a915b2902e05c4e29541a0e9973500da8a42495cc178524da331d4681864c72b72}} 
+G\+A\+M\+E\+O\+V\+ER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHOW\_SCORES@{SHOW\_SCORES}!game.h@{game.h}}\index{game.h@{game.h}!SHOW\_SCORES@{SHOW\_SCORES}}}\mbox{\Hypertarget{game_8h_a915b2902e05c4e29541a0e9973500da8a862f5b0c6003be3d4ef124186eba945b}\label{game_8h_a915b2902e05c4e29541a0e9973500da8a862f5b0c6003be3d4ef124186eba945b}} 
+S\+H\+O\+W\+\_\+\+S\+C\+O\+R\+ES&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INITIAL@{INITIAL}!game.h@{game.h}}\index{game.h@{game.h}!INITIAL@{INITIAL}}}\mbox{\Hypertarget{game_8h_a915b2902e05c4e29541a0e9973500da8a7116db6906963fd0720c4a85be250cf4}\label{game_8h_a915b2902e05c4e29541a0e9973500da8a7116db6906963fd0720c4a85be250cf4}} 
+I\+N\+I\+T\+I\+AL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LEFT\_DRAW@{LEFT\_DRAW}!game.h@{game.h}}\index{game.h@{game.h}!LEFT\_DRAW@{LEFT\_DRAW}}}\mbox{\Hypertarget{game_8h_a915b2902e05c4e29541a0e9973500da8a95088f09eab764d1f4e4956fd6128680}\label{game_8h_a915b2902e05c4e29541a0e9973500da8a95088f09eab764d1f4e4956fd6128680}} 
+L\+E\+F\+T\+\_\+\+D\+R\+AW&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VERTIX@{VERTIX}!game.h@{game.h}}\index{game.h@{game.h}!VERTIX@{VERTIX}}}\mbox{\Hypertarget{game_8h_a915b2902e05c4e29541a0e9973500da8a817f19da02007f73fd316ffef6b5901a}\label{game_8h_a915b2902e05c4e29541a0e9973500da8a817f19da02007f73fd316ffef6b5901a}} 
+V\+E\+R\+T\+IX&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RIGHT\_DRAW@{RIGHT\_DRAW}!game.h@{game.h}}\index{game.h@{game.h}!RIGHT\_DRAW@{RIGHT\_DRAW}}}\mbox{\Hypertarget{game_8h_a915b2902e05c4e29541a0e9973500da8ad9005327af7631b89fc6f08967ee0f62}\label{game_8h_a915b2902e05c4e29541a0e9973500da8ad9005327af7631b89fc6f08967ee0f62}} 
+R\+I\+G\+H\+T\+\_\+\+D\+R\+AW&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DONE@{DONE}!game.h@{game.h}}\index{game.h@{game.h}!DONE@{DONE}}}\mbox{\Hypertarget{game_8h_a915b2902e05c4e29541a0e9973500da8a9c954bcf443428c80b0f107b3bc48749}\label{game_8h_a915b2902e05c4e29541a0e9973500da8a9c954bcf443428c80b0f107b3bc48749}} 
+D\+O\+NE&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{game_8h_aca67dfe717203bac33a082e4f1b84348}\label{game_8h_aca67dfe717203bac33a082e4f1b84348}} 
+\index{game.h@{game.h}!checkClick@{checkClick}}
+\index{checkClick@{checkClick}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{checkClick()}{checkClick()}}
+{\footnotesize\ttfamily bool check\+Click (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$}]{sp,  }\item[{struct packet $\ast$}]{packet,  }\item[{int}]{x0,  }\item[{int}]{x1,  }\item[{int}]{y0,  }\item[{int}]{y1 }\end{DoxyParamCaption})}
+
+Check if the user click on left mouse button and the cursor x is between x0,x1 and cursor y between y0,y1 \mbox{\Hypertarget{game_8h_ad5636bd381f117c6d575dc6b56167434}\label{game_8h_ad5636bd381f117c6d575dc6b56167434}} 
+\index{game.h@{game.h}!checkValidMovement@{checkValidMovement}}
+\index{checkValidMovement@{checkValidMovement}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{checkValidMovement()}{checkValidMovement()}}
+{\footnotesize\ttfamily bool check\+Valid\+Movement (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game}{Game}} $\ast$}]{game }\end{DoxyParamCaption})}
+
+
+
+Validates a movement, if it is following a vertical line upwards. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game_8h_a7cbc607dedd794f4e9b0160e3f2506c2}\label{game_8h_a7cbc607dedd794f4e9b0160e3f2506c2}} 
+\index{game.h@{game.h}!choose\_your\_destiny@{choose\_your\_destiny}}
+\index{choose\_your\_destiny@{choose\_your\_destiny}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{choose\_your\_destiny()}{choose\_your\_destiny()}}
+{\footnotesize\ttfamily int choose\+\_\+your\+\_\+destiny (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game}{Game}} $\ast$}]{game }\end{DoxyParamCaption})}
+
+
+
+Main loop of the game. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{game_8h_a7cbc607dedd794f4e9b0160e3f2506c2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8h_a99a0e4f1133c87e87fd270a7ebe06b8d}\label{game_8h_a99a0e4f1133c87e87fd270a7ebe06b8d}} 
+\index{game.h@{game.h}!drawCursorPositions@{drawCursorPositions}}
+\index{drawCursorPositions@{drawCursorPositions}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{drawCursorPositions()}{drawCursorPositions()}}
+{\footnotesize\ttfamily void draw\+Cursor\+Positions (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game}{Game}} $\ast$}]{game,  }\item[{uint32\+\_\+t}]{color,  }\item[{uint8\+\_\+t $\ast$}]{aux\+\_\+buffer }\end{DoxyParamCaption})}
+
+
+
+Draws on the buffer the positions the cursor has travelled to. 
+
+Only works with C\+O\+L\+OR M\+O\+D\+ES 8\+\_\+8\+\_\+8\+\_\+8
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & \\
+\hline
+{\em color} & \\
+\hline
+{\em aux\+\_\+buffer} & \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=343pt]{game_8h_a99a0e4f1133c87e87fd270a7ebe06b8d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8h_a273ad821edce51b0a7229b86dc2aab5e}\label{game_8h_a273ad821edce51b0a7229b86dc2aab5e}} 
+\index{game.h@{game.h}!drawRtcTime@{drawRtcTime}}
+\index{drawRtcTime@{drawRtcTime}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{drawRtcTime()}{drawRtcTime()}}
+{\footnotesize\ttfamily void draw\+Rtc\+Time (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game}{Game}} $\ast$}]{game,  }\item[{uint8\+\_\+t $\ast$}]{buffer }\end{DoxyParamCaption})}
+
+Displays the time on the screen (h/m/s format) Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_a273ad821edce51b0a7229b86dc2aab5e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8h_ac83a816fc365d338a51abcbadc6bbacc}\label{game_8h_ac83a816fc365d338a51abcbadc6bbacc}} 
+\index{game.h@{game.h}!paintMouseMovement@{paintMouseMovement}}
+\index{paintMouseMovement@{paintMouseMovement}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{paintMouseMovement()}{paintMouseMovement()}}
+{\footnotesize\ttfamily int paint\+Mouse\+Movement (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game}{Game}} $\ast$}]{game,  }\item[{struct packet $\ast$}]{packet }\end{DoxyParamCaption})}
+
+
+
+Cheks if the mouse movement is valid and updates variables. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & \\
+\hline
+{\em packet} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game_8h_a73c38b28f5840b95c9e1b5cd04060319}\label{game_8h_a73c38b28f5840b95c9e1b5cd04060319}} 
+\index{game.h@{game.h}!resetVariables@{resetVariables}}
+\index{resetVariables@{resetVariables}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{resetVariables()}{resetVariables()}}
+{\footnotesize\ttfamily void reset\+Variables (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game}{Game}} $\ast$}]{game,  }\item[{int $\ast$}]{timer\+\_\+counter,  }\item[{int $\ast$}]{seconds\+\_\+elapsed,  }\item[{int $\ast$}]{key\+\_\+codes\+\_\+counter }\end{DoxyParamCaption})}
+
+
+
+Resets the game variables to their start. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & \\
+\hline
+{\em timer\+\_\+counter} & \\
+\hline
+{\em seconds\+\_\+elapsed} & \\
+\hline
+{\em key\+\_\+codes\+\_\+counter} & \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{game_8h_a73c38b28f5840b95c9e1b5cd04060319_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8h_aefcf067809e26c01e5413d61140295e9}\label{game_8h_aefcf067809e26c01e5413d61140295e9}} 
+\index{game.h@{game.h}!setupSprites@{setupSprites}}
+\index{setupSprites@{setupSprites}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{setupSprites()}{setupSprites()}}
+{\footnotesize\ttfamily void setup\+Sprites (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game}{Game}} $\ast$}]{game }\end{DoxyParamCaption})}
+
+
+
+Initialization functions that creates all the needed sprites and some variables. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_aefcf067809e26c01e5413d61140295e9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8h_adff2210798ae43e37c32d66d8b589c10}\label{game_8h_adff2210798ae43e37c32d66d8b589c10}} 
+\index{game.h@{game.h}!updateMouseSpritePosition@{updateMouseSpritePosition}}
+\index{updateMouseSpritePosition@{updateMouseSpritePosition}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{updateMouseSpritePosition()}{updateMouseSpritePosition()}}
+{\footnotesize\ttfamily void update\+Mouse\+Sprite\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game}{Game}} $\ast$}]{game,  }\item[{struct packet $\ast$}]{packet }\end{DoxyParamCaption})}
+
+
+
+Updates the cursor position based on the packets received from the mouse. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & \\
+\hline
+{\em packet} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{game_8h_a954762f0594d1047f59151c4832a6927}\label{game_8h_a954762f0594d1047f59151c4832a6927}} 
+\index{game.h@{game.h}!updateTimeSprites@{updateTimeSprites}}
+\index{updateTimeSprites@{updateTimeSprites}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{updateTimeSprites()}{updateTimeSprites()}}
+{\footnotesize\ttfamily void update\+Time\+Sprites (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game}{Game}} $\ast$}]{game,  }\item[{\mbox{\hyperlink{struct_date}{Date}} $\ast$}]{date }\end{DoxyParamCaption})}
+
+
+
+Updates the time\+Sprite with the date given as argument. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & \\
+\hline
+{\em date} & \\
+\hline
+\end{DoxyParams}

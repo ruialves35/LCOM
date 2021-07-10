@@ -1,0 +1,7 @@
+<map id="uart_send_message" name="uart_send_message">
+<area shape="rect" id="node1" title="Sends a message through the serial port." alt="" coords="5,31,144,57"/>
+<area shape="rect" id="node2" href="$uart_8c.html#a89b12c76cc3c9595a88a72ea5d102dec" title="Checks if the user can send a new message." alt="" coords="192,5,313,32"/>
+<area shape="rect" id="node5" href="$uart_8c.html#a0d2f75bb0c90f1c13bc02036c8669f7e" title="writes in the uart reg given as the arg the byte" alt="" coords="201,56,304,83"/>
+<area shape="rect" id="node3" href="$uart_8c.html#aa62a1fd216f328e78b85e4b27d4627d7" title="Reads from the reg given as argument." alt="" coords="361,5,463,32"/>
+<area shape="rect" id="node4" href="$utils_8c.html#a79a031a8611f5b2d6afa4158e92b0fb4" title=" " alt="" coords="511,5,601,32"/>
+</map>

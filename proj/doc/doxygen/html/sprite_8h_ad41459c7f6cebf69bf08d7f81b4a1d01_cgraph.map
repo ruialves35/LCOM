@@ -1,0 +1,7 @@
+<map id="draw_background" name="draw_background">
+<area shape="rect" id="node1" title=" " alt="" coords="5,81,128,108"/>
+<area shape="rect" id="node2" href="$vbe__utils_8c.html#a1c8a2e27d94c35040f9fd915639c957a" title="calculates size in bytes, given the size in bits" alt="" coords="176,5,337,32"/>
+<area shape="rect" id="node3" href="$vbe_8c.html#a29911e110d87d372e97e0676d2768c95" title=" " alt="" coords="193,56,320,83"/>
+<area shape="rect" id="node4" href="$vbe_8c.html#a1cb8d2f949b208688572ecea7bdd80c1" title=" " alt="" coords="217,107,296,133"/>
+<area shape="rect" id="node5" href="$vbe_8c.html#a2151525935e20e57fc0087ad189d833d" title=" " alt="" coords="217,157,296,184"/>
+</map>

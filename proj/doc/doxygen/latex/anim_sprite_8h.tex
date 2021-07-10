@@ -1,0 +1,152 @@
+\hypertarget{anim_sprite_8h}{}\doxysection{anim\+Sprite.\+h File Reference}
+\label{anim_sprite_8h}\index{animSprite.h@{animSprite.h}}
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include $<$stdarg.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}sprite.\+h\char`\"{}}\newline
+Include dependency graph for anim\+Sprite.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{anim_sprite_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{anim_sprite_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_anim_sprite}{Anim\+Sprite}}
+\begin{DoxyCompactList}\small\item\em Struct that stores multiple sprites for animation purposes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_anim_sprite}{Anim\+Sprite}} $\ast$ \mbox{\hyperlink{anim_sprite_8h_aeb52c4a2a5fef2943565c449fc2e228d}{create\+\_\+anim\+Sprite}} (int x, int y, int xspeed, int yspeed, int aspeed, uint8\+\_\+t no\+\_\+pic, enum xpm\+\_\+image\+\_\+type type, xpm\+\_\+map\+\_\+t pic1,...)
+\begin{DoxyCompactList}\small\item\em Create a anim\+Sprite object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{anim_sprite_8h_a481798d1000ae97ad80dcfcd17f3df76}{animate\+\_\+anim\+Sprite}} (\mbox{\hyperlink{struct_anim_sprite}{Anim\+Sprite}} $\ast$asp)
+\item 
+void \mbox{\hyperlink{anim_sprite_8h_adb33ac2c12d5dc3543ca47b6f2bd872e}{draw\+\_\+animated\+\_\+sprite}} (\mbox{\hyperlink{struct_anim_sprite}{Anim\+Sprite}} $\ast$asp)
+\item 
+void \mbox{\hyperlink{anim_sprite_8h_a2ae9348124af6a57267c3be86afbf8c7}{draw\+\_\+animated\+\_\+sprite\+\_\+on}} (\mbox{\hyperlink{struct_anim_sprite}{Anim\+Sprite}} $\ast$asp, uint8\+\_\+t $\ast$buffer)
+\item 
+void \mbox{\hyperlink{anim_sprite_8h_a26ca7602c11b4434612ccd3b2a23100f}{destroy\+\_\+anim\+Sprite}} (\mbox{\hyperlink{struct_anim_sprite}{Anim\+Sprite}} $\ast$asp)
+\begin{DoxyCompactList}\small\item\em Destroys an anim\+Sprite object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{anim_sprite_8h_a481798d1000ae97ad80dcfcd17f3df76}\label{anim_sprite_8h_a481798d1000ae97ad80dcfcd17f3df76}} 
+\index{animSprite.h@{animSprite.h}!animate\_animSprite@{animate\_animSprite}}
+\index{animate\_animSprite@{animate\_animSprite}!animSprite.h@{animSprite.h}}
+\doxysubsubsection{\texorpdfstring{animate\_animSprite()}{animate\_animSprite()}}
+{\footnotesize\ttfamily int animate\+\_\+anim\+Sprite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_anim_sprite}{Anim\+Sprite}} $\ast$}]{asp }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+0 if it didn\textquotesingle{}t reach the end of the animation, 1 otherwise 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{anim_sprite_8h_a481798d1000ae97ad80dcfcd17f3df76_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{anim_sprite_8h_aeb52c4a2a5fef2943565c449fc2e228d}\label{anim_sprite_8h_aeb52c4a2a5fef2943565c449fc2e228d}} 
+\index{animSprite.h@{animSprite.h}!create\_animSprite@{create\_animSprite}}
+\index{create\_animSprite@{create\_animSprite}!animSprite.h@{animSprite.h}}
+\doxysubsubsection{\texorpdfstring{create\_animSprite()}{create\_animSprite()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_anim_sprite}{Anim\+Sprite}}$\ast$ create\+\_\+anim\+Sprite (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{xspeed,  }\item[{int}]{yspeed,  }\item[{int}]{aspeed,  }\item[{uint8\+\_\+t}]{no\+\_\+pic,  }\item[{enum xpm\+\_\+image\+\_\+type}]{type,  }\item[{xpm\+\_\+map\+\_\+t}]{pic1,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+Create a anim\+Sprite object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+{\em xspeed} & \\
+\hline
+{\em yspeed} & \\
+\hline
+{\em aspeed} & \\
+\hline
+{\em no\+\_\+pic} & \\
+\hline
+{\em type} & \\
+\hline
+{\em pic1} & \\
+\hline
+{\em ...} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Anim\+Sprite$\ast$ 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=289pt]{anim_sprite_8h_aeb52c4a2a5fef2943565c449fc2e228d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{anim_sprite_8h_a26ca7602c11b4434612ccd3b2a23100f}\label{anim_sprite_8h_a26ca7602c11b4434612ccd3b2a23100f}} 
+\index{animSprite.h@{animSprite.h}!destroy\_animSprite@{destroy\_animSprite}}
+\index{destroy\_animSprite@{destroy\_animSprite}!animSprite.h@{animSprite.h}}
+\doxysubsubsection{\texorpdfstring{destroy\_animSprite()}{destroy\_animSprite()}}
+{\footnotesize\ttfamily void destroy\+\_\+anim\+Sprite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_anim_sprite}{Anim\+Sprite}} $\ast$}]{asp }\end{DoxyParamCaption})}
+
+
+
+Destroys an anim\+Sprite object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em asp} & \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=295pt]{anim_sprite_8h_a26ca7602c11b4434612ccd3b2a23100f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{anim_sprite_8h_adb33ac2c12d5dc3543ca47b6f2bd872e}\label{anim_sprite_8h_adb33ac2c12d5dc3543ca47b6f2bd872e}} 
+\index{animSprite.h@{animSprite.h}!draw\_animated\_sprite@{draw\_animated\_sprite}}
+\index{draw\_animated\_sprite@{draw\_animated\_sprite}!animSprite.h@{animSprite.h}}
+\doxysubsubsection{\texorpdfstring{draw\_animated\_sprite()}{draw\_animated\_sprite()}}
+{\footnotesize\ttfamily void draw\+\_\+animated\+\_\+sprite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_anim_sprite}{Anim\+Sprite}} $\ast$}]{asp }\end{DoxyParamCaption})}
+
+Draws the pixmap directly on the V\+R\+AM, by updating the mapped\+\_\+mem Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{anim_sprite_8h_adb33ac2c12d5dc3543ca47b6f2bd872e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{anim_sprite_8h_a2ae9348124af6a57267c3be86afbf8c7}\label{anim_sprite_8h_a2ae9348124af6a57267c3be86afbf8c7}} 
+\index{animSprite.h@{animSprite.h}!draw\_animated\_sprite\_on@{draw\_animated\_sprite\_on}}
+\index{draw\_animated\_sprite\_on@{draw\_animated\_sprite\_on}!animSprite.h@{animSprite.h}}
+\doxysubsubsection{\texorpdfstring{draw\_animated\_sprite\_on()}{draw\_animated\_sprite\_on()}}
+{\footnotesize\ttfamily void draw\+\_\+animated\+\_\+sprite\+\_\+on (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_anim_sprite}{Anim\+Sprite}} $\ast$}]{asp,  }\item[{uint8\+\_\+t $\ast$}]{buffer }\end{DoxyParamCaption})}
+
+Draws the pixmap on the buffer specified in its argument Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{anim_sprite_8h_a2ae9348124af6a57267c3be86afbf8c7_cgraph}
+\end{center}
+\end{figure}

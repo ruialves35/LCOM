@@ -1,0 +1,74 @@
+\hypertarget{specific__functions_8h}{}\doxysection{specific\+\_\+functions.\+h File Reference}
+\label{specific__functions_8h}\index{specific\_functions.h@{specific\_functions.h}}
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+Include dependency graph for specific\+\_\+functions.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{specific__functions_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{specific__functions_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int() \mbox{\hyperlink{specific__functions_8h_ad95f860c76fffcc5c2c2695dd8d7468f}{kbc\+\_\+sys\+\_\+inb}} (int port, uint8\+\_\+t $\ast$value)
+\item 
+void() \mbox{\hyperlink{specific__functions_8h_aea970a154161a35f6894898a092ed70a}{kbc\+\_\+ih}} ()
+\item 
+void() \mbox{\hyperlink{specific__functions_8h_a61f4ae28611a30e88bbd47ab76b4d6b7}{kbc\+\_\+poll\+\_\+status}} ()
+\item 
+int() \mbox{\hyperlink{specific__functions_8h_a8b0872fcd66f2133f261e343b37a9b66}{mouse\+\_\+sys\+\_\+inb}} (int port, uint8\+\_\+t $\ast$value)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{specific__functions_8h_aea970a154161a35f6894898a092ed70a}\label{specific__functions_8h_aea970a154161a35f6894898a092ed70a}} 
+\index{specific\_functions.h@{specific\_functions.h}!kbc\_ih@{kbc\_ih}}
+\index{kbc\_ih@{kbc\_ih}!specific\_functions.h@{specific\_functions.h}}
+\doxysubsubsection{\texorpdfstring{kbc\_ih()}{kbc\_ih()}}
+{\footnotesize\ttfamily void() kbc\+\_\+ih (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{specific__functions_8h_aea970a154161a35f6894898a092ed70a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{specific__functions_8h_a61f4ae28611a30e88bbd47ab76b4d6b7}\label{specific__functions_8h_a61f4ae28611a30e88bbd47ab76b4d6b7}} 
+\index{specific\_functions.h@{specific\_functions.h}!kbc\_poll\_status@{kbc\_poll\_status}}
+\index{kbc\_poll\_status@{kbc\_poll\_status}!specific\_functions.h@{specific\_functions.h}}
+\doxysubsubsection{\texorpdfstring{kbc\_poll\_status()}{kbc\_poll\_status()}}
+{\footnotesize\ttfamily void() kbc\+\_\+poll\+\_\+status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+while output buffer is empty, keep iterating until it has a value that will be stored in status Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{specific__functions_8h_a61f4ae28611a30e88bbd47ab76b4d6b7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{specific__functions_8h_ad95f860c76fffcc5c2c2695dd8d7468f}\label{specific__functions_8h_ad95f860c76fffcc5c2c2695dd8d7468f}} 
+\index{specific\_functions.h@{specific\_functions.h}!kbc\_sys\_inb@{kbc\_sys\_inb}}
+\index{kbc\_sys\_inb@{kbc\_sys\_inb}!specific\_functions.h@{specific\_functions.h}}
+\doxysubsubsection{\texorpdfstring{kbc\_sys\_inb()}{kbc\_sys\_inb()}}
+{\footnotesize\ttfamily int() kbc\+\_\+sys\+\_\+inb (\begin{DoxyParamCaption}\item[{int}]{port,  }\item[{uint8\+\_\+t $\ast$}]{value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{specific__functions_8h_a8b0872fcd66f2133f261e343b37a9b66}\label{specific__functions_8h_a8b0872fcd66f2133f261e343b37a9b66}} 
+\index{specific\_functions.h@{specific\_functions.h}!mouse\_sys\_inb@{mouse\_sys\_inb}}
+\index{mouse\_sys\_inb@{mouse\_sys\_inb}!specific\_functions.h@{specific\_functions.h}}
+\doxysubsubsection{\texorpdfstring{mouse\_sys\_inb()}{mouse\_sys\_inb()}}
+{\footnotesize\ttfamily int() mouse\+\_\+sys\+\_\+inb (\begin{DoxyParamCaption}\item[{int}]{port,  }\item[{uint8\+\_\+t $\ast$}]{value }\end{DoxyParamCaption})}
+

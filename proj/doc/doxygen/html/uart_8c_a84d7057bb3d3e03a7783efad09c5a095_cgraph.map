@@ -1,0 +1,7 @@
+<map id="uart_set_bit_rate" name="uart_set_bit_rate">
+<area shape="rect" id="node1" title="Set the bitrate to the one specified as the argument." alt="" coords="5,31,124,57"/>
+<area shape="rect" id="node2" href="$uart_8c.html#ae17156e078d7fc999d700d896c66728d" title="Enables divisor latch access on the Line Control Reg. if dlb is true." alt="" coords="172,5,265,32"/>
+<area shape="rect" id="node5" href="$uart_8c.html#a0d2f75bb0c90f1c13bc02036c8669f7e" title="writes in the uart reg given as the arg the byte" alt="" coords="313,56,416,83"/>
+<area shape="rect" id="node3" href="$uart_8c.html#aa62a1fd216f328e78b85e4b27d4627d7" title="Reads from the reg given as argument." alt="" coords="314,5,415,32"/>
+<area shape="rect" id="node4" href="$utils_8c.html#a79a031a8611f5b2d6afa4158e92b0fb4" title=" " alt="" coords="464,5,555,32"/>
+</map>

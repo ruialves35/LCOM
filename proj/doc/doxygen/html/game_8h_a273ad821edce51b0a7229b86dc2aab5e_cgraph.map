@@ -1,0 +1,8 @@
+<map id="drawRtcTime" name="drawRtcTime">
+<area shape="rect" id="node1" title=" " alt="" coords="5,81,103,108"/>
+<area shape="rect" id="node2" href="$sprite_8c.html#a92557072532e4f8c75e7b8d07670683d" title=" " alt="" coords="151,81,260,108"/>
+<area shape="rect" id="node3" href="$vbe__utils_8c.html#a1c8a2e27d94c35040f9fd915639c957a" title="calculates size in bytes, given the size in bits" alt="" coords="308,5,469,32"/>
+<area shape="rect" id="node4" href="$vbe_8c.html#a29911e110d87d372e97e0676d2768c95" title=" " alt="" coords="325,56,452,83"/>
+<area shape="rect" id="node5" href="$vbe_8c.html#a1cb8d2f949b208688572ecea7bdd80c1" title=" " alt="" coords="349,107,428,133"/>
+<area shape="rect" id="node6" href="$vbe_8c.html#a2151525935e20e57fc0087ad189d833d" title=" " alt="" coords="349,157,428,184"/>
+</map>

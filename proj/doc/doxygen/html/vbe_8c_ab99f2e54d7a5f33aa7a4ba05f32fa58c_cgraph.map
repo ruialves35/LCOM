@@ -1,0 +1,9 @@
+<map id="vg_draw_rectangle_on" name="vg_draw_rectangle_on">
+<area shape="rect" id="node1" title="Draws a rectangle in desired buffer." alt="" coords="5,56,155,83"/>
+<area shape="rect" id="node2" href="$vbe_8c.html#a1cb8d2f949b208688572ecea7bdd80c1" title=" " alt="" coords="415,5,493,32"/>
+<area shape="rect" id="node3" href="$vbe_8c.html#a2151525935e20e57fc0087ad189d833d" title=" " alt="" coords="225,56,303,83"/>
+<area shape="rect" id="node4" href="$vbe_8c.html#a1a6b9de2852b4ed1f8d82679749abe50" title="Draws horizontal line in desired buffer." alt="" coords="203,107,325,133"/>
+<area shape="rect" id="node5" href="$vbe__utils_8c.html#a1c8a2e27d94c35040f9fd915639c957a" title="calculates size in bytes, given the size in bits" alt="" coords="373,56,535,83"/>
+<area shape="rect" id="node6" href="$vbe_8c.html#a29911e110d87d372e97e0676d2768c95" title=" " alt="" coords="391,107,517,133"/>
+<area shape="rect" id="node7" href="$vbe_8c.html#aee3838c12a8543f378920ab8f6c3cae2" title=" " alt="" coords="386,157,522,184"/>
+</map>
